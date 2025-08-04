@@ -30,7 +30,7 @@ export default function Main(){
           <div className="max-lg:w-full w-[60%] flex flex-col space-y-6">
             <h1 className="text-4xl font-bold max-lg:text-3xl">Salut 👋</h1>
             <div className="flex flex-col space-y-2">
-              <h1 className="text-3xl font-bold max-lg:text-2xl"><strong>Je suis FIDELY GEMAEL NGOLIO-NGONDIO</strong></h1>
+              <h1 className="text-3xl font-bold max-lg:text-2xl"><strong>Je suis FIDELY GEMAEL NGOLION-GONDIO</strong></h1>
               <div className="h-6">
                 <h1 className="text-3xl font-bold max-lg:text-2xl animate-blink">
                 <Typewriter words={['Ingénieur en Génie Civil', 'Co-fondateur de Turkey Healthcare Group', 'Directeur pour la région Afrique']} />
