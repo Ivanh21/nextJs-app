@@ -63,7 +63,8 @@ export default function Testimonial(){
                 <div className="w-full flex max-lg:flex-col max-lg:space-y-8 p-8 dark:bg-[#1c2136] rounded-lg lg:space-x-16 testimonial">
                     <div className="relative h-72 w-1/2 max-lg:w-full">
                         <Image 
-                            layout="fill"
+                            width={900}
+                            height={300}
                             src={testimonial.image}
                             alt={testimonial.name}
                             objectFit="cover"
@@ -87,12 +88,12 @@ export default function Testimonial(){
                                 <p className="text-sm font-bold text-gray-500">{testimonial.role}</p>
                             </div>
 
-                            <Image
+                            {/* <Image
                             src={testimonial.logo}
                             width={100}
                             height={50}
                             alt="Quote"
-                            />
+                            /> */}
                         </div>
                     </div>
                 </div>

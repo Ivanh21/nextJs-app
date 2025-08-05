@@ -253,7 +253,7 @@ export default function Main(){
         <h1 className="text-5xl font-bold max-lg:text-4xl max-md:text-2xl">Trusted by Global Brands</h1>
         <p className="text-sm text-gray-500 w-[50%] max-md:w-full text-center">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.</p>
       </div>
-      <div className="w-full flex max-lg:flex-col max-lg:space-y-8 justify-center items-center lg:space-x-16">
+      {/* <div className="w-full flex max-lg:flex-col max-lg:space-y-8 justify-center items-center lg:space-x-16">
         
         <div className="flex items-center justify-center space-x-4 md:space-x-16">
           <Image
@@ -304,7 +304,7 @@ export default function Main(){
   
 
         </div>
-      </div>
+      </div> */}
       <div className="border-b border-gray-300 px-24"></div>
     </section>
 
@@ -314,9 +314,9 @@ export default function Main(){
 
 
 
-    <section className="w-full flex flex-col space-y-16 materiel-item p-2 lg:p-12" id="">
+    {/* <section className="w-full flex flex-col space-y-16 materiel-item p-2 lg:p-12" id="">
       <Materiel />
-    </section>
+    </section> */}
 
 
     <section className="w-full flex flex-col space-y-16 p-4 lg:p-12">
