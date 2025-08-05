@@ -314,7 +314,7 @@ export default function Main(){
 
 
 
-    <section className="w-full flex flex-col space-y-16 materiel-item p-4 lg:p-12" id="">
+    <section className="w-full flex flex-col space-y-16 materiel-item p-2 lg:p-12" id="">
       <Materiel />
     </section>
 

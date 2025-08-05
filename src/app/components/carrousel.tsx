@@ -44,7 +44,7 @@ export default function Carrousel(){
 
     return(
         <>
-            <div className="flex flex-col justify-center items-center space-y-4 px-2">
+            <div className="flex flex-col justify-center items-center space-y-4 lg:px-2">
                       <h1 className="text-5xl font-bold max-md:text-2xl max-lg:text-4xl ">Latest Projects</h1>
                       <p className="text-sm text-gray-500 w-[50%] max-md:w-full text-center">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.</p>
                     </div>
@@ -60,7 +60,7 @@ export default function Carrousel(){
             
                      <div
                     ref={scrollRef}
-                    className="flex space-x-4 overflow-x-auto scrollbar-hide py-4 px-1"
+                    className="flex space-x-4 overflow-x-auto scrollbar-hide py-4 lg:px-1"
                     style={{ scrollSnapType: 'x mandatory' }}
                   >
                     {['dentist', 'doctor', 'worker', 'plane', 'architect', 'surgery', 'istanbul'].map((img, i) => (
