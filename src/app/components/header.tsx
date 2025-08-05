@@ -25,6 +25,7 @@ export default function Header(){
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   
+  const [isVisible, setIsVisible] = useState(false);
 
     return (
       <header className={`${styles.navbar} ${isFixed ? `${styles.fixed}` : ''} top-0 left-0 navbar w-full flex justify-between items-center px-2 py-4 lg:px-16 absolute z-10`}>
@@ -54,7 +55,13 @@ export default function Header(){
 
         </div>
 
-      <div className="relative inline-block text-left">
+      <div className="lg:hidden flex p-2">
+        <button onClick={() => setIsVisible(!isVisible)}>
+          <i className="fa-solid fa-bars text-4xl"></i>
+        </button>
+      </div>
+
+      <div className="max-lg:hidden relative inline-block text-left">
       <button
         onClick={() => setOpen(!open)}
         className="inline-flex items-center gap-2 border px-3 py-2 rounded hover:bg-gray-100 dark:hover:bg-[#181c31]"
@@ -94,7 +101,70 @@ export default function Header(){
         </ul>
       )}
     </div>
+    {isVisible && (
+      <div className="absolute">
+      <div className="fixed inset-0 bg-white menu z-50 flex flex-col items-center justify-center">
+        <button
+          className="absolute top-8 right-8"
+          onClick={() => setIsVisible(!isVisible)}
+        >
+          <i className="fa-solid fa-xmark text-2xl text-gray-500 hover:text-black"></i>
+        </button>
+        <div className="flex flex-col justify-center items-center space-y-8">
+          <a href="#home" className="text-lg text-gray-500 font-bold" onClick={() => setIsVisible(!isVisible)}>Home</a>
+          <a href="#work" className="text-lg text-gray-500 font-bold" onClick={() => setIsVisible(!isVisible)}>About</a>
+          <a href="#project" className="text-lg text-gray-500 font-bold" onClick={() => setIsVisible(!isVisible)}>Features</a>
+          <a href="#contact" className="text-lg text-gray-500 font-bold" onClick={() => setIsVisible(!isVisible)}>Support</a>
 
-      </header>
+        <div className="lg:hidden relative inline-block text-left">
+        <button
+          onClick={() => setOpen(!open)}
+          className="inline-flex items-center gap-2 border px-3 py-2 rounded hover:bg-gray-100 dark:hover:bg-[#181c31]"
+        >
+          <Image
+            src={selectedLang.flag}
+            alt={selectedLang.name}
+            width={20}
+            height={20}
+          />
+          <span className="text-lg text-gray-500 font-bold">{selectedLang.name}</span>
+          <svg
+            className="w-4 h-4 ml-1"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
+        {open && (
+          <ul className="absolute z-10 mt-2 w-full light:bg-white border rounded shadow">
+            {languages.map((lang) => (
+              <li
+                key={lang.code}
+                onClick={() => {
+                  setSelectedLang(lang);
+                  setOpen(false);
+                  setIsVisible(!isVisible)
+                }}
+                className="flex items-center gap-2 px-3 py-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-[#181c31]"
+              >
+                <Image src={lang.flag} alt={lang.name} width={20} height={20} />
+                <span className="text-lg text-gray-500 font-bold">{lang.name}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+        </div>
+      </div>
+    </div>
+
+    )}
+
+
+    </header>
+
     );
 }

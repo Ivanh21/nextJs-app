@@ -71,6 +71,23 @@ body {
     background-position: center;
   
   }
+
+  .project-item{
+  background: url("/images/shape/shape-08.svg"),#f4f7fa;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+.materiel-item{
+  background:url("/images/shape/shape-15.svg"), #f4f7fa;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+.menu{
+  background: linear-gradient(rgba(255, 255, 255, 0.9));
+}
 }
 
 
@@ -81,6 +98,23 @@ body {
     background-size: cover;
     background-position: center;
   }
+
+  .project-item{
+  background: url("/images/shape/shape-08.svg"),#1c2136;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+.materiel-item{
+  background:url("/images/shape/shape-15.svg"), #1c2136;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+.menu{
+  background: linear-gradient(rgba(0, 0, 0, 0.9));
+}
 }
 
 @media (prefers-color-scheme: light){
@@ -97,7 +131,7 @@ body {
 
 
 
-.social-media{
+.social-media, .testimonial{
   box-shadow:
     rgba(60, 66, 87, 0.12) 0px 7px 14px 0px,
     rgba(0, 0, 0, 0.12) 0px 3px 6px 0px; 
@@ -120,70 +154,6 @@ body {
 }
 
 
-
-
-
-
-
-
-
-
-
-.name {
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 5px solid black;
-  font-family: monospace;
-  font-size: 2rem;
-  width: 0ch;
-
-  animation: typing 6s steps(10, end) 4s forwards,
-             /* deleting 8s steps(10, end) 4s forwards, */
-             blink 4s step-end infinite;
-}
-
-/* .fonction{
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 5px solid black;
-  font-family: monospace;
-  font-size: 2rem;
-  width: 0ch;
-
-  animation: typing2 8s steps(10, end) 8s forwards, blink 0.7s step-end infinite;
-} */
-
-.name{
-  animation-iteration-count: infinite;
-}
-
-
-/* Typing the first word */
-@keyframes typing {
-  from { width: 0ch; }
-  to { width: 42ch; } /* "John" = 4 characters */
-}
-
-/* Deleting it */
-@keyframes deleting {
-  from { width: 38ch; }
-  to { width: 0ch; }
-}
-
-/* Typing the second word */
-@keyframes typing2 {
-  from { width: 0ch; }
-  to { width: 27ch; } /* "Sophia" = 6 characters */
-}
-
-/* Cursor blink */
-@keyframes blink {
-  50% { border-color: transparent; }
-}
-
-
 .project{
 width: 350px;
 height: 350px;
@@ -191,20 +161,6 @@ height: 350px;
     rgba(60, 66, 87, 0.12) 0px 7px 14px 0px,
     rgba(0, 0, 0, 0.12) 0px 3px 6px 0px; 
 }
-
-/* .play-animation{
-  animation: circular 4s infinite;
-}
-
-
-@keyframes circular {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-} */
 
 
 @keyframes pulse-ring {
@@ -229,3 +185,14 @@ height: 350px;
   animation: pulse-ring 1.5s ease-out infinite;
   z-index: 0;
 }
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+
+

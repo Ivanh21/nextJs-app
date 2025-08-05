@@ -1,7 +1,10 @@
 'use client';
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Typewriter } from "./typewriter";
+import Carrousel from "./carrousel";
+import Materiel from "./materiel";
+import Testimonial from "./testimonial";
 
 
 
@@ -23,23 +26,25 @@ export default function Main(){
 
     return (
     <main className="w-full space-y-40">
-      <section className="flex flex-col justify-between max-lg:space-y-16 w-full px-2 lg:px-16 pt-16 max-lg:pt-32 max-md:pt-52" id="home">
+      <section className="flex flex-col justify-between max-lg:space-y-16 w-full px-4 lg:px-16 pt-16 max-lg:pt-32 max-md:pt-44" id="home">
 
       <div className="w-full flex flex-col justify-between items-center animation-item">
         <div className="w-full flex justify-between items-center">
-          <div className="max-lg:w-full w-[60%] flex flex-col space-y-6">
-            <h1 className="text-4xl font-bold max-lg:text-3xl">Salut 👋</h1>
-            <div className="flex flex-col space-y-2">
+          <div className="max-lg:w-full w-[60%] flex flex-col space-y-6 max-lg:space-y-12">
+            <h1 className="text-4xl font-bold max-lg:text-3xl">Bienvenue !</h1>
+            <div className="flex flex-col space-y-4">
               <h1 className="text-3xl font-bold max-lg:text-2xl"><strong>Je suis FIDELY GEMAEL NGOLION-GONDIO</strong></h1>
               <div className="h-6">
-                <h1 className="text-3xl font-bold max-lg:text-2xl animate-blink">
+                <h1 className="text-3xl font-bold max-lg:text-2xl">
                 <Typewriter words={['Ingénieur en Génie Civil', 'Co-fondateur de Turkey Healthcare Group', 'Directeur pour la région Afrique']} />
               </h1>
               </div>
             </div>
-            <p className="lg:text-justify text-gray-500">Professionnel engagé dans le développement des infrastructures et de la santé sur le continent africain, Je combine expertise en génie civil et vision stratégique pour bâtir des partenariats durables. En tant que co-fondateur du Turkey Healthcare Group, j’œuvre pour améliorer l’accès aux soins innovants à travers la collaboration internationale.</p>
+            <p className="text-justify text-gray-500">Professionnel engagé dans le développement des infrastructures et de la santé sur le continent africain, Je combine expertise en génie civil et vision stratégique pour bâtir des partenariats durables. En tant que co-fondateur du Turkey Healthcare Group, j’œuvre pour améliorer l’accès aux soins innovants à travers la collaboration internationale.</p>
             <div className="flex space-x-8">
               <a href="#work" className="p-4 bg-[#006bff] rounded-full text-white text-center max-lg:text-md">En savoir plus</a>
+
+              {/* <a href="#" className="p-4 border border-[#006bff] rounded-full text-center max-lg:text-md">Télécharger mon CV</a> */}
               {/* <div className="flex flex-col space-y-2">
                 <span>Call us (000)XXX-XXX</span>
                 <p className="text-gray-500">For any question or concern</p>
@@ -151,13 +156,13 @@ export default function Main(){
 
       <section className="flex flex-col space-y-16 justify-center items-center" id="work">
         <div className="flex justify-center items-center">
-          <div className="flex flex-col space-y-4 px-2">
+          <div className="flex flex-col space-y-4 px-2 max-lg:px-4">
             <h1 className="text-5xl font-bold max-lg:text-4xl max-md:text-2xl text-center">Pourquoi travailler avec NG ?</h1>
             <p className="text-center text-sm text-gray-500">Nous vous proposons de nombreux services pour satisfaire vos besoins et nous vous accompagnons à la réalisation de vos projets.</p>
           </div>
         </div>
 
-        <div className="flex flex-col justify-center items-center space-y-4 lg:px-24">
+        <div className="flex flex-col justify-center items-center space-y-4 px-4  lg:px-24">
             <div className="flex max-md:flex-col items-center justify-center">
               <div className="w-[40%] max-lg:w-full menu-item rounded-lg p-4">
               <Image
@@ -244,11 +249,11 @@ export default function Main(){
 
 
     <section className="w-full flex flex-col space-y-16 justify-center lg:px-16" id="brand">
-      <div className="flex flex-col justify-center items-center space-y-4 px-2">
+      <div className="flex flex-col justify-center items-center space-y-4 px-2 max-lg:px-4">
         <h1 className="text-5xl font-bold max-lg:text-4xl max-md:text-2xl">Trusted by Global Brands</h1>
         <p className="text-sm text-gray-500 w-[50%] max-md:w-full text-center">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.</p>
       </div>
-      <div className="w-full flex max-lg:flex-col max-lg:space-y-8 justify-center items-center space-x-16">
+      <div className="w-full flex max-lg:flex-col max-lg:space-y-8 justify-center items-center lg:space-x-16">
         
         <div className="flex items-center justify-center space-x-4 md:space-x-16">
           <Image
@@ -303,153 +308,21 @@ export default function Main(){
       <div className="border-b border-gray-300 px-24"></div>
     </section>
 
-    <section className="w-full flex flex-col space-y-16" id="project">
-      <div className="flex flex-col justify-center items-center space-y-4 px-2">
-          <h1 className="text-5xl font-bold max-md:text-2xl max-lg:text-4xl ">Latest Projects</h1>
-          <p className="text-sm text-gray-500 w-[50%] max-md:w-full text-center">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.</p>
-        </div>
-      {/* <div className="flex w-full px-16">
-          <div className="project flex flex-col justify-center space-y-6 items-center rounded-xl p-4">
-              <div className="flex">
-                <Image
-                width={100}
-                height={44}
-                src="/images/icon/black-preview.png"
-                alt="logitech"
-                />
-              </div>
-              <div className="w-full flex space-x-8 items-center">
-                <h2 className="text-md font-semibold text-gray-500">Juhan Ahamed</h2>
-                <h2 className="text-md font-semibold text-gray-500">Aug 28 2024</h2>
-              </div>
-              <div className="w-full flex items-center">
-                <a href="#" className="font-bold text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
-              </div>
-          </div>
-      </div> */}
-      <div className="w-full px-16 flex lg:space-x-4 max-lg:flex-col max-lg:items-center max-lg:space-y-4 overflow-x-auto">
-        <div className="w-full max-w-sm rounded-lg overflow-hidden shadow-lg bg-white">
-        <div className="relative h-96 w-full">
-          <Image
-            src="/images/icon/dentist.jpg" // remplace par ton image
-            alt="Vaccine vials"
-            layout="fill"
-            objectFit="cover"
-          />
-          {/* Play Button */}
-          <div className="absolute top-6 right-6">
-            <div className="relative w-[40px] h-[40px]">
-              <span className="pulse-ring"></span> {/* Cercle animé */}
-              <div className="bg-[#006bff] rounded-full p-2 cursor-pointer relative z-1">
-                <Image
-                  width={40}
-                  height={40}
-                  src="/images/icon/icon-play.svg"
-                  alt="logitech"
-                />
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        {/* Caption */}
-        <div className="p-4 bg-gray-700 text-white text-sm font-medium">
-          Lorem ipsum dolor sit amet conse adipiscing elit.
-        </div>
-      </div>
-
-        <div className="w-full max-w-sm rounded-lg overflow-hidden shadow-lg bg-white">
-        <div className="relative h-96 w-full">
-          <Image
-            src="/images/icon/doctor.jpg" // remplace par ton image
-            alt="Vaccine vials"
-            layout="fill"
-            objectFit="cover"
-          />
-          {/* Play Button */}
-          <div className="absolute top-6 right-6">
-            <div className="relative w-[40px] h-[40px]">
-              <span className="pulse-ring"></span> {/* Cercle animé */}
-              <div className="bg-[#006bff] rounded-full p-2 cursor-pointer relative z-1">
-                <Image
-                  width={40}
-                  height={40}
-                  src="/images/icon/icon-play.svg"
-                  alt="logitech"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Caption */}
-        <div className="p-4 bg-gray-700 text-white text-sm font-medium">
-          Lorem ipsum dolor sit amet conse adipiscing elit.
-        </div>
-      </div>
-
-      <div className="w-full max-w-sm rounded-lg overflow-hidden shadow-lg bg-white">
-        <div className="relative h-96 w-full">
-          <Image
-            src="/images/icon/worker.jpg" // remplace par ton image
-            alt="Vaccine vials"
-            layout="fill"
-            objectFit="cover"
-          />
-          {/* Play Button */}
-          <div className="absolute top-6 right-6">
-            <div className="relative w-[40px] h-[40px]">
-              <span className="pulse-ring"></span> {/* Cercle animé */}
-              <div className="bg-[#006bff] rounded-full p-2 cursor-pointer relative z-1">
-                <Image
-                  width={40}
-                  height={40}
-                  src="/images/icon/icon-play.svg"
-                  alt="logitech"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Caption */}
-        <div className="p-4 bg-gray-700 text-white text-sm font-medium">
-          Lorem ipsum dolor sit amet conse adipiscing elit.
-        </div>
-      </div>
-
-        <div className="w-full max-w-sm rounded-lg overflow-hidden shadow-lg bg-white">
-        <div className="relative h-96 w-full">
-          <Image
-            src="/images/icon/plane.jpg" // remplace par ton image
-            alt="Vaccine vials"
-            layout="fill"
-            objectFit="cover"
-          />
-          {/* Play Button */}
-          <div className="absolute top-6 right-6">
-            <div className="relative w-[40px] h-[40px]">
-              <span className="pulse-ring"></span> {/* Cercle animé */}
-              <div className="bg-[#006bff] rounded-full p-2 cursor-pointer relative z-1">
-                <Image
-                  width={40}
-                  height={40}
-                  src="/images/icon/icon-play.svg"
-                  alt="logitech"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Caption */}
-        <div className="p-4 bg-gray-700 text-white text-sm font-medium">
-          Lorem ipsum dolor sit amet conse adipiscing elit.
-        </div>
-      </div>
-      </div>
+    <section className="w-full flex flex-col space-y-16 project-item p-2 lg:p-12" id="project">
+      <Carrousel />
     </section>
+
+
+
+    <section className="w-full flex flex-col space-y-16 materiel-item p-4 lg:p-12" id="">
+      <Materiel />
+    </section>
+
+
+    <section className="w-full flex flex-col space-y-16 p-4 lg:p-12">
+      <Testimonial />
+    </section>
+
 
       <section className="contact w-full p-4 lg:p-12 flex flex-col justify-end space-y-16" id="contact">
           

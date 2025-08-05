@@ -5,7 +5,7 @@ export default function Footer(){
     return(
       <>
       {/* <div className="section-bar" ></div> */}
-      <footer className="flex flex-col w-full space-y-16 px-2 lg:px-16 pt-8">
+      <footer className="flex flex-col w-full space-y-16 px-4 lg:px-16 pt-8">
         <div className="flex max-lg:flex-col items-center lg:space-x-16 max-lg:space-y-8 w-full">
 
             <div className="flex flex-col space-y-4 w-full lg:w-[25%]">
@@ -128,16 +128,19 @@ export default function Footer(){
 
               <ul className="flex flex-col space-y-2 text-gray-500">
                 <li>
-                  <a href="#">Web Development</a>
+                  <a href="#">Services sanitaires & Tourisme médical</a>
                 </li>
                 <li>
-                  <a href="#">Graphics Design</a>
+                  <a href="#">Matériel Médical et de Laboratoire</a>
                 </li>
                 <li>
-                  <a href="#">Digital Marketing</a>
+                  <a href="#">Construction & Finition</a>
+                </li>
+                 <li>
+                  <a href="#">Voyages en Turquie</a>
                 </li>
                 <li>
-                  <a href="#">Ui/Ux Design</a>
+                  <a href="#">Projets en Afrique</a>
                 </li>
               </ul>
             </div>
@@ -179,7 +182,7 @@ export default function Footer(){
           </div>
 
           <div className="flex max-md:justify-center">
-            <span className="text-gray-500">© 2025 Dervan. All rights reserved</span>
+            <span className="text-gray-500">© 2025 NGOLION. All rights reserved</span>
           </div>
         </div>
       </footer>
