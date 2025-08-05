@@ -50,11 +50,11 @@ import Image from "next/image";
 //                     </div>
 //                   <div className="w-full  flex space-x-2 lg:space-x-4">
                       
-//                     <div className="flex justify-center items-center">
+//                     <div className="flex justify-center items-center relative">
 //                         <button  onClick={() =>
 //                         scrollRef.current?.scrollBy({ left: -300, behavior: 'smooth' })
 //                       }>
-//                         <i className="fa-solid fa-arrow-left size-12 border border-gray-500 rounded-full size-12 p-4 text-gray-500 hover:bg-[#006bff] hover:border-[#006bff] hover:text-white"></i>
+//                         <i className="fa-solid fa-arrow-left size-12 border border-[#006bff] rounded-full size-12 p-4 bg-[#006bff] text-white absolute top-48 left-8 z-10"></i>
 //                       </button>
 //                     </div>
             
@@ -77,7 +77,7 @@ import Image from "next/image";
 //                           />
             
 //                           {/* Play Button */}
-//                           <div className="absolute top-6 right-6">
+//                           {/* <div className="absolute top-6 right-6">
 //                             <div className="relative w-[40px] h-[40px]">
 //                               <span className="pulse-ring"></span>
 //                               <div className="bg-[#006bff] rounded-full p-2 cursor-pointer relative z-1">
@@ -89,7 +89,7 @@ import Image from "next/image";
 //                                 />
 //                               </div>
 //                             </div>
-//                           </div>
+//                           </div> */}
 //                         </div>
             
 //                         <div className="p-4 bg-gray-700 text-white text-sm font-medium">
@@ -99,11 +99,11 @@ import Image from "next/image";
 //                     ))}
                     
 //                   </div>
-//                     <div className="flex justify-center items-center">
+//                     <div className="flex justify-center items-center relative">
 //                       <button onClick={() =>
 //                         scrollRef.current?.scrollBy({ left: 300, behavior: 'smooth' })
 //                       }>
-//                         <i className="fa-solid fa-arrow-right size-12 border border-gray-500 rounded-full size-12 p-4 text-gray-500 hover:bg-[#006bff] hover:border-[#006bff] hover:text-white"></i>
+//                         <i className="fa-solid fa-arrow-right size-12 border rounded-full size-12 p-4 bg-[#006bff] border-[#006bff] text-white absolute top-48 right-8"></i>
 //                       </button>
 //                     </div>
                     
@@ -134,45 +134,6 @@ export default function Carrousel() {
 
  const images = ['dentist', 'doctor', 'worker', 'plane', 'architect', 'surgery', 'istanbul'];
 
-  // Mesurer dynamiquement la largeur d’un élément
-  useEffect(() => {
-    if (itemRef.current) {
-      const width = itemRef.current.getBoundingClientRect().width;
-      setItemWidth(width);
-    }
-  }, []);
-
-  // Auto-scroll
-  useEffect(() => {
-    const container = scrollRef.current;
-    if (!container || itemWidth === 0) return;
-
-    const scrollInterval = setInterval(() => {
-      const maxScrollLeft = container.scrollWidth - container.clientWidth;
-
-      if (Math.ceil(container.scrollLeft) >= maxScrollLeft) {
-        container.scrollLeft = 0;
-      } else {
-        container.scrollBy({ left: itemWidth, behavior: 'smooth' });
-      }
-    }, 5000);
-
-    return () => clearInterval(scrollInterval);
-  }, [itemWidth]);
-
-  // Mettre à jour l'index actif pour les indicateurs
-  useEffect(() => {
-    const container = scrollRef.current;
-    if (!container) return;
-
-    const handleScroll = () => {
-      const index = Math.round(container.scrollLeft / itemWidth);
-      setActiveIndex(index);
-    };
-
-    container.addEventListener('scroll', handleScroll);
-    return () => container.removeEventListener('scroll', handleScroll);
-  }, [itemWidth]);
 
   return (
     <>
@@ -186,16 +147,14 @@ export default function Carrousel() {
       </div>
 
       <div className="w-full flex space-x-2 lg:space-x-4 items-center mt-8">
-        {/* Bouton gauche */}
-        <div className="flex justify-center items-center max-md:hidden">
-          <button onClick={() =>
-            scrollRef.current?.scrollBy({ left: -itemWidth, behavior: 'smooth' })
-          }>
-            <i className="fa-solid fa-arrow-left size-12 border border-gray-500 rounded-full p-4 text-gray-500 hover:bg-[#006bff] hover:border-[#006bff] hover:text-white"></i>
+        
+        <div className="flex justify-center items-center relative">
+          <button>
+            <i className="fa-solid fa-arrow-left size-12 border rounded-full p-4 bg-[#006bff] border-[#006bff] text-white absolute bottom-0 left-8 z-10"></i>
           </button>
         </div>
 
-        {/* Carrousel */}
+        
         <div
           ref={scrollRef}
           className="flex space-x-4 overflow-x-auto scrollbar-hide py-4 px-1 scroll-smooth snap-x snap-mandatory"
@@ -216,7 +175,7 @@ export default function Carrousel() {
                             objectFit="cover"
                           />
             
-                          {/* Play Button */}
+                          
                           <div className="absolute top-6 right-6">
                             <div className="relative w-[40px] h-[40px]">
                               <span className="pulse-ring"></span>
@@ -239,27 +198,15 @@ export default function Carrousel() {
           ))}
         </div>
 
-        {/* Bouton droit */}
-        <div className="flex justify-center items-center max-md:hidden">
-          <button onClick={() =>
-            scrollRef.current?.scrollBy({ left: itemWidth, behavior: 'smooth' })
-          }>
-            <i className="fa-solid fa-arrow-right size-12 border border-gray-500 rounded-full p-4 text-gray-500 hover:bg-[#006bff] hover:border-[#006bff] hover:text-white"></i>
+        
+        <div className="flex justify-center items-center relative">
+          <button>
+            <i className="fa-solid fa-arrow-right size-12 border rounded-full p-4 bg-[#006bff] border-[#006bff] text-white absolute bottom-0 right-8"></i>
           </button>
         </div>
       </div>
 
-      {/* Indicateurs de position */}
-      <div className="flex justify-center w-full mt-4 space-x-2">
-        {images.map((_, i) => (
-          <div
-            key={i}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              i === activeIndex ? 'bg-blue-500 scale-125' : 'bg-gray-300'
-            }`}
-          ></div>
-        ))}
-      </div>
+      
     </>
   );
 }

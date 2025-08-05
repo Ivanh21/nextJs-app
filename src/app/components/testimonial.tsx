@@ -16,14 +16,14 @@ export default function Testimonial(){
     name: 'Sarah Johnson',
     role: 'Lead Surgeon at Istanbul Care',
     text: 'The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.',
-    image: '/images/icon/doctor.jpg',
+    image: '/images/icon/wife.jpg',
     logo: '/images/brand/brand-light-02.svg',
   },
   {
     name: 'Ali Yılmaz',
     role: 'Patient & Entrepreneur',
     text: 'Contrary to popular belief, Lorem Ipsum is not simply random text.',
-    image: '/images/icon/worker.jpg',
+    image: '/images/icon/vision.jpg',
     logo: '/images/brand/brand-light-03.svg',
   },
  ];
@@ -61,17 +61,17 @@ export default function Testimonial(){
                 <div className="w-full flex flex-col justify-center space-y-8 lg:px-24">
                 
                 <div className="w-full flex max-lg:flex-col max-lg:space-y-8 p-8 dark:bg-[#1c2136] rounded-lg lg:space-x-16 testimonial">
-                    <div className="relative h-72 w-80 max-lg:w-full">
+                    <div className="relative h-72 w-[30%] max-lg:w-full">
                         <Image 
                             layout="fill"
                             src={testimonial.image}
                             alt={testimonial.name}
                             objectFit="cover"
-                            className="rounded-lg"
+                            className="rounded-2xl"
                         />
                     </div>
 
-                    <div className="flex flex-col justify-between max-lg:space-y-8">
+                    <div className="flex flex-col justify-between max-lg:space-y-8 lg:w-[70%]">
                         <div className="flex flex-col space-y-4">
                             <Image
                             src={`/images/icon/icon-quote.svg`}
