@@ -61,10 +61,9 @@ export default function Testimonial(){
                 <div className="w-full flex flex-col justify-center space-y-8 lg:px-24">
                 
                 <div className="w-full flex max-lg:flex-col max-lg:space-y-8 p-8 dark:bg-[#1c2136] rounded-lg lg:space-x-16 testimonial">
-                    <div className="relative h-72 w-1/2 max-lg:w-full">
+                    <div className="relative h-72 w-80 max-lg:w-full">
                         <Image 
-                            width={900}
-                            height={300}
+                            layout="fill"
                             src={testimonial.image}
                             alt={testimonial.name}
                             objectFit="cover"
