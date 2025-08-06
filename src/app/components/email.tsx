@@ -1,33 +1,57 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
 
 
 export default function Email(){
   const form = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState('');
 
+//   const sendEmail = (e: React.FormEvent) => {
+//     e.preventDefault();
+
+//     if (!form.current) return;
+
+//     emailjs
+//       .sendForm(
+//         'service_hbmfl8s',  
+//         'template_b1xmi2w',  
+//         form.current,
+//         'B2hJtZR6UR-qCW1yJ'       
+//       )
+//        .then(
+//         () => {
+//           setStatus('Message envoyé avec succès !');
+//           form.current?.reset();
+//         },
+//         (error) => {
+//           console.error(error);
+//           setStatus("Erreur lors de l'envoi du message.");
+//         }
+//       );
+//   };
+
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
-
     if (!form.current) return;
+
+    const toastId = toast.loading('Envoi du message...');
 
     emailjs
       .sendForm(
         'service_hbmfl8s',  
         'template_b1xmi2w',  
         form.current,
-        'B2hJtZR6UR-qCW1yJ'       
+        'B2hJtZR6UR-qCW1yJ' 
       )
-       .then(
-        () => {
-          setStatus('Message envoyé avec succès !');
-          form.current?.reset();
-        },
-        (error) => {
-          console.error(error);
-          setStatus("Erreur lors de l'envoi du message.");
-        }
-      );
+      .then(() => {
+        toast.success('Message envoyé avec succès !', { id: toastId });
+        form.current?.reset();
+      })
+      .catch((error) => {
+        console.error(error);
+        toast.error("Une erreur est survenue. Réessaie plus tard.", { id: toastId });
+      });
   };
 
     return (
@@ -174,7 +198,7 @@ export default function Email(){
                   <button className="bg-[#006bff] p-4 text-white rounded-full">Send Message</button>
                 </div>
 
-                {status && <p className="text-center text-sm mt-2 text-green-600">{status}</p>}
+             
               </form>
             </div>
         </div>

@@ -60,7 +60,7 @@ export default function Testimonial(){
                 </div>
                 <div className="w-full flex flex-col justify-center space-y-8 lg:px-24">
                 
-                <div className="w-full flex max-lg:flex-col max-lg:space-y-8 p-8 dark:bg-[#1c2136] rounded-lg lg:space-x-16 testimonial">
+                <div className="w-full flex max-md:flex-col max-md:space-y-8 p-8 dark:bg-[#1c2136] rounded-lg md:space-x-16 testimonial">
                     <div className="relative h-72 w-[30%] max-lg:w-full">
                         <Image 
                             layout="fill"

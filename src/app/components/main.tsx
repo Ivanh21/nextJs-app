@@ -232,18 +232,6 @@ export default function Main(){
               </div>
             </div>
 
-            {/* <div className="w-[40%] p-4 max-lg:w-full menu-item rounded-lg">
-              <Image
-                width={50}
-                height={50}
-                src="/images/icon/icon-09.svg"
-                alt="Logo"
-              />
-              <div className="flex flex-col space-y-6 pt-6">
-                <span className="text-lg font-bold">Regular Updates</span>
-                <p className="text-sm text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
-              </div>
-            </div> */}
             </div>
         </div>
       </section>
@@ -254,27 +242,27 @@ export default function Main(){
         <h1 className="text-5xl font-bold max-lg:text-4xl max-md:text-2xl">Trusted by Global Brands</h1>
         <p className="text-sm text-gray-500 w-[50%] max-md:w-full text-center">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.</p>
       </div>
-      {/* <div className="w-full flex max-lg:flex-col max-lg:space-y-8 justify-center items-center lg:space-x-16">
+      <div className="w-full flex max-lg:flex-col max-lg:space-y-8 justify-center items-center lg:space-x-16">
         
         <div className="flex items-center justify-center space-x-4 md:space-x-16">
           <Image
           width={100}
           height={44}
-          src="/images/brand/brand-light-01.svg"
+          src="/images/icon/icon-04.svg"
           alt="logitech"
           />
         
           <Image
           width={100}
           height={44}
-          src="/images/brand/brand-light-02.svg"
+          src="/images/icon/icon-05.svg"
           alt="logitech"
           />
           
           <Image
           width={100}
           height={44}
-          src="/images/brand/brand-light-03.svg"
+          src="/images/icon/icon-06.svg"
           alt="logitech"
           />
         
@@ -285,27 +273,27 @@ export default function Main(){
           <Image
           width={100}
           height={44}
-          src="/images/brand/brand-light-04.svg"
+          src="/images/icon/icon-07.svg"
           alt="logitech"
           />
       
           <Image
           width={100}
           height={44}
-          src="/images/brand/brand-light-05.svg"
+          src="/images/icon/icon-08.svg"
           alt="logitech"
           />
 
           <Image
           width={100}
           height={44}
-          src="/images/brand/brand-light-06.svg"
+          src="/images/icon/icon-09.svg"
           alt="logitech"
           />
   
 
         </div>
-      </div> */}
+      </div>
       <div className="border-b border-gray-300 px-24"></div>
     </section>
 
