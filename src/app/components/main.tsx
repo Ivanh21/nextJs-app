@@ -104,9 +104,7 @@ export default function Main(){
             </div>
  
           </div> */}
-      </div>
-
-      <div className="flex w-full max-lg:flex-wrap items-center lg:justify-between justify-center max-lg:gap-8 max-md:flex-col max-md:gap-16">
+              <div className="flex w-full max-lg:flex-wrap items-center lg:justify-between justify-center max-lg:gap-8 max-md:flex-col max-md:gap-16">
         <div className="max-md:w-full flex items-center space-x-4">
         <div className="bg-[#F57] p-4 rounded-full">
         <Image
@@ -152,6 +150,9 @@ export default function Main(){
         </div>
         </div>
         </div>
+      </div>
+
+
       </section>
 
 
