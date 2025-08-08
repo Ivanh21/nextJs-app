@@ -12,17 +12,8 @@ export default function Footer(){
               <Image
               width={60}
               height={20}
-              src="/images/logo/logo-or.png"
-              alt="logo"
-              className="block dark:hidden"
-              />
-
-              <Image
-              width={60}
-              height={20}
               src="/images/logo/logo-or-dark.png"
               alt="logo"
-              className="hidden dark:block"
               />
 
               <p className="text-sm text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -104,20 +95,20 @@ export default function Footer(){
             <div className="flex justify-between w-full max-md:flex-col max-md:space-y-8">
             <div className="flex flex-col space-y-4">
               
-              <h2 className="text-xl font-semibold">Quick Links</h2>
+              <h2 className="text-xl font-semibold">Liens</h2>
 
               <ul className="flex flex-col space-y-2 text-gray-500">
                 <li>
-                  <a href="#home">Home</a>
+                  <a href="#home">Accueil</a>
                 </li>
                 <li>
-                  <a href="#work">About</a>
+                  <a href="#about">À propos</a>
                 </li>
                 <li>
-                  <a href="#project">Features</a>
+                  <a href="#project">Projets</a>
                 </li>
                 <li>
-                  <a href="#contact">Support</a>
+                  <a href="#contact">Contact</a>
                 </li>
               </ul>
             </div>
@@ -163,13 +154,13 @@ export default function Footer(){
               </ul>
             </div> */}
  
-            <div className="flex flex-col space-y-4">
+            <div className="flex flex-col space-y-4 lg:w-[30%]">
               
               <h2 className="text-xl font-semibold">Newsletter</h2>
 
-              <p className="text-gray-500">Subscribe to receive future updates</p>
+              <p className="text-gray-500">Abonnez-vous pour recevoir des futures informations</p>
 
-              <input type="text" className="rounded-full p-3 news dark:bg-[#181c31]" placeholder="Email address" />
+              <input type="text" className="rounded-full p-3 news dark:bg-[#181c31]" placeholder="example@gmail.com" />
             </div>  
             </div>
             

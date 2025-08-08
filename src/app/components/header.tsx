@@ -33,25 +33,18 @@ export default function Header(){
             <Image
             width={60}
             height={20}
-            src="/images/logo/logo-or.png"
-            alt="Logo"
-            className="block dark:hidden"
-            />
-            <Image
-            width={60}
-            height={20}
             src="/images/logo/logo-or-dark.png"
             alt="Logo"
-            className="hidden dark:block"
             />
+        
         </div>
 
         <div className="hidden lg:flex space-x-8">
 
-        <a href="#home" className="text-lg font-semibold">Home</a>
-        <a href="#work" className="text-lg font-semibold">About</a>
-        <a href="#project" className="text-lg font-semibold">Features</a>
-        <a href="#contact" className="text-lg font-semibold">Support</a>
+        <a href="#home" className="text-lg font-semibold">Accueil</a>
+        <a href="#about" className="text-lg font-semibold">À propos</a>
+        <a href="#project" className="text-lg font-semibold">Projets</a>
+        <a href="#contact" className="text-lg font-semibold">Contact</a>
 
         </div>
 
@@ -62,7 +55,7 @@ export default function Header(){
       </div>
 
       <div className="max-lg:hidden relative inline-block text-left">
-      <button
+      {/* <button
         onClick={() => setOpen(!open)}
         className="inline-flex items-center gap-2 border px-3 py-2 rounded hover:bg-gray-100 dark:hover:bg-[#181c31]"
       >
@@ -99,7 +92,7 @@ export default function Header(){
             </li>
           ))}
         </ul>
-      )}
+      )} */}
     </div>
     {isVisible && (
       <div className="absolute">

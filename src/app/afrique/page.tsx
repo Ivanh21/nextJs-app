@@ -19,7 +19,7 @@ export default function Afrique(){
                 layout="fill"
                 objectFit="cover"
                 alt="Projet afrique 1"
-                className="mt-12 px-24 rounded-[8%]"
+                className="mt-12 px-24 rounded-[10%]"
                 />
             </div>
 

@@ -162,10 +162,10 @@ export default function Main(){
 
       <section className="w-full flex flex-col justify-center space-y-8 lg:px-24" id="about">
           <div className="text-5xl font-bold max-lg:text-4xl max-md:text-2xl text-center">
-            <h1>About me</h1>
+            <h1>À propos de moi</h1>
           </div>
-          <div className="w-full flex justify-center items-center space-x-8">
-            <div className="">
+          <div className="w-full flex justify-center items-center px-4 md:space-x-8">
+            <div className="max-md:hidden">
                 <Image 
                 width={300}
                 height={200}
@@ -174,14 +174,14 @@ export default function Main(){
                 className="rounded-[50%]"
                 /> 
             </div>
-            <div className="flex flex-col space-y-6 justify-center w-[40%]">
+            <div className="flex flex-col space-y-6 justify-center w-[40%] max-md:w-full">
             <p className="text-gray-500 text-justify">
               Co-fondateur de Turkey Healthcare Group & Istanbul infertility Center j’accompagne les entreprises et institutions médicales dans la mise en place de solutions de soins de santé de haut niveau, en 
               facilitant l’accès à une médecine d’excellence grâce à des collaborations internationales solides et des technologies médicales avancées. <br />
               Je m’investis pleinement pour connecter l’Afrique aux meilleures expertises médicales de Turquie, avec une approche personnalisée, humaine et tournée vers les résultats.
             </p>
               <div className="flex justify-center">
-                <a href="#" className="w-[40%] p-4 border border-[#006bff] rounded-full text-center max-lg:text-md flex justify-center">Télécharger mon CV</a>
+                <a href="#" className="w-auto p-4 border border-[#006bff] rounded-full text-center max-lg:text-md flex justify-center">Télécharger mon CV</a>
               </div>
             </div>
           </div>
@@ -196,67 +196,39 @@ export default function Main(){
         </div>
 
         <div className="flex flex-col justify-center items-center space-y-4 px-4 lg:px-24">
-            <div className="flex max-md:flex-col items-center justify-center space-x-4">
-              <div className="w-[30%] max-lg:w-full menu-item h-56 rounded-lg p-4 space-y-8 flex flex-col justify-center items-center cursor-pointer">
-              {/* <div className="flex justify-center">
-                <i className="fa-solid fa-hospital text-3xl text-[#006bff] border-[#006bff] rounded-full"></i>
-              </div> */}
-               <Image
-                width={50}
-                height={50}
-                src="/images/icon/icon-04.svg"
-                alt="Logo"
-              />
-              <div className="flex flex-col space-y-6">
+            <div className="flex max-md:flex-col items-center justify-center max-md:space-y-4 md:space-x-4">
+              <div className="w-[30%] max-lg:w-full menu-item h-56 rounded-lg p-4 space-y-4 flex flex-col justify-center items-center cursor-pointer">
+                <i className="fi fi-ss-entrance icon-circle"></i>              
+                <div className="flex flex-col">
                 <span className="text-lg font-bold text-center">Accès à des hôpitaux accrédités et des médecins parmi les meilleurs de Turquie</span>
               </div>
               </div>
 
-            <div className="w-[30%] max-lg:w-full p-4 menu-item h-56 rounded-lg space-y-8 flex flex-col justify-center items-center cursor-pointer">
-              <Image
-                width={50}
-                height={50}
-                src="/images/icon/icon-05.svg"
-                alt="Logo"
-              />
-              <div className="flex flex-col space-y-6">
+            <div className="w-[30%] max-lg:w-full p-4 menu-item h-56 rounded-lg space-y-4 flex flex-col justify-center items-center cursor-pointer">
+              <i className="fi fi-sr-people-group icon-circle"></i>
+              <div className="flex flex-col">
                 <span className="text-lg font-bold text-center"> Prise en charge personnalisée et confidentielle</span>
               </div>
             </div>
 
-            <div className="w-[30%] max-lg:w-full p-4 menu-item h-56 rounded-lg space-y-8 flex flex-col justify-center items-center cursor-pointer">
-              <Image
-                width={50}
-                height={50}
-                src="/images/icon/icon-06.svg"
-                alt="Logo"
-              />
+            <div className="w-[30%] max-lg:w-full p-4 menu-item h-56 rounded-lg space-y-4 flex flex-col justify-center items-center cursor-pointer">
+              <i className="fi fi-sr-sack-dollar icon-circle"></i>
               <div className="flex flex-col space-y-6">
                 <span className="text-lg font-bold text-center">Tarifs compétitifs, sans compromis sur la qualité des soins</span>
               </div>
             </div>
             </div>
 
-            <div className="w-full flex max-md:flex-col items-center justify-center space-x-4">
-              <div className="w-[30%] max-lg:w-full menu-item h-56 rounded-lg p-4 space-y-8 flex flex-col justify-center items-center cursor-pointer">
-              <Image
-                width={50}
-                height={50}
-                src="/images/icon/icon-07.svg"
-                alt="Logo"
-              />
+            <div className="w-full flex max-md:flex-col items-center justify-center max-md:space-y-4 md:space-x-4">
+              <div className="w-[30%] max-lg:w-full menu-item h-56 rounded-lg p-4 space-y-4 flex flex-col justify-center items-center cursor-pointer">
+              <i className="fi fi-ss-hr-management icon-circle"></i>
               <div className="flex flex-col space-y-6">
                 <span className="text-lg font-bold text-center">Coordination complète avant, pendant et après le traitement</span>
               </div>
               </div>
 
-            <div className="w-[30%] max-lg:w-full menu-item h-56 rounded-lg p-4 space-y-8 flex flex-col justify-center items-center cursor-pointer">
-              <Image
-                width={50}
-                height={50}
-                src="/images/icon/icon-08.svg"
-                alt="Logo"
-              />
+            <div className="w-[30%] max-lg:w-full menu-item h-56 rounded-lg p-4 space-y-4 flex flex-col justify-center items-center cursor-pointer">
+              <i className="fi fi-ss-user-headset icon-circle"></i>
               <div className="flex flex-col space-y-6">
                 <span className="text-lg font-bold text-center">Service client multilingue et équipe dédiée en Afrique</span>
               </div>
@@ -354,67 +326,42 @@ export default function Main(){
         </div>
 
         <div className="flex flex-col justify-center items-center space-y-4 px-4 lg:px-24">
-            <div className="flex max-md:flex-col items-center justify-center space-x-4">
+            <div className="flex max-md:flex-col items-center justify-center max-md:space-y-4 md:space-x-4">
               <div className="w-[30%] max-lg:w-full menu-item h-56 rounded-lg p-4 space-y-8 flex flex-col justify-center items-center cursor-pointer">
               {/* <div className="flex justify-center">
                 <i className="fa-solid fa-hospital text-3xl text-[#006bff] border-[#006bff] rounded-full"></i>
               </div> */}
-               <Image
-                width={50}
-                height={50}
-                src="/images/icon/icon-04.svg"
-                alt="Logo"
-              />
+              <i className="fi fi-ss-hand-holding-medical icon-circle"></i>
               <div className="flex flex-col space-y-6">
                 <span className="text-lg font-bold text-center">Services sanitaires & Tourisme médical</span>
               </div>
               </div>
 
             <div className="w-[30%] max-lg:w-full p-4 menu-item h-56 rounded-lg space-y-8 flex flex-col justify-center items-center cursor-pointer">
-              <Image
-                width={50}
-                height={50}
-                src="/images/icon/icon-05.svg"
-                alt="Logo"
-              />
+              <i className="fi fi-rr-stethoscope icon-circle"></i>
               <div className="flex flex-col space-y-6">
                 <span className="text-lg font-bold text-center">Fourniture de Matériel Médical et de Laboratoire</span>
               </div>
             </div>
 
             <div className="w-[30%] max-lg:w-full p-4 menu-item h-56 rounded-lg space-y-8 flex flex-col justify-center items-center cursor-pointer">
-              <Image
-                width={50}
-                height={50}
-                src="/images/icon/icon-06.svg"
-                alt="Logo"
-              />
+              <i className="fi fi-ss-hard-hat icon-circle"></i>
               <div className="flex flex-col space-y-6">
                 <span className="text-lg font-bold">Matériel de Construction & Finition</span>
               </div>
             </div>
             </div>
 
-            <div className="w-full flex max-md:flex-col items-center justify-center space-x-4">
+            <div className="w-full flex max-md:flex-col items-center justify-center max-md:space-y-4 md:space-x-4">
               <div className="w-[30%] max-lg:w-full menu-item h-56 rounded-lg p-4 space-y-8 flex flex-col justify-center items-center cursor-pointer">
-              <Image
-                width={50}
-                height={50}
-                src="/images/icon/icon-07.svg"
-                alt="Logo"
-              />
+              <i className="fi fi-ss-plane icon-circle"></i>
               <div className="flex flex-col space-y-6">
                 <span className="text-lg font-bold">Voyages d’Affaires en Turquie</span>
               </div>
               </div>
 
             <div className="w-[30%] max-lg:w-full menu-item h-56 rounded-lg p-4 space-y-8 flex flex-col justify-center items-center cursor-pointer">
-              <Image
-                width={50}
-                height={50}
-                src="/images/icon/icon-08.svg"
-                alt="Logo"
-              />
+              <i className="fi fi-rr-earth-africa icon-circle"></i>
               <div className="flex flex-col space-y-6">
                 <span className="text-lg font-bold">Projets en Afrique</span>
               </div>
@@ -426,7 +373,7 @@ export default function Main(){
 
 
 
-    <section className="w-full flex flex-col space-y-16 justify-center lg:px-16" id="brand">
+    {/* <section className="w-full flex flex-col space-y-16 justify-center lg:px-16" id="brand">
       <div className="flex flex-col justify-center items-center space-y-4 px-2 max-lg:px-4">
         <h1 className="text-5xl font-bold max-lg:text-4xl max-md:text-2xl">Trusted by Global Brands</h1>
         <p className="text-sm text-gray-500 w-[50%] max-md:w-full text-center">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.</p>
@@ -484,7 +431,7 @@ export default function Main(){
         </div>
       </div>
       <div className="border-b border-gray-300 px-24"></div>
-    </section>
+    </section> */}
 
     <section className="w-full flex flex-col space-y-16 project-item p-2 lg:pt-12 lg:pb-12" id="project">
       <Carrousel />

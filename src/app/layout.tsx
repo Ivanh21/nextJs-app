@@ -39,6 +39,9 @@ export default function RootLayout({
           src="https://kit.fontawesome.com/c44b1437e7.js"
           crossOrigin="anonymous"
         />
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-straight/css/uicons-solid-straight.css' />
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css' />
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css' />
       </head>
       <body
         className={poppins.className}

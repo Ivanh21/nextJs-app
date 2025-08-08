@@ -57,8 +57,8 @@ export default function Email(){
     return (
         <>
           <div className="flex flex-col justify-center items-center space-y-4 px-2">
-          <h1 className="text-5xl font-bold max-md:text-2xl max-lg:text-4xl ">Lets Stay Connected</h1>
-          <p className="text-sm text-gray-500 w-[50%] max-md:w-full text-center">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.</p>
+          <h1 className="text-5xl font-bold max-md:text-2xl max-lg:text-4xl ">Contactez-moi</h1>
+          <p className="text-sm text-gray-500 w-[50%] max-md:w-full text-center">Pour plus des informations, contactez-moi en utilisant mes coordonnées.</p>
         </div>
         
 
@@ -66,7 +66,7 @@ export default function Email(){
             <div className="w-[25%] max-lg:w-[50%] max-md:w-full block-contact social-media p-8 rounded-xl">
               <div className="flex flex-col space-y-10">
                 <div className="flex flex-col">
-                    <h2 className="text-lg font-semibold">Email Address</h2>
+                    <h2 className="text-lg font-semibold">Adresse email</h2>
                     <a href="mailto:support@startup.com" className="text-gray-500">support@startup.com</a>
                 </div>
                 <div className="flex flex-col">
@@ -74,7 +74,7 @@ export default function Email(){
                   <a href="#" className="text-gray-500">76/A, Green valle, Califonia USA.</a>
                 </div>
                 <div className="flex flex-col">
-                  <h2 className="text-lg font-semibold">Phone number</h2>
+                  <h2 className="text-lg font-semibold">Numéro</h2>
                   <a href="tel:+00987543433223" className="text-gray-500">+009 8754 3433 223</a>
                 </div>
                 <div className="flex flex-col">
@@ -85,7 +85,7 @@ export default function Email(){
                 <div className="border border-gray-500"></div>
 
                 <div className="flex flex-col space-y-8">
-                  <h2 className="text-lg font-semibold">Social Media</h2>
+                  <h2 className="text-lg font-semibold">Réseaux socials</h2>
 
                 <ul className="flex items-center gap-5">
                 <li>
@@ -165,27 +165,27 @@ export default function Email(){
               <form ref={form} onSubmit={sendEmail} className="flex flex-col space-y-8">
                 <div className="flex max-lg:flex-col justify-between items-center max-lg:space-y-4 lg:space-x-8">
                   <div className="w-full flex flex-col space-y-1">
-                      <label htmlFor="">Full name</label>
+                      <label htmlFor="">Noms</label>
                       <input type="text" name="name" className="p-4 w-full border border-gray-500 rounded-lg hover:border-[#006bff] dark:bg-[#181c31]" placeholder="John Smith" required />
                   </div>
 
                   
                   <div className="w-full flex flex-col space-y-1">
-                      <label htmlFor="">Email address</label>
+                      <label htmlFor="">Adresse email</label>
                       <input type="email" name="email" className="p-4 w-full border border-gray-500 rounded-lg hover:border-[#006bff] dark:bg-[#181c31]" placeholder="exemple@gmail.com" required />
                   </div>
                 </div>
 
                 <div className="flex max-lg:flex-col justify-between items-center max-lg:space-y-4 lg:space-x-8">
                   <div className="w-full flex flex-col space-y-1">
-                      <label htmlFor="">Phone Number</label>
+                      <label htmlFor="">Numéro de téléphone</label>
                       <input type="text" name="tel" className="p-4 w-full border border-gray-500 rounded-lg hover:border-[#006bff] dark:bg-[#181c31]" placeholder="+009 3342 3432" required />
                   </div>
 
                   
                   <div className="w-full flex flex-col space-y-1">
-                      <label htmlFor="">Subdject</label>
-                      <input type="text" name="subject" className="p-4 w-full border border-gray-500 rounded-lg hover:border-[#006bff] dark:bg-[#181c31]" placeholder="Type of Subject" required />
+                      <label htmlFor="">Sujet</label>
+                      <input type="text" name="subject" className="p-4 w-full border border-gray-500 rounded-lg hover:border-[#006bff] dark:bg-[#181c31]" placeholder="Type du sujet" required />
                   </div>
                 </div>
 
@@ -195,7 +195,7 @@ export default function Email(){
                 </div>
 
                 <div className="flex justify-center">
-                  <button className="bg-[#006bff] p-4 text-white rounded-full">Send Message</button>
+                  <button className="bg-[#006bff] p-4 text-white rounded-full">Envoyer votre message</button>
                 </div>
 
              

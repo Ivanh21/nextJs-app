@@ -55,8 +55,7 @@ export default function Testimonial(){
         return(
             <div className="flex flex-col space-y-16">
                 <div className="flex flex-col justify-center items-center space-y-4 px-2">
-                    <h1 className="text-5xl font-bold max-md:text-2xl max-lg:text-4xl ">Client’s Testimonials</h1>
-                    <p className="text-sm text-gray-500 w-[50%] max-md:w-full text-center">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.</p>
+                    <h1 className="text-5xl font-bold max-md:text-2xl max-lg:text-4xl ">Avis des clients</h1>
                 </div>
                 <div className="w-full flex flex-col justify-center space-y-8 lg:px-24">
                 
