@@ -15,15 +15,23 @@ export default function Header(){
 
   const [isFixed, setIsFixed] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollThreshold = 40; 
-      setIsFixed(window.scrollY > scrollThreshold);
-    };
+useEffect(() => {
+  // On laisse le navigateur restaurer la position
+  if ('scrollRestoration' in window.history) {
+    window.history.scrollRestoration = 'auto';
+  }
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const handleScroll = () => {
+    const scrollThreshold = 40;
+    setIsFixed(window.scrollY > scrollThreshold);
+  };
+
+  // Vérifie immédiatement la position au chargement
+  handleScroll();
+
+  window.addEventListener('scroll', handleScroll);
+  return () => window.removeEventListener('scroll', handleScroll);
+}, []);
   
   const [isVisible, setIsVisible] = useState(false);
 
@@ -109,7 +117,7 @@ export default function Header(){
           <a href="#project" className="text-lg text-gray-500 font-bold" onClick={() => setIsVisible(!isVisible)}>Features</a>
           <a href="#contact" className="text-lg text-gray-500 font-bold" onClick={() => setIsVisible(!isVisible)}>Support</a>
 
-        <div className="lg:hidden relative inline-block text-left">
+        {/* <div className="lg:hidden relative inline-block text-left">
         <button
           onClick={() => setOpen(!open)}
           className="inline-flex items-center gap-2 border px-3 py-2 rounded hover:bg-gray-100 dark:hover:bg-[#181c31]"
@@ -149,7 +157,7 @@ export default function Header(){
             ))}
           </ul>
         )}
-      </div>
+      </div> */}
         </div>
       </div>
     </div>

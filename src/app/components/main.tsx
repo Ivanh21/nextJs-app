@@ -46,7 +46,7 @@ export default function Main(){
               Je m’investis pleinement pour connecter l’Afrique aux meilleures expertises médicales de Turquie, avec une approche personnalisée, humaine et tournée vers les résultats. */}
             </p>
             <div className="flex space-x-8">
-              <a href="#work" className="p-4 bg-[#006bff] rounded-full text-white text-center max-lg:text-md">En savoir plus</a>
+              <a href="#about" className="p-4 bg-[#006bff] rounded-full text-white text-center max-lg:text-md">En savoir plus</a>
 
             
               {/* <div className="flex flex-col space-y-2">
