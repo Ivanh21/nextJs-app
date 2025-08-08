@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Footer from "../components/footer";
+import Link from "next/link";
 
 
 
@@ -8,7 +9,7 @@ export default function Afrique(){
         <div className="flex flex-col py-8">
         
         <div className="px-24">
-            <a href="/" className="w-[10%] p-4 border border-[#006bff] bg-[#006bff] text-white rounded-full text-center flex justify-center">Retour</a>
+            <Link href="/" className="w-[10%] p-4 border border-[#006bff] bg-[#006bff] text-white rounded-full text-center flex justify-center">Retour</Link>
         </div>
 
         <main>
