@@ -433,9 +433,9 @@ export default function Main(){
       <div className="border-b border-gray-300 px-24"></div>
     </section> */}
 
-    <section className="w-full flex flex-col space-y-16 project-item p-2 lg:pt-12 lg:pb-12" id="project">
+    {/* <section className="w-full flex flex-col space-y-16 project-item p-2 lg:pt-12 lg:pb-12" id="project">
       <Carrousel />
-    </section>
+    </section> */}
 
 
 
