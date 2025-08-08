@@ -273,6 +273,16 @@ export default function Carousel() {
   }, [])
 
   return (
+    <>
+    
+     <div className="flex flex-col justify-center items-center space-y-4 lg:px-2">
+        <h1 className="text-5xl font-bold max-md:text-2xl max-lg:text-4xl text-center">
+          Latest Projects
+         </h1>
+         <p className="text-sm text-gray-500 w-[50%] max-md:w-full text-center">
+           It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.
+        </p>
+       </div>
     <div className="w-full flex flex-col items-center relative mt-8 overflow-hidden">
       {/* Flèche gauche */}
       <button
@@ -344,5 +354,6 @@ export default function Carousel() {
         ))}
       </div>
     </div>
+    </>
   )
 }

@@ -4,6 +4,8 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 import { Toaster } from "react-hot-toast";
+import Header from "./components/header";
+import Footer from "./components/footer";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -41,7 +43,9 @@ export default function RootLayout({
       <body
         className={poppins.className}
       >
-        {children}
+      
+        <main>{children}</main>
+        <Footer />
         <Toaster position="top-right" reverseOrder={false} />
       </body>
     </html>

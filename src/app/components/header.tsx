@@ -28,7 +28,7 @@ export default function Header(){
   const [isVisible, setIsVisible] = useState(false);
 
     return (
-      <header className={`${styles.navbar} ${isFixed ? `${styles.fixed}` : ''} top-0 left-0 navbar w-full flex justify-between items-center px-2 py-4 lg:px-16 absolute z-10`}>
+      <header className={`${styles.navbar} ${isFixed ? `${styles.fixed}` : ''} top-0 left-0 navbar w-full flex justify-between items-center px-2 py-4 lg:px-16 absolute z-99`}>
           <div className="">
             <Image
             width={60}
