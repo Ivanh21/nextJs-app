@@ -36,7 +36,7 @@ useEffect(() => {
   const [isVisible, setIsVisible] = useState(false);
 
     return (
-      <header className={`${styles.navbar} ${isFixed ? `${styles.fixed}` : ''} top-0 left-0 navbar w-full flex justify-between items-center px-2 py-4 lg:px-16 absolute z-99`}>
+      <header className={`${styles.navbar} ${isFixed ? `${styles.fixed}` : ''} top-0 left-0 navbar w-full flex justify-between items-center px-2 py-4 lg:px-16 absolute z-40`}>
           <div className="">
             <Image
             width={60}
@@ -49,10 +49,11 @@ useEffect(() => {
 
         <div className="hidden lg:flex space-x-8">
 
-        <a href="#home" className="text-lg font-semibold">Accueil</a>
-        <a href="#about" className="text-lg font-semibold">À propos</a>
-        <a href="#project" className="text-lg font-semibold">Projets</a>
-        <a href="#contact" className="text-lg font-semibold">Contact</a>
+        <a href="/#home" className="text-lg font-semibold">Accueil</a>
+        <a href="/#about" className="text-lg font-semibold">À propos</a>
+        <a href="/#services" className="text-lg font-semibold">Services</a>
+        <a href="/#project" className="text-lg font-semibold">Projets</a>
+        <a href="/#contact" className="text-lg font-semibold">Contact</a>
 
         </div>
 
@@ -112,10 +113,10 @@ useEffect(() => {
           <i className="fa-solid fa-xmark text-2xl text-gray-500 hover:text-black"></i>
         </button>
         <div className="flex flex-col justify-center items-center space-y-8">
-          <a href="#home" className="text-lg text-gray-500 font-bold" onClick={() => setIsVisible(!isVisible)}>Home</a>
-          <a href="#work" className="text-lg text-gray-500 font-bold" onClick={() => setIsVisible(!isVisible)}>About</a>
-          <a href="#project" className="text-lg text-gray-500 font-bold" onClick={() => setIsVisible(!isVisible)}>Features</a>
-          <a href="#contact" className="text-lg text-gray-500 font-bold" onClick={() => setIsVisible(!isVisible)}>Support</a>
+          <a href="/#home" className="text-lg text-gray-500 font-bold" onClick={() => setIsVisible(!isVisible)}>Accueil</a>
+          <a href="/#work" className="text-lg text-gray-500 font-bold" onClick={() => setIsVisible(!isVisible)}>À propos</a>
+          <a href="/#project" className="text-lg text-gray-500 font-bold" onClick={() => setIsVisible(!isVisible)}>Projets</a>
+          <a href="/#contact" className="text-lg text-gray-500 font-bold" onClick={() => setIsVisible(!isVisible)}>Contact</a>
 
         {/* <div className="lg:hidden relative inline-block text-left">
         <button

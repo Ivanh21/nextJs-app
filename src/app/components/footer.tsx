@@ -99,16 +99,19 @@ export default function Footer(){
 
               <ul className="flex flex-col space-y-2 text-gray-500">
                 <li>
-                  <a href="#home">Accueil</a>
+                  <a href="/#home">Accueil</a>
                 </li>
                 <li>
-                  <a href="#about">À propos</a>
+                  <a href="/#about">À propos</a>
+                </li>
+                 <li>
+                  <a href="/#services">Services</a>
                 </li>
                 <li>
-                  <a href="#project">Projets</a>
+                  <a href="/#project">Projets</a>
                 </li>
                 <li>
-                  <a href="#contact">Contact</a>
+                  <a href="/#contact">Contact</a>
                 </li>
               </ul>
             </div>
@@ -119,19 +122,19 @@ export default function Footer(){
 
               <ul className="flex flex-col space-y-2 text-gray-500">
                 <li>
-                  <a href="#">Services sanitaires & Tourisme médical</a>
+                  <a href="/sanitaire">Services sanitaires & Tourisme médical</a>
                 </li>
                 <li>
-                  <a href="#">Matériel Médical et de Laboratoire</a>
+                  <a href="/fourniture">Matériel Médical et de Laboratoire</a>
                 </li>
                 <li>
-                  <a href="#">Construction & Finition</a>
+                  <a href="">Construction & Finition</a>
                 </li>
                  <li>
-                  <a href="#">Voyages en Turquie</a>
+                  <a href="">Voyages en Turquie</a>
                 </li>
                 <li>
-                  <a href="#">Projets en Afrique</a>
+                  <a href="/afrique">Projets en Afrique</a>
                 </li>
               </ul>
             </div>

@@ -211,7 +211,7 @@ import Image from "next/image";
 //   );
 // }
 
-const images = ['dentist', 'doctor', 'worker', 'plane', 'architect', 'surgery', 'istanbul']
+const images = ['projet-01', 'projet-02', 'projet-03', 'projet-04']
 
 export default function Carousel() {
   const scrollRef = useRef<HTMLDivElement>(null)
@@ -306,7 +306,7 @@ export default function Carousel() {
           >
             <div className="relative h-96 w-full">
               <Image
-                src={`/images/icon/${img}.jpg`}
+                src={`/images/project/${img}.jpg`}
                 alt={`Image ${img}`}
                 layout="fill"
                 objectFit="cover"

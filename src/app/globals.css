@@ -80,6 +80,44 @@ body {
   color: #006bff;
 }
 
+@media screen and (max-width: 1024px ) {
+  .icon-circle{
+    width: 54px;
+    height: 54px;
+     font-size: 24px;
+  }
+}
+
+/* .img-project{
+  background: url("/images/project/projet-01.jpeg");
+  background-position: center;
+  background-size: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;   
+}
+
+.img-project:hover{
+  background: linear-gradient(rgba(255,255,255,0.6), rgba(0,0,0,0.4)), url("/images/project/projet-01.jpeg");
+  background-position: center;
+  background-size: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;  
+  transition: slideTop 4s ease-in-out;
+}
+
+
+
+@keyframes slideTop{
+   100%{
+    opacity: 0;
+    transform: translateY(-70px);
+  }
+  0%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+} */
+
 
 @media (prefers-color-scheme: light){
   .contact{

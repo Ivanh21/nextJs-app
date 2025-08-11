@@ -6,10 +6,10 @@ import Carrousel from "./carrousel";
 import Materiel from "./materiel";
 import Testimonial from "./testimonial";
 import Email from "./email";
-
-
+import Services from "./services";
 
 export default function Main(){
+
   const [show, setShow] = useState(false);
 
   useEffect(() => {
@@ -174,7 +174,7 @@ export default function Main(){
                 className="rounded-[50%]"
                 /> 
             </div>
-            <div className="flex flex-col space-y-6 justify-center w-[40%] max-md:w-full">
+            <div className="flex flex-col space-y-6 justify-center w-[50%] max-md:w-full">
             <p className="text-gray-500 text-justify">
               Co-fondateur de Turkey Healthcare Group & Istanbul infertility Center j’accompagne les entreprises et institutions médicales dans la mise en place de solutions de soins de santé de haut niveau, en 
               facilitant l’accès à une médecine d’excellence grâce à des collaborations internationales solides et des technologies médicales avancées. <br />
@@ -317,58 +317,8 @@ export default function Main(){
       </section>
 
 
-      <section className="flex flex-col space-y-16 justify-center items-center" id="work">
-        <div className="flex justify-center items-center">
-          <div className="flex flex-col space-y-4 px-2 max-lg:px-4">
-            <h1 className="text-5xl font-bold max-lg:text-4xl max-md:text-2xl text-center">Nos services</h1>
-            <p className="text-center text-sm text-gray-500">Nous vous proposons de nombreux services pour satisfaire vos besoins et nous vous accompagnons à la réalisation de vos projets.</p>
-          </div>
-        </div>
-
-        <div className="flex flex-col justify-center items-center space-y-4 px-4 lg:px-24">
-            <div className="flex max-md:flex-col items-center justify-center max-md:space-y-4 md:space-x-4">
-              <div className="w-[30%] max-lg:w-full menu-item h-56 rounded-lg p-4 space-y-8 flex flex-col justify-center items-center cursor-pointer">
-              {/* <div className="flex justify-center">
-                <i className="fa-solid fa-hospital text-3xl text-[#006bff] border-[#006bff] rounded-full"></i>
-              </div> */}
-              <i className="fi fi-ss-hand-holding-medical icon-circle"></i>
-              <div className="flex flex-col space-y-6">
-                <span className="text-lg font-bold text-center">Services sanitaires & Tourisme médical</span>
-              </div>
-              </div>
-
-            <div className="w-[30%] max-lg:w-full p-4 menu-item h-56 rounded-lg space-y-8 flex flex-col justify-center items-center cursor-pointer">
-              <i className="fi fi-rr-stethoscope icon-circle"></i>
-              <div className="flex flex-col space-y-6">
-                <span className="text-lg font-bold text-center">Fourniture de Matériel Médical et de Laboratoire</span>
-              </div>
-            </div>
-
-            <div className="w-[30%] max-lg:w-full p-4 menu-item h-56 rounded-lg space-y-8 flex flex-col justify-center items-center cursor-pointer">
-              <i className="fi fi-ss-hard-hat icon-circle"></i>
-              <div className="flex flex-col space-y-6">
-                <span className="text-lg font-bold">Matériel de Construction & Finition</span>
-              </div>
-            </div>
-            </div>
-
-            <div className="w-full flex max-md:flex-col items-center justify-center max-md:space-y-4 md:space-x-4">
-              <div className="w-[30%] max-lg:w-full menu-item h-56 rounded-lg p-4 space-y-8 flex flex-col justify-center items-center cursor-pointer">
-              <i className="fi fi-ss-plane icon-circle"></i>
-              <div className="flex flex-col space-y-6">
-                <span className="text-lg font-bold">Voyages d’Affaires en Turquie</span>
-              </div>
-              </div>
-
-            <div className="w-[30%] max-lg:w-full menu-item h-56 rounded-lg p-4 space-y-8 flex flex-col justify-center items-center cursor-pointer">
-              <i className="fi fi-rr-earth-africa icon-circle"></i>
-              <div className="flex flex-col space-y-6">
-                <span className="text-lg font-bold">Projets en Afrique</span>
-              </div>
-            </div>
-
-            </div>
-        </div>
+      <section className="flex flex-col space-y-16 justify-center items-center" id="services">
+        <Services/>
       </section>
 
 
@@ -433,9 +383,9 @@ export default function Main(){
       <div className="border-b border-gray-300 px-24"></div>
     </section> */}
 
-    {/* <section className="w-full flex flex-col space-y-16 project-item p-2 lg:pt-12 lg:pb-12" id="project">
+    <section className="w-full flex flex-col space-y-16 project-item p-2 lg:pt-12 lg:pb-12" id="project">
       <Carrousel />
-    </section> */}
+    </section> 
 
 
 
