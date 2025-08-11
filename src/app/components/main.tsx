@@ -7,6 +7,7 @@ import Materiel from "./materiel";
 import Testimonial from "./testimonial";
 import Email from "./email";
 import Services from "./services";
+import Link from "next/link";
 
 export default function Main(){
 
@@ -46,7 +47,7 @@ export default function Main(){
               Je m’investis pleinement pour connecter l’Afrique aux meilleures expertises médicales de Turquie, avec une approche personnalisée, humaine et tournée vers les résultats. */}
             </p>
             <div className="flex space-x-8">
-              <a href="#about" className="p-4 bg-[#006bff] rounded-full text-white text-center max-lg:text-md">En savoir plus</a>
+              <Link href="#about" className="p-4 bg-[#006bff] rounded-full text-white text-center max-lg:text-md">En savoir plus</Link>
 
             
               {/* <div className="flex flex-col space-y-2">
@@ -181,7 +182,7 @@ export default function Main(){
               Je m’investis pleinement pour connecter l’Afrique aux meilleures expertises médicales de Turquie, avec une approche personnalisée, humaine et tournée vers les résultats.
             </p>
               <div className="flex justify-center">
-                <a href="#" className="w-auto p-4 border border-[#006bff] rounded-full text-center max-lg:text-md flex justify-center">Télécharger mon CV</a>
+                <Link href="#" className="w-auto p-4 border border-[#006bff] rounded-full text-center max-lg:text-md flex justify-center">Télécharger mon CV</Link>
               </div>
             </div>
           </div>
@@ -404,12 +405,12 @@ export default function Main(){
       </section>
       {show && (
       <div className="absolute">
-        <a href="#home"
+        <Link href="#home"
           className="fixed bottom-6 right-4 p-3 rounded-md bg-[#006bff] text-white shadow-lg hover:bg-blue-700 transition"
           aria-label="Scroll to top"
         >
         <i className="fa-solid fa-arrow-up"></i>
-        </a>
+        </Link>
       </div>
     )}
 

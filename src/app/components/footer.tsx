@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 
 export default function Footer(){
@@ -20,7 +21,7 @@ export default function Footer(){
 
               <ul className="flex items-center gap-5">
                 <li>
-                  <a aria-label="Footer Link for Facebook" href="#"
+                  <Link aria-label="Footer Link for Facebook" href="#"
                     ><svg
                       className="fill-[#D1D8E0] transition-all duration-300 hover:fill-[#006bff]"
                       width="24"
@@ -40,10 +41,10 @@ export default function Footer(){
                           <rect width="24" height="24" fill="white"></rect>
                         </clipPath>
                       </defs></svg>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a aria-label="Footer Link for Twitter" href="#"
+                  <Link aria-label="Footer Link for Twitter" href="#"
                     ><svg
                       className="fill-[#D1D8E0] transition-all duration-300 hover:fill-[#006bff]"
                       width="24"
@@ -63,10 +64,10 @@ export default function Footer(){
                           <rect width="24" height="24" fill="white"></rect>
                         </clipPath>
                       </defs></svg>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a aria-label="Footer Link for Linkedin" href="#"
+                  <Link aria-label="Footer Link for Linkedin" href="#"
                     ><svg
                       className="fill-[#D1D8E0] transition-all duration-300 hover:fill-[#006bff]"
                       width="24"
@@ -86,7 +87,7 @@ export default function Footer(){
                           <rect width="24" height="24" fill="white"></rect>
                         </clipPath>
                       </defs></svg>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -99,19 +100,19 @@ export default function Footer(){
 
               <ul className="flex flex-col space-y-2 text-gray-500">
                 <li>
-                  <a href="/#home">Accueil</a>
+                  <Link href="/#home">Accueil</Link>
                 </li>
                 <li>
-                  <a href="/#about">À propos</a>
+                  <Link href="/#about">À propos</Link>
                 </li>
                  <li>
-                  <a href="/#services">Services</a>
+                  <Link href="/#services">Services</Link>
                 </li>
                 <li>
-                  <a href="/#project">Projets</a>
+                  <Link href="/#project">Projets</Link>
                 </li>
                 <li>
-                  <a href="/#contact">Contact</a>
+                  <Link href="/#contact">Contact</Link>
                 </li>
               </ul>
             </div>
@@ -122,19 +123,19 @@ export default function Footer(){
 
               <ul className="flex flex-col space-y-2 text-gray-500">
                 <li>
-                  <a href="/sanitaire">Services sanitaires & Tourisme médical</a>
+                  <Link href="/sanitaire">Services sanitaires & Tourisme médical </Link>
                 </li>
                 <li>
-                  <a href="/fourniture">Matériel Médical et de Laboratoire</a>
+                  <Link href="/fourniture">Matériel Médical et de Laboratoire</Link>
                 </li>
                 <li>
-                  <a href="">Construction & Finition</a>
+                  <Link href="">Construction & Finition</Link>
                 </li>
                  <li>
-                  <a href="">Voyages en Turquie</a>
+                  <Link href="">Voyages en Turquie</Link>
                 </li>
                 <li>
-                  <a href="/afrique">Projets en Afrique</a>
+                  <Link href="/afrique">Projets en Afrique</Link>
                 </li>
               </ul>
             </div>
@@ -171,8 +172,8 @@ export default function Footer(){
 
         <div className="flex max-md:flex-col max-md:space-y-4 justify-between foot pt-2">
           <div className="flex space-x-2 max-md:justify-center">
-            <a href="#" className="text-gray-500">Privacy Policy</a>
-            <a href="#" className="text-gray-500">Support</a>
+            <Link href="#" className="text-gray-500">Privacy Policy</Link>
+            <Link href="#" className="text-gray-500">Support</Link>
           </div>
 
           <div className="flex max-md:justify-center">

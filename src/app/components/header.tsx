@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useState, useEffect } from 'react';
 import styles from './header.module.css';
+import Link from "next/link";
 
 
 const languages = [
@@ -49,11 +50,11 @@ useEffect(() => {
 
         <div className="hidden lg:flex space-x-8">
 
-        <a href="/#home" className="text-lg font-semibold">Accueil</a>
-        <a href="/#about" className="text-lg font-semibold">À propos</a>
-        <a href="/#services" className="text-lg font-semibold">Services</a>
-        <a href="/#project" className="text-lg font-semibold">Projets</a>
-        <a href="/#contact" className="text-lg font-semibold">Contact</a>
+        <Link href="/#home" className="text-lg font-semibold">Accueil</Link>
+        <Link href="/#about" className="text-lg font-semibold">À propos</Link>
+        <Link href="/#services" className="text-lg font-semibold">Services</Link>
+        <Link href="/#project" className="text-lg font-semibold">Projets</Link>
+        <Link href="/#contact" className="text-lg font-semibold">Contact</Link>
 
         </div>
 
@@ -113,10 +114,10 @@ useEffect(() => {
           <i className="fa-solid fa-xmark text-2xl text-gray-500 hover:text-black"></i>
         </button>
         <div className="flex flex-col justify-center items-center space-y-8">
-          <a href="/#home" className="text-lg text-gray-500 font-bold" onClick={() => setIsVisible(!isVisible)}>Accueil</a>
-          <a href="/#work" className="text-lg text-gray-500 font-bold" onClick={() => setIsVisible(!isVisible)}>À propos</a>
-          <a href="/#project" className="text-lg text-gray-500 font-bold" onClick={() => setIsVisible(!isVisible)}>Projets</a>
-          <a href="/#contact" className="text-lg text-gray-500 font-bold" onClick={() => setIsVisible(!isVisible)}>Contact</a>
+          <Link href="/#home" className="text-lg text-gray-500 font-bold" onClick={() => setIsVisible(!isVisible)}>Accueil</Link>
+          <Link href="/#work" className="text-lg text-gray-500 font-bold" onClick={() => setIsVisible(!isVisible)}>À propos</Link>
+          <Link href="/#project" className="text-lg text-gray-500 font-bold" onClick={() => setIsVisible(!isVisible)}>Projets</Link>
+          <Link href="/#contact" className="text-lg text-gray-500 font-bold" onClick={() => setIsVisible(!isVisible)}>Contact</Link>
 
         {/* <div className="lg:hidden relative inline-block text-left">
         <button

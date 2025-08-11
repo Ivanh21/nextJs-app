@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
+import Link from "next/link";
 
 
 export default function Email(){
@@ -67,19 +68,19 @@ export default function Email(){
               <div className="flex flex-col space-y-10">
                 <div className="flex flex-col">
                     <h2 className="text-lg font-semibold">Adresse email</h2>
-                    <a href="mailto:support@startup.com" className="text-gray-500">support@startup.com</a>
+                    <Link href="mailto:support@startup.com" className="text-gray-500">support@startup.com</Link>
                 </div>
                 <div className="flex flex-col">
                   <h2 className="text-lg font-semibold">Office location</h2>
-                  <a href="#" className="text-gray-500">76/A, Green valle, Califonia USA.</a>
+                  <Link href="#" className="text-gray-500">76/A, Green valle, Califonia USA.</Link>
                 </div>
                 <div className="flex flex-col">
                   <h2 className="text-lg font-semibold">Numéro</h2>
-                  <a href="tel:+00987543433223" className="text-gray-500">+009 8754 3433 223</a>
+                  <Link href="tel:+00987543433223" className="text-gray-500">+009 8754 3433 223</Link>
                 </div>
                 <div className="flex flex-col">
                     <h2 className="text-lg font-semibold">Skype Email</h2>
-                    <a href="mailto:support@startup.com" className="text-gray-500">support@startup.com</a>
+                    <Link href="mailto:support@startup.com" className="text-gray-500">support@startup.com</Link>
                 </div>
 
                 <div className="border border-gray-500"></div>
@@ -89,7 +90,7 @@ export default function Email(){
 
                 <ul className="flex items-center gap-5">
                 <li>
-                  <a aria-label="Footer Link for Facebook" href="#"
+                  <Link aria-label="Footer Link for Facebook" href="#"
                     ><svg
                       className="fill-[#D1D8E0] transition-all duration-300 hover:fill-[#006bff]"
                       width="24"
@@ -109,10 +110,10 @@ export default function Email(){
                           <rect width="24" height="24" fill="white"></rect>
                         </clipPath>
                       </defs></svg>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a aria-label="Footer Link for Twitter" href="#"
+                  <Link aria-label="Footer Link for Twitter" href="#"
                     ><svg
                       className="fill-[#D1D8E0] transition-all duration-300 hover:fill-[#006bff]"
                       width="24"
@@ -132,10 +133,10 @@ export default function Email(){
                           <rect width="24" height="24" fill="white"></rect>
                         </clipPath>
                       </defs></svg>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a aria-label="Footer Link for Linkedin" href="#"
+                  <Link aria-label="Footer Link for Linkedin" href="#"
                     ><svg
                       className="fill-[#D1D8E0] transition-all duration-300 hover:fill-[#006bff]"
                       width="24"
@@ -155,7 +156,7 @@ export default function Email(){
                           <rect width="24" height="24" fill="white"></rect>
                         </clipPath>
                       </defs></svg>
-                  </a>
+                  </Link>
                 </li>
               </ul>
                 </div>
