@@ -32,7 +32,7 @@ body {
 }
 
 @media(prefers-color-scheme: light){
-  .menu-item {
+  .menu-item, .service-item {
     background-color: white;
     box-shadow:
       rgba(39, 40, 43, 0.12) 0px 7px 14px 0px,
@@ -41,11 +41,15 @@ body {
 }
 
 @media (prefers-color-scheme: dark){
-  .menu-item {
+  .menu-item, .service-item {
     background-color: #1c2136;
     box-shadow:
       rgba(32, 32, 32, 0.12) 0px 7px 14px 0px,
       rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+  }
+
+  .menu-item:hover{
+    border: 1px solid #f4f7fa;
   }
 }
 
@@ -209,6 +213,13 @@ body {
   animation: slideDown 3s ease-in forwards;
 }
 
+.animate-col{
+  animation: slideDown 1s ease-in forwards;
+}
+
+.animate-btn{
+  animation: slideTop 1s ease-in forwards;
+}
 
 .project{
 width: 350px;
@@ -216,6 +227,22 @@ height: 350px;
  box-shadow:
     rgba(60, 66, 87, 0.12) 0px 7px 14px 0px,
     rgba(0, 0, 0, 0.12) 0px 3px 6px 0px; 
+}
+
+
+@keyframes slideUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-70px);
+  }
+}
+
+.animate-up {
+  animation: slideUp 0.5s ease-out forwards;
 }
 
 
@@ -252,3 +279,10 @@ height: 350px;
 
 
 
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

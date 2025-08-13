@@ -8,6 +8,9 @@ import Testimonial from "./testimonial";
 import Email from "./email";
 import Services from "./services";
 import Link from "next/link";
+import styles from './main.module.css'
+import AnimatedBlock from "./scroll";
+import ProjectsHorizontal from "./scrollMotion";
 
 export default function Main(){
 
@@ -28,6 +31,7 @@ export default function Main(){
 
     return (
     <main className="w-full space-y-40">
+
       <section className="flex flex-col justify-between max-lg:space-y-16 w-full px-4 lg:px-16 pt-16 max-lg:pt-32 max-md:pt-44" id="home">
 
       <div className="w-full flex flex-col justify-between items-center animation-item space-y-8">
@@ -42,7 +46,7 @@ export default function Main(){
               </h1>
               </div>
             </div>
-            <p className="text-justify text-gray-500">Engagé dans le développement des infrastructures et de la santé en Afrique, je mets mon expertise en génie civil et en stratégie de développement au service de partenariats durables et à forte valeur ajoutée. <br />
+            <p className="md:text-justify text-gray-500">Engagé dans le développement des infrastructures et de la santé en Afrique, je mets mon expertise en génie civil et en stratégie de développement au service de partenariats durables et à forte valeur ajoutée. <br />
               {/* Co-fondateur de Turkey Healthcare Group & Istanbul infertility Center j’accompagne les entreprises et institutions médicales dans la mise en place de solutions de soins de santé de haut niveau, en facilitant l’accès à une médecine d’excellence grâce à des collaborations internationales solides et des technologies médicales avancées. <br/>
               Je m’investis pleinement pour connecter l’Afrique aux meilleures expertises médicales de Turquie, avec une approche personnalisée, humaine et tournée vers les résultats. */}
             </p>
@@ -160,6 +164,7 @@ export default function Main(){
 
       </section>
 
+      <AnimatedBlock>
 
       <section className="w-full flex flex-col justify-center space-y-8 lg:px-24" id="about">
           <div className="text-5xl font-bold max-lg:text-4xl max-md:text-2xl text-center">
@@ -176,7 +181,7 @@ export default function Main(){
                 /> 
             </div>
             <div className="flex flex-col space-y-6 justify-center w-[50%] max-md:w-full">
-            <p className="text-gray-500 text-justify">
+            <p className="text-gray-500 md:text-justify">
               Co-fondateur de Turkey Healthcare Group & Istanbul infertility Center j’accompagne les entreprises et institutions médicales dans la mise en place de solutions de soins de santé de haut niveau, en 
               facilitant l’accès à une médecine d’excellence grâce à des collaborations internationales solides et des technologies médicales avancées. <br />
               Je m’investis pleinement pour connecter l’Afrique aux meilleures expertises médicales de Turquie, avec une approche personnalisée, humaine et tournée vers les résultats.
@@ -187,8 +192,10 @@ export default function Main(){
             </div>
           </div>
       </section>
+      </AnimatedBlock>
 
-
+      <AnimatedBlock>
+      
       <section className="flex flex-col space-y-16 justify-center items-center" id="work">
          <div className="flex justify-center items-center">
           <div className="flex flex-col space-y-4 px-2 max-lg:px-4">
@@ -237,172 +244,39 @@ export default function Main(){
 
             </div>
         </div>
-        {/* <div className="flex justify-center items-center">
-          <div className="flex flex-col space-y-4 px-2 max-lg:px-4">
-            <h1 className="text-5xl font-bold max-lg:text-4xl max-md:text-2xl text-center">Pourquoi travailler avec nous ?</h1>
-            <p className="text-center text-sm text-gray-500">Nous vous proposons de nombreux services pour satisfaire vos besoins et nous vous accompagnons à la réalisation de vos projets.</p>
-          </div>
-        </div>
-
-        <div className="flex flex-col justify-center items-center space-y-4 px-4  lg:px-24">
-            <div className="flex max-md:flex-col items-center justify-center">
-              <div className="w-[40%] max-lg:w-full menu-item rounded-lg p-4">
-              <Image
-                width={50}
-                height={50}
-                src="/images/icon/icon-04.svg"
-                alt="Logo"
-              />
-              <div className="flex flex-col space-y-6 pt-6">
-                <span className="text-lg font-bold">Services sanitaires & Tourisme médical</span>
-                <p className="text-sm text-gray-500">Travailler avec nous, c’est garantir à vos patients un soin de qualité, en toute sécurité et dans la dignité.</p>
-              </div>
-              </div>
-
-            <div className="w-[40%] max-lg:w-full p-4 menu-item rounded-lg">
-              <Image
-                width={50}
-                height={50}
-                src="/images/icon/icon-05.svg"
-                alt="Logo"
-              />
-              <div className="flex flex-col space-y-6 pt-6">
-                <span className="text-lg font-bold">Fourniture de Matériel Médical et de Laboratoire</span>
-                <p className="text-sm text-gray-500">Vous n’achetez pas seulement du matériel, vous achetez un accompagnement et une garantie de performance.</p>
-              </div>
-            </div>
-
-            <div className="w-[40%] max-lg:w-full p-4 menu-item rounded-lg">
-              <Image
-                width={50}
-                height={50}
-                src="/images/icon/icon-06.svg"
-                alt="Logo"
-              />
-              <div className="flex flex-col space-y-6 pt-6">
-                <span className="text-lg font-bold">Matériel de Construction & Finition</span>
-                <p className="text-sm text-gray-500">Vous construisez mieux, plus vite et à moindre coût, avec une vision à long terme.</p>
-              </div>
-            </div>
-            </div>
-
-            <div className="flex max-md:flex-col items-center justify-center">
-              <div className="w-[40%] max-lg:w-full menu-item rounded-lg p-4">
-              <Image
-                width={50}
-                height={50}
-                src="/images/icon/icon-07.svg"
-                alt="Logo"
-              />
-              <div className="flex flex-col space-y-6 pt-6">
-                <span className="text-lg font-bold">Voyages d’Affaires en Turquie</span>
-                <p className="text-sm text-gray-500">Avec nous, vous ne visitez pas la Turquie : vous y bâtissez des opportunités concrètes.</p>
-              </div>
-              </div>
-
-            <div className="w-[40%] max-lg:w-full menu-item rounded-lg p-4">
-              <Image
-                width={50}
-                height={50}
-                src="/images/icon/icon-08.svg"
-                alt="Logo"
-              />
-              <div className="flex flex-col space-y-6 pt-6">
-                <span className="text-lg font-bold">Projets en Afrique</span>
-                <p className="text-sm text-gray-500">Vous ne travaillez pas avec un prestataire, mais avec un partenaire engagé pour le développement du continent.</p>
-              </div>
-            </div>
-
-            </div>
-        </div> */}
       </section>
+      </AnimatedBlock> 
+
+      <AnimatedBlock>
+        <section className="flex flex-col space-y-16 justify-center items-center" id="services">
+          <Services/>
+        </section>
+      </AnimatedBlock>    
 
 
-      <section className="flex flex-col space-y-16 justify-center items-center" id="services">
-        <Services/>
-      </section>
-
-
-
-    {/* <section className="w-full flex flex-col space-y-16 justify-center lg:px-16" id="brand">
-      <div className="flex flex-col justify-center items-center space-y-4 px-2 max-lg:px-4">
-        <h1 className="text-5xl font-bold max-lg:text-4xl max-md:text-2xl">Trusted by Global Brands</h1>
-        <p className="text-sm text-gray-500 w-[50%] max-md:w-full text-center">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.</p>
-      </div>
-      <div className="w-full flex max-lg:flex-col max-lg:space-y-8 justify-center items-center lg:space-x-16">
-        
-        <div className="flex items-center justify-center space-x-4 md:space-x-16">
-          <Image
-          width={100}
-          height={44}
-          src="/images/icon/icon-04.svg"
-          alt="logitech"
-          />
-        
-          <Image
-          width={100}
-          height={44}
-          src="/images/icon/icon-05.svg"
-          alt="logitech"
-          />
-          
-          <Image
-          width={100}
-          height={44}
-          src="/images/icon/icon-06.svg"
-          alt="logitech"
-          />
-        
-        </div>
-
-        <div className="flex justify-center items-center space-x-4 md:space-x-16">
-
-          <Image
-          width={100}
-          height={44}
-          src="/images/icon/icon-07.svg"
-          alt="logitech"
-          />
-      
-          <Image
-          width={100}
-          height={44}
-          src="/images/icon/icon-08.svg"
-          alt="logitech"
-          />
-
-          <Image
-          width={100}
-          height={44}
-          src="/images/icon/icon-09.svg"
-          alt="logitech"
-          />
-  
-
-        </div>
-      </div>
-      <div className="border-b border-gray-300 px-24"></div>
-    </section> */}
-
-    <section className="w-full flex flex-col space-y-16 project-item p-2 lg:pt-12 lg:pb-12" id="project">
+    {/* <section className="w-full flex flex-col space-y-16 project-item p-2 lg:pt-12 lg:pb-12" id="project">
       <Carrousel />
+    </section>  */}
+
+
+   <AnimatedBlock>
+    <section className="w-full flex flex-col space-y-16 materiel-item p-2 lg:p-12" id="">
+      <ProjectsHorizontal />
     </section> 
+   </AnimatedBlock>
+
+    <AnimatedBlock>
+      <section className="w-full flex flex-col space-y-16 p-4 lg:p-12">
+        <Testimonial />
+      </section>
+    </AnimatedBlock>
 
 
-
-    {/* <section className="w-full flex flex-col space-y-16 materiel-item p-2 lg:p-12" id="">
-      <Materiel />
-    </section> */}
-
-
-    <section className="w-full flex flex-col space-y-16 p-4 lg:p-12">
-      <Testimonial />
-    </section>
-
-
-      <section className="contact w-full p-4 lg:p-12 flex flex-col justify-end space-y-16" id="contact">
+     <AnimatedBlock>
+       <section className="contact w-full p-4 lg:p-12 flex flex-col justify-end space-y-16" id="contact">
           <Email />
       </section>
+     </AnimatedBlock>
       {show && (
       <div className="absolute">
         <Link href="#home"

@@ -1,9 +1,52 @@
+import { tree } from "next/dist/build/templates/app-page";
 import { useState } from "react";
 
 export default function Services(){
     const [sanitaire, setSanitaire] = useState(false);
     const [fourniture, setFourniture] = useState(false);
     const [afrique, setAfrique] = useState(false);
+    const [animate, setAnimate] = useState("");
+
+    const toggleSanitaire = () => {
+    if (sanitaire) {
+        setAnimate("animate-up");
+        setTimeout(() => {
+        setSanitaire(false);
+        setAnimate("");
+        }, 500); // Durée anim
+    } else {
+        setSanitaire(true);
+        setAnimate("animate-col");
+    }
+    };
+
+    const toggleFourniture = () => {
+    if (fourniture) {
+        setAnimate("animate-up");
+        setTimeout(() => {
+        setFourniture(false);
+        setAnimate("");
+        }, 500); // Durée anim
+    } else {
+        setFourniture(true);
+        setAnimate("animate-col");
+    }
+    };
+
+
+    const toggleAfrique = () => {
+    if (afrique) {
+        setAnimate("animate-up");
+        setTimeout(() => {
+        setAfrique(false);
+        setAnimate("");
+        }, 500); // Durée anim
+    } else {
+        setAfrique(true);
+        setAnimate("animate-col");
+    }
+    };
+
 
     return(
         <>
@@ -16,7 +59,7 @@ export default function Services(){
 
         <div className="w-full flex flex-col justify-center items-center space-y-4 px-4 lg:px-24">
             <div className="w-full flex flex-col items-center justify-center space-y-4">
-              <div className="w-full menu-item rounded-lg p-4 flex justify-between items-center cursor-pointer">
+              <div className="w-full service-item rounded-lg p-4 flex justify-between items-center cursor-pointer">
              
               <div className="flex space-x-4 flex items-center">
                 <i className="fi fi-ss-hand-holding-medical icon-circle"></i>
@@ -25,23 +68,23 @@ export default function Services(){
               </div>
               </div>
                 {!sanitaire && (
-                  <i className="fa-solid fa-plus font-extrabold text-4xl text-[#006bff]" onClick={() =>setSanitaire(!sanitaire)}></i>
+                  <i className="fa-solid fa-plus font-extrabold text-4xl text-[#006bff]" onClick={toggleSanitaire}></i>
                 ) }
                 {sanitaire && (
-                  <i className="fa-solid fa-minus font-extrabold text-4xl text-[#006bff]" onClick={() =>setSanitaire(!sanitaire)}></i>
+                  <i className="fa-solid fa-minus font-extrabold text-4xl text-[#006bff] " onClick={toggleSanitaire}></i>
                 ) }
               </div>
 
-              { sanitaire &&(
-                 <div className="flex flex-col">        
-                        <main className="px-4 lg:px-24">
+              { (sanitaire || animate === "animate-up") &&(
+                 <div className={`flex flex-col ${animate}`}>        
+                        <main className="px-4 lg:px-8">
                             <div className="w-full flex flex-col justify-between space-y-8 h-full">
                         
                             <div className=" py-16">
                             
                                 <div className="flex flex-col space-y-8">
                                     <h1 className="text-5xl font-bold max-lg:text-4xl max-md:text-2xl">Services Sanitaires & Tourisme Médical</h1>
-                                    <p>Chez Turkey Healthcare Group et Istanbul Infertility Center, nous offrons une prise en charge médicale intégrée et personnalisée pour les patients internationaux, en combinant soins de santé de haut niveau, accompagnement sur mesure.</p>
+                                    <p className="text-justify">Chez Turkey Healthcare Group et Istanbul Infertility Center, nous offrons une prise en charge médicale intégrée et personnalisée pour les patients internationaux, en combinant soins de santé de haut niveau, accompagnement sur mesure.</p>
                                     <p className="text-justify">Notre objectif est de rendre l’excellence médicale turque accessible à tous, dans un cadre sécurisé, organisé et rassurant.</p>
                                     <h2 className="text-3xl font-bold max-lg:text-2xl">Nos services médicaux</h2>
                                     <ul className="flex flex-col space-y-8 list-disc">
@@ -118,7 +161,7 @@ export default function Services(){
 
               }
 
-            <div className="w-full menu-item rounded-lg p-4 justify-between flex items-center cursor-pointer">
+            <div className="w-full service-item rounded-lg p-4 justify-between flex items-center cursor-pointer">
               <div className="space-x-4 flex items-center">
                 <i className="fi fi-rr-stethoscope icon-circle"></i>
                 <div className="flex flex-col space-y-6">
@@ -126,17 +169,17 @@ export default function Services(){
                 </div>
               </div>
                 {!fourniture && (
-                  <i className="fa-solid fa-plus font-extrabold text-4xl text-[#006bff]" onClick={() =>setFourniture(!fourniture)}></i>
+                  <i className="fa-solid fa-plus font-extrabold text-4xl text-[#006bff]" onClick={toggleFourniture}></i>
                 ) }
                 {fourniture && (
-                  <i className="fa-solid fa-minus font-extrabold text-4xl text-[#006bff]" onClick={() =>setFourniture(!fourniture)}></i>
+                  <i className="fa-solid fa-minus font-extrabold text-4xl text-[#006bff]" onClick={toggleFourniture}></i>
                 ) }
             </div>
 
-            {fourniture && (
-             <div className="flex flex-col">
+            {(fourniture || animate === "animate-up") && (
+             <div className={`flex flex-col ${animate}`}>
             
-                    <main className="px-4 lg:px-24">
+                    <main className="px-4 lg:px-8">
                         <div className="w-full flex flex-col justify-between space-y-8 h-full"> 
             
                         <div className=" py-16">
@@ -209,7 +252,7 @@ export default function Services(){
 
             }
 
-            <div className="w-full menu-item rounded-lg p-4 justify-between flex items-center cursor-pointer">
+            <div className="w-full service-item rounded-lg p-4 justify-between flex items-center cursor-pointer">
               <div className="space-x-4 flex items-center">
                 <i className="fi fi-ss-hard-hat icon-circle"></i>
               <div className="flex flex-col space-y-6">
@@ -221,7 +264,7 @@ export default function Services(){
             </div>
 
             <div className="w-full flex flex-col items-center justify-center space-y-4">
-              <div className="w-full menu-item rounded-lg p-4 space-x-4 flex justify-between items-center cursor-pointer">
+              <div className="w-full service-item rounded-lg p-4 space-x-4 flex justify-between items-center cursor-pointer">
               <div className="space-x-4 flex items-center">
                 <i className="fi fi-ss-plane icon-circle"></i>
               <div className="flex flex-col space-y-6">
@@ -231,7 +274,7 @@ export default function Services(){
               <i className="fa-solid fa-plus font-extrabold text-4xl text-[#006bff]"></i>
               </div>
 
-            <div className="w-full menu-item  rounded-lg p-4 space-x-4 flex justify-between items-center cursor-pointer">
+            <div className="w-full service-item  rounded-lg p-4 space-x-4 flex justify-between items-center cursor-pointer">
               <div className="space-x-4 flex items-center">
                 <i className="fi fi-rr-earth-africa icon-circle"></i>
               <div className="flex flex-col space-y-6">
@@ -239,17 +282,17 @@ export default function Services(){
               </div>
               </div>
                 {!afrique && (
-                  <i className="fa-solid fa-plus font-extrabold text-4xl text-[#006bff]" onClick={() =>setAfrique(!afrique)}></i>
+                  <i className="fa-solid fa-plus font-extrabold text-4xl text-[#006bff]" onClick={toggleAfrique}></i>
                 ) }
                 {afrique && (
-                  <i className="fa-solid fa-minus font-extrabold text-4xl text-[#006bff]" onClick={() =>setAfrique(!afrique)}></i>
+                  <i className="fa-solid fa-minus font-extrabold text-4xl text-[#006bff]" onClick={toggleAfrique}></i>
                 ) }
             </div>
 
-            {afrique && (
-                <div className="flex flex-col">
+            {(afrique || animate === "animate-up") && (
+                <div className={`flex flex-col ${animate}`}>
                 
-                        <main className="px-4 lg:px-24">
+                        <main className="px-4 lg:px-8">
                             <div className="w-full flex flex-col justify-between space-y-8 h-full">
                            
                             <div className=" py-16">
