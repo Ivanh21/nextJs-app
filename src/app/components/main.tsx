@@ -221,7 +221,7 @@ export default function Main(){
 
             <div className="w-[30%] max-lg:w-full p-4 menu-item h-56 rounded-lg space-y-4 flex flex-col justify-center items-center cursor-pointer">
               <i className="fi fi-sr-sack-dollar icon-circle"></i>
-              <div className="flex flex-col space-y-6">
+              <div className="flex">
                 <span className="text-lg font-bold text-center">Tarifs compétitifs, sans compromis sur la qualité des soins</span>
               </div>
             </div>
@@ -235,7 +235,7 @@ export default function Main(){
               </div>
               </div>
 
-            <div className="w-[30%] max-lg:w-full menu-item h-56 rounded-lg p-4 space-y-4 flex flex-col justify-center items-center cursor-pointer">
+            <div className="w-[30%] max-lg:w-full menu-item h-56 rounded-lg p-4 hover:p-4 space-y-4 flex flex-col justify-center items-center cursor-pointer">
               <i className="fi fi-ss-user-headset icon-circle"></i>
               <div className="flex flex-col space-y-6">
                 <span className="text-lg font-bold text-center">Service client multilingue et équipe dédiée en Afrique</span>

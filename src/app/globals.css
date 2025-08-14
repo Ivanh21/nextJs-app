@@ -37,6 +37,7 @@ body {
     box-shadow:
       rgba(39, 40, 43, 0.12) 0px 7px 14px 0px,
       rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+    border: 1px solid transparent;
   }
 }
 
@@ -46,11 +47,11 @@ body {
     box-shadow:
       rgba(32, 32, 32, 0.12) 0px 7px 14px 0px,
       rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+    border: 1px solid transparent;
   }
 
   .menu-item:hover{
-    border: 1px solid #f4f7fa;
-    padding: 10px;
+     border-color: #f4f7fa;
   }
 }
 

@@ -750,7 +750,7 @@ export default function Services() {
 
   return (
     <div className="w-full max-w-5xl mx-auto px-4 py-8 space-y-4">
-      <h1 className="text-4xl font-bold text-center">Nos Services</h1>
+      <h1 className="text-5xl font-bold max-lg:text-4xl max-md:text-2xl text-center">Nos services</h1>
       <p className="text-center text-gray-500 mb-6">
         Nous vous proposons de nombreux services pour satisfaire vos besoins et nous vous accompagnons à la réalisation de vos projets.
       </p>
