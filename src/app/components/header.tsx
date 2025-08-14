@@ -37,7 +37,7 @@ useEffect(() => {
   const [isVisible, setIsVisible] = useState(false);
 
     return (
-      <header className={`${styles.navbar} ${isFixed ? `${styles.isFixed }` : ''} top-0 left-0 navbar w-full flex justify-between items-center px-2 py-4 lg:px-16 absolute z-40`}>
+      <header className={`navbar transition-all duration-500 ease-in-out ${isFixed ? "fixed top-0 z-50 bg-white dark:bg-[#181c31] shadow-md" : "absolute"} w-full flex justify-between items-center px-2 py-4 lg:px-16`}>
           <div className="">
             <Image
             width={60}
