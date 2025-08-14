@@ -75,7 +75,7 @@ export default function ProjectsHorizontal() {
         {/* Container scroll horizontal */}
         <div
           ref={scrollRef}
-          className="flex gap-6 px-6 py-10 overflow-x-auto scroll-smooth no-scrollbar"
+          className="flex justify-center items-center gap-6 px-6 py-10 overflow-x-auto scroll-smooth no-scrollbar"
           style={{ scrollSnapType: "x mandatory" }}
         >
           {projects.map((project, i) => (

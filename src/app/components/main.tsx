@@ -272,6 +272,8 @@ export default function Main(){
     </AnimatedBlock>
 
 
+      
+
      <AnimatedBlock>
        <section className="contact w-full p-4 lg:p-12 flex flex-col justify-end space-y-16" id="contact">
           <Email />

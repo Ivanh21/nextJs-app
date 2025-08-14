@@ -123,19 +123,19 @@ export default function Footer(){
 
               <ul className="flex flex-col space-y-2 text-gray-500">
                 <li>
-                  <Link href="/sanitaire">Services sanitaires & Tourisme médical </Link>
+                  <Link href="#">Services sanitaires & Tourisme médical </Link>
                 </li>
                 <li>
-                  <Link href="/fourniture">Matériel Médical et de Laboratoire</Link>
+                  <Link href="#">Matériel Médical et de Laboratoire</Link>
                 </li>
                 <li>
-                  <Link href="">Construction & Finition</Link>
+                  <Link href="#">Construction & Finition</Link>
                 </li>
                  <li>
-                  <Link href="">Voyages en Turquie</Link>
+                  <Link href="#">Voyages en Turquie</Link>
                 </li>
                 <li>
-                  <Link href="/afrique">Projets en Afrique</Link>
+                  <Link href="# ">Projets en Afrique</Link>
                 </li>
               </ul>
             </div>

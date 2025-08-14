@@ -50,6 +50,7 @@ body {
 
   .menu-item:hover{
     border: 1px solid #f4f7fa;
+    padding: 10px;
   }
 }
 
