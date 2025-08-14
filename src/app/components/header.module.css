@@ -3,7 +3,7 @@
 }
 
 @media (prefers-color-scheme: light) {
-  .fixed {
+  .isFixed  {
     position: fixed;
     background-color: white;
     z-index: 1;
@@ -12,7 +12,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .fixed {
+  .isFixed  {
     position: fixed;
     background-color: #181c31;
     z-index: 1;
