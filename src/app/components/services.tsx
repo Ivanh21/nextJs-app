@@ -1,7 +1,7 @@
 
 
 
- import { useState, useEffect } from "react";
+ import { useState, useEffect, useRef } from "react";
 
  interface Service {
    id: string;
@@ -335,48 +335,62 @@
    ];
 
    return (
-     <div className="w-full flex flex-col space-y-4 px-4 lg:px-24">
-       <div className="flex flex-col space-y-8">
-        <h1 className="text-5xl max-lg:text-4xl max-md:text-2xl font-bold text-center">Nos Services</h1>
-       <p className="text-center text-gray-500 mb-6">
-         Nous vous proposons de nombreux services pour satisfaire vos besoins et
-         nous vous accompagnons à la réalisation de vos projets.
-       </p>
-       </div>
+    <div className="w-full mx-auto flex flex-col space-y-4 px-4 lg:px-24">
+      <div className="flex flex-col space-y-8">
+        <h1 className="text-5xl max-lg:text-4xl max-md:text-2xl font-bold text-center">
+          Nos Services
+        </h1>
+        <p className="text-center text-gray-500 mb-6">
+          Nous vous proposons de nombreux services pour satisfaire vos besoins et
+          nous vous accompagnons à la réalisation de vos projets.
+        </p>
+      </div>
 
-       {services.map((service) => (
-         <div
-           key={service.id}
-           className="border border-gray-200 rounded-lg overflow-hidden shadow-sm mt-8"
-         >
-           {/* Header */}
-           <button
-             onClick={() => toggle(service.id)}
-             className="w-full flex justify-between items-center p-4 bg-gray-50 dark:bg-[#1c2136] dark:hover:bg-[#181c31]  hover:bg-gray-100"
-           >
-             <div className="flex items-center space-x-3">
-               <i className={`${service.icon} text-xl icon-circle`} />
-               <span className="font-semibold text-start ">{service.title}</span>
-             </div>
-             <i
-               className={`fa-solid ${
-                 openIds.includes(service.id) ? "fa-minus" : "fa-plus"
-               } text-[#006bff] text-xl`}
-             />
-           </button>
+      {services.map((service) => {
+        const isOpen = openIds.includes(service.id);
+        const contentRef = useRef<HTMLDivElement>(null);
 
-           {/* Content */}
-           <div
-             className={`transition-all duration-300 ease-in-out ${
-               openIds.includes(service.id) ? "max-h-auto p-4" : "max-h-0 p-0"
-             } overflow-hidden bg-white dark:bg-[#1c2136]`}
-           >
-             {service.content}
-           </div>
-         </div>
-       ))}
-     </div>
-   );
+        const maxHeight = isOpen
+          ? `${contentRef.current?.scrollHeight ?? 0}px`
+          : "0px";
+
+        return (
+          <div
+            key={service.id}
+            className="border border-gray-200 rounded-lg overflow-hidden shadow-sm mt-8 transition-all duration-300"
+          >
+            {/* Header */}
+            <button
+              onClick={() => toggle(service.id)}
+              className="w-full flex justify-between items-center p-4 bg-gray-50 dark:bg-[#1c2136] dark:hover:bg-[#181c31] hover:bg-gray-100"
+            >
+              <div className="flex items-center space-x-3">
+                <i className={`${service.icon} text-xl icon-circle`} />
+                <span className="font-semibold text-start">{service.title}</span>
+              </div>
+              <i
+                className={`fa-solid ${
+                  isOpen ? "fa-minus" : "fa-plus"
+                } text-[#006bff] text-xl`}
+              />
+            </button>
+
+            {/* Content */}
+            <div
+              ref={contentRef}
+              style={{
+                maxHeight,
+                transition: "max-height 0.5s ease",
+              }}
+              className="overflow-hidden bg-white dark:bg-[#1c2136] px-4"
+            >
+              <div className="py-4">{service.content}</div>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
  }
 
 
