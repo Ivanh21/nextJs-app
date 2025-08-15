@@ -11,14 +11,16 @@
  }
 
  export default function Services() {
-   const [openIds, setOpenIds] = useState<string[]>([]);
+     const [openIds, setOpenIds] = useState<string[]>([]);
 
-   const toggle = (id: string) => {
-     setOpenIds((prev) =>
-       prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]
-     );
-   };
+  const toggle = (id: string) => {
+    setOpenIds((prev) =>
+      prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]
+    );
+  };
 
+  // 🔧 Ref pour stocker les refs des éléments dynamiques
+  const contentRefs = useRef<Record<string, HTMLDivElement | null>>({});
    const services: Service[] = [
      {
        id: "sanitaire",
@@ -334,7 +336,7 @@
      },
    ];
 
-   return (
+    return (
     <div className="w-full mx-auto flex flex-col space-y-4 px-4 lg:px-24">
       <div className="flex flex-col space-y-8">
         <h1 className="text-5xl max-lg:text-4xl max-md:text-2xl font-bold text-center">
@@ -348,10 +350,9 @@
 
       {services.map((service) => {
         const isOpen = openIds.includes(service.id);
-        const contentRef = useRef<HTMLDivElement>(null);
-
+        const currentRef = contentRefs.current[service.id];
         const maxHeight = isOpen
-          ? `${contentRef.current?.scrollHeight ?? 0}px`
+          ? `${currentRef?.scrollHeight ?? 0}px`
           : "0px";
 
         return (
@@ -377,7 +378,9 @@
 
             {/* Content */}
             <div
-              ref={contentRef}
+              ref={(el) => {
+                contentRefs.current[service.id] = el;
+            }}
               style={{
                 maxHeight,
                 transition: "max-height 0.5s ease",
