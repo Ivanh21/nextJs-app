@@ -248,7 +248,7 @@ export default function Main(){
       </AnimatedBlock> 
 
       <AnimatedBlock>
-        <section className="flex flex-col space-y-16 justify-center items-center" id="services">
+        <section className="w-full flex flex-col space-y-16 justify-center items-center" id="services">
           <Services/>
         </section>
       </AnimatedBlock>    
