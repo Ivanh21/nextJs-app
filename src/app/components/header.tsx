@@ -5,14 +5,14 @@ import styles from './header.module.css';
 import Link from "next/link";
 
 
-const languages = [
-  { code: 'en', name: 'English', flag: '/images/icon/flag-kingdom.png' },
-  { code: 'tr', name: 'Türkçe', flag: '/images/icon/flag-turkey.png' },
-];
+// const languages = [
+//   { code: 'en', name: 'English', flag: '/images/icon/flag-kingdom.png' },
+//   { code: 'tr', name: 'Türkçe', flag: '/images/icon/flag-turkey.png' },
+// ];
 
 export default function Header(){
-  const [selectedLang, setSelectedLang] = useState(languages[0]);
-  const [open, setOpen] = useState(false);
+  // const [selectedLang, setSelectedLang] = useState(languages[0]);
+  // const [open, setOpen] = useState(false);
 
   const [isFixed, setIsFixed] = useState(false);
 

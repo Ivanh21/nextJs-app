@@ -1,7 +1,7 @@
 
+'use client';
 
-
- import { useState, useEffect, useRef } from "react";
+ import { useState, useRef } from "react";
 
  interface Service {
    id: string;

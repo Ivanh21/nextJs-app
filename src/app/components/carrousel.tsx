@@ -305,12 +305,12 @@ export default function Carousel() {
             rounded-lg overflow-hidden shadow-lg bg-white"
           >
             <div className="relative h-96 w-full">
-              <Image
-                src={`/images/project/${img}.jpg`}
-                alt={`Image ${img}`}
-                layout="fill"
-                objectFit="cover"
-              />
+               <Image
+                  src={`/images/project/${img}.jpg`}
+                  alt={`Image ${img}`}
+                  fill
+                  style={{ objectFit: 'cover' }}
+                />
 
               {/* <div className="absolute top-6 right-6">
                 <div className="relative w-[40px] h-[40px]">
