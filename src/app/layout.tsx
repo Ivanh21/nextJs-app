@@ -46,9 +46,7 @@ export default function RootLayout({
       <body
         className={poppins.className}
       >
-        <Header />
         <main>{children}</main>
-        <Footer />
         <Toaster position="top-right" reverseOrder={false} />
       </body>
     </html>

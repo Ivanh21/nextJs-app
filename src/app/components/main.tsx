@@ -262,7 +262,7 @@ export default function Main(){
 
 
    <AnimatedBlock>
-    <section className="w-full flex flex-col space-y-16 materiel-item p-2 lg:p-12" id="">
+    <section className="w-full flex flex-col space-y-16 materiel-item p-2 lg:p-12" id="project">
       <ProjectsHorizontal />
     </section> 
    </AnimatedBlock>
