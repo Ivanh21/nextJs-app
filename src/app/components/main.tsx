@@ -31,10 +31,11 @@ export default function Main(){
 
     return (
     <main className="w-full space-y-40">
+      <AnimatedBlock>
 
       <section className="flex flex-col justify-between max-lg:space-y-16 w-full px-4 lg:px-16 pt-16 max-lg:pt-32 max-md:pt-44" id="home">
 
-      <div className="w-full flex flex-col justify-between items-center animation-item space-y-8">
+      <div className="w-full flex flex-col justify-between items-center  space-y-8">
         <div className="w-full flex justify-between items-center">
           <div className="max-lg:w-full w-[60%] flex flex-col space-y-6 max-lg:space-y-12">
             <h1 className="text-4xl font-bold max-lg:text-3xl">Bienvenue !</h1>
@@ -163,6 +164,7 @@ export default function Main(){
 
 
       </section>
+      </AnimatedBlock>
 
       <AnimatedBlock>
 
