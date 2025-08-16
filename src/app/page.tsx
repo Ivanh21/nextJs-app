@@ -8,19 +8,23 @@ import Main from "./components/main";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
+  const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
-    // Garde le loader visible pendant au moins 3 secondes
     const timer = setTimeout(() => {
-      setLoading(false);
+      setFadeOut(true); // Lance le fondu
+      // Puis retire complètement le loader après la durée de la transition
+      setTimeout(() => {
+        setLoading(false);
+      }, 500); // correspond à la durée du fade-out
     }, 2000);
 
     return () => clearTimeout(timer);
   }, []);
 
   return (
-<>
-      {/* Loader overlay */}
+    <>
+      {/* Loader visible uniquement s’il n’est pas encore désactivé */}
       {loading && (
         <div
           id="initial-loader"
@@ -35,6 +39,9 @@ export default function Home() {
             justifyContent: "center",
             alignItems: "center",
             zIndex: 9999,
+            opacity: fadeOut ? 0 : 1,
+            transition: "opacity 0.5s ease-in-out",
+            pointerEvents: "none", // permet de cliquer à travers si nécessaire
           }}
         >
           <div className="spinner" />
@@ -60,13 +67,12 @@ export default function Home() {
         </div>
       )}
 
-      {/* Contenu principal — toujours présent, mais masqué si loading */}
+      {/* Contenu principal toujours présent dans le DOM */}
       <div style={{ visibility: loading ? "hidden" : "visible" }}>
         <Header />
         <Main />
         <Footer />
       </div>
     </>
-
   );
 }
