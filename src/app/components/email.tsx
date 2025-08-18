@@ -71,11 +71,11 @@ export default function Email(){
                     <Link href="mailto:support@startup.com" className="text-gray-500">support@startup.com</Link>
                 </div>
                 <div className="flex flex-col">
-                  <h2 className="text-lg font-semibold">Office location</h2>
-                  <Link href="#" className="text-gray-500">76/A, Green valle, Califonia USA.</Link>
+                  <h2 className="text-lg font-semibold">Nos bureaux</h2>
+                  <Link href="https://maps.app.goo.gl/4n9bSfm9LXM7jMAh9" target="_blank" className="text-gray-500">HEALTHCARE GROUP, Merkez, Çukurçeşme Cd.</Link>
                 </div>
                 <div className="flex flex-col">
-                  <h2 className="text-lg font-semibold">Numéro</h2>
+                  <h2 className="text-lg font-semibold">Tel</h2>
                   <Link href="tel:+00987543433223" className="text-gray-500">+009 8754 3433 223</Link>
                 </div>
                 <div className="flex flex-col">

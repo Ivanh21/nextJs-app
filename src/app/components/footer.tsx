@@ -17,7 +17,7 @@ export default function Footer(){
               alt="logo"
               />
 
-              <p className="text-sm text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p className="text-sm text-gray-500 max-lg:w-72">N'hésitez pas à me joindre via mes différents réseaux sociaux en cas de besoin.</p>
 
               <ul className="flex items-center gap-5">
                 <li>
@@ -93,7 +93,7 @@ export default function Footer(){
             </div>
 
 
-            <div className="flex justify-between w-full max-md:flex-col max-md:space-y-8">
+            <div className="flex lg:justify-between w-full max-md:flex-col max-md:space-y-8 max-lg:space-x-8 max-md:space-x-0">
             <div className="flex flex-col space-y-4">
               
               <h2 className="text-xl font-semibold">Liens</h2>
@@ -158,9 +158,10 @@ export default function Footer(){
               </ul>
             </div> */}
  
-            <div className="flex flex-col space-y-4 lg:w-[30%]">
+            <div className="flex flex-col space-y-4 w-[70%] lg:w-[30%]">
               
               <h2 className="text-xl font-semibold">Newsletter</h2>
+              <i className="fi fi-br-paper-plane-top"></i>
 
               <p className="text-gray-500">Abonnez-vous pour recevoir des futures informations</p>
 
@@ -170,14 +171,14 @@ export default function Footer(){
             
         </div>
 
-        <div className="flex max-md:flex-col max-md:space-y-4 justify-between foot pt-2">
-          <div className="flex space-x-2 max-md:justify-center">
+        <div className="flex max-md:flex-col max-md:space-y-4 justify-center foot pt-2">
+          {/* <div className="flex space-x-2 max-md:justify-center">
             <Link href="#" className="text-gray-500">Privacy Policy</Link>
             <Link href="#" className="text-gray-500">Support</Link>
-          </div>
+          </div> */}
 
           <div className="flex max-md:justify-center">
-            <span className="text-gray-500">© 2025 NGOLION. All rights reserved</span>
+            <span className="text-gray-500">© 2025 NGOLION. Tous droits réservés</span>
           </div>
         </div>
       </footer>

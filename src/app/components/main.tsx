@@ -2,13 +2,10 @@
 import Image from "next/image";
 import { useEffect, useState, useRef } from "react";
 import { Typewriter } from "./typewriter";
-import Carrousel from "./carrousel";
-import Materiel from "./materiel";
 import Testimonial from "./testimonial";
 import Email from "./email";
 import Services from "./services";
 import Link from "next/link";
-import styles from './main.module.css'
 import AnimatedBlock from "./scroll";
 import ProjectsHorizontal from "./scrollMotion";
 
@@ -48,118 +45,23 @@ export default function Main(){
               </div>
             </div>
             <p className="md:text-justify text-gray-500">Engagé dans le développement des infrastructures et de la santé en Afrique, je mets mon expertise en génie civil et en stratégie de développement au service de partenariats durables et à forte valeur ajoutée. <br />
-              {/* Co-fondateur de Turkey Healthcare Group & Istanbul infertility Center j’accompagne les entreprises et institutions médicales dans la mise en place de solutions de soins de santé de haut niveau, en facilitant l’accès à une médecine d’excellence grâce à des collaborations internationales solides et des technologies médicales avancées. <br/>
-              Je m’investis pleinement pour connecter l’Afrique aux meilleures expertises médicales de Turquie, avec une approche personnalisée, humaine et tournée vers les résultats. */}
             </p>
             <div className="flex space-x-8">
               <Link href="#about" className="p-4 bg-[#006bff] rounded-full text-white text-center max-lg:text-md">En savoir plus</Link>
-
-            
-              {/* <div className="flex flex-col space-y-2">
-                <span>Call us (000)XXX-XXX</span>
-                <p className="text-gray-500">For any question or concern</p>
-              </div> */}
             </div>
           </div>
-
-        {/* <div className="absolute top-[-1rem] right-[-2rem] flex justify-center">
-          <Image
-          width={50}
-          height={50}
-          src="/images/shape/shape-01.svg"
-          alt="Construction"
-          />
-        </div>
-
-        <div className="absolute top-[-0.5rem] right-[24rem] flex justify-center">
-          <Image
-          width={50}
-          height={50}
-          src="/images/shape/shape-02.svg"
-          alt="Construction"
-          
-          
-            />
-        </div> */}
 
           <div className="w-[40%] flex justify-center max-md:hidden">
                <Image 
                 width={450}
                 height={300}
-                src="/images/icon/ngolion.png"
+                src="/images/project/ngolion.png"
                 alt="Logo"
                 className="rounded-[50%]"
                 /> 
           </div>
 
         </div>
-          {/* <div className="hidden xl:flex relative">
-            
-                <Image 
-                width={750}
-                height={684}
-                src="/images/shape/shape-04.svg"
-                alt="Logo"
-                className="absolute top-[180%] left-0"
-                />    
-          
-             <div>
-                <Image 
-                width={100}
-                height={40}
-                src="/images/shape/shape-01.svg"
-                className="absolute top-64 left-[-65px]"
-                alt="Logo"
-                />
-            </div>
- 
-          </div> */}
-        {/* <div className="flex w-full max-lg:flex-wrap items-center lg:justify-between justify-center max-lg:gap-8 max-md:flex-col max-md:gap-16">
-        <div className="max-md:w-full flex items-center space-x-4">
-        <div className="bg-[#F57] p-4 rounded-full">
-        <Image
-          width={36}
-          height={36}
-          src="images/icon/icon-01.svg"
-          alt="Logo"
-        />
-        </div>
-        <div className="flex flex-col">
-          <span className="text-lg font-semibold">Cutting-edge Features</span>
-          <p className="text-sm text-justify w-52 text-gray-500">Lorem ipsum dolor sit amet conse adipiscing elit.</p>
-        </div>
-        </div>
-
-        <div className="max-md:w-full flex items-center space-x-4">
-        <div className="bg-[#4DB355] p-4 rounded-full">
-        <Image
-          width={36}
-          height={36}
-          src="images/icon/icon-02.svg"
-          alt="Logo"
-        />
-        </div>
-        <div className="flex flex-col">
-          <span className="text-lg font-semibold">10+ Useful Integrations</span>
-          <p className="text-sm text-justify w-52 text-gray-500">Lorem ipsum dolor sit amet conse adipiscing elit.</p>
-        </div>
-        </div>
-
-        <div className="max-md:w-full flex items-center space-x-4">
-        <div className="bg-[#F57F47] p-4 rounded-full">
-        <Image
-          width={36}
-          height={36}
-          src="images/icon/icon-03.svg"
-          alt="Logo"
-        />
-        </div>
-        <div className="flex flex-col">
-          <span className="text-lg font-semibold">High-quality Modern Design</span>
-          <p className="text-sm text-justify w-52 text-gray-500">Lorem ipsum dolor sit amet conse adipiscing elit.</p>
-        </div>
-        </div>
-        </div> */}
       </div>
 
 
@@ -168,16 +70,16 @@ export default function Main(){
 
       <AnimatedBlock>
 
-      <section className="w-full flex flex-col justify-center space-y-8 lg:px-24" id="about">
+      <section className="w-full flex flex-col justify-center max-md:space-y-16  lg:px-24" id="about">
           <div className="text-5xl font-bold max-lg:text-4xl max-md:text-2xl text-center">
             <h1>À propos de moi</h1>
           </div>
-          <div className="w-full flex justify-center items-center px-4 md:space-x-8">
-            <div className="max-md:hidden">
+          <div className="w-full flex justify-center items-center px-4">
+            <div className="max-md:hidden pb-4">
                 <Image 
                 width={300}
                 height={200}
-                src="/images/icon/ngolion.png"
+                src="/images/icon/fidely.png"
                 alt="Logo"
                 className="rounded-[50%]"
                 /> 
@@ -262,7 +164,7 @@ export default function Main(){
 
 
    <AnimatedBlock>
-    <section className="w-full flex flex-col space-y-16 materiel-item p-2 lg:p-12" id="project">
+    <section className="w-full flex flex-col space-y-8 materiel-item p-2 lg:p-12" id="project">
       <ProjectsHorizontal />
     </section> 
    </AnimatedBlock>

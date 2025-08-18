@@ -283,6 +283,7 @@ height: 350px;
 
 .no-scrollbar::-webkit-scrollbar {
   display: none;
+  
 }
 .no-scrollbar {
   -ms-overflow-style: none;

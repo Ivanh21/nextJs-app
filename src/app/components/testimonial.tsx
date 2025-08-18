@@ -67,7 +67,7 @@ export default function Testimonial() {
 
       <div className="w-full flex flex-col justify-center space-y-8 lg:px-24">
         <div className="w-full flex max-md:flex-col max-md:space-y-8 p-8 dark:bg-[#1c2136] rounded-lg md:space-x-16 testimonial">
-          <div className="relative h-72 w-[30%] max-lg:w-full">
+          <div className="relative h-48 w-[30%] max-lg:w-full">
             <Image
               fill
               src={testimonial.image}
@@ -77,14 +77,14 @@ export default function Testimonial() {
           </div>
 
           <div className="flex flex-col justify-between max-lg:space-y-8 lg:w-[70%]">
-            <div className="flex flex-col space-y-4">
+            <div className="flex flex-col space-y-2">
               <Image
                 src={`/images/icon/icon-quote.svg`}
                 width={50}
                 height={50}
                 alt="Quote"
               />
-              <p className="text-2xl font-bold text-gray-600 italic">
+              <p className="text-xl font-bold text-gray-600 italic">
                 {testimonial.text}
               </p>
             </div>
