@@ -17,7 +17,7 @@ export default function Footer(){
               alt="logo"
               />
 
-              <p className="text-sm text-gray-500 max-lg:w-72">N'hésitez pas à me joindre via mes différents réseaux sociaux en cas de besoin.</p>
+              <p className="text-sm text-gray-500 max-lg:w-72">N’hésitez pas à me joindre via mes différents réseaux sociaux en cas de besoin.</p>
 
               <ul className="flex items-center gap-5">
                 <li>
