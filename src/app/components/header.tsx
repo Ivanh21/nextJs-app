@@ -32,9 +32,23 @@ useEffect(() => {
 
   window.addEventListener('scroll', handleScroll);
   return () => window.removeEventListener('scroll', handleScroll);
-}, []);
+  }, []);
+
   
   const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+  if (isVisible) {
+    document.body.style.overflow = 'hidden'; // bloque le scroll
+  } else {
+    document.body.style.overflow = 'auto'; // réactive le scroll
+  }
+
+  // nettoyage quand le composant est démonté
+  return () => {
+    document.body.style.overflow = 'auto';
+  };
+  }, [isVisible]);
 
     return (
       <header className={`navbar transition-all duration-500 ease-in-out ${isFixed ? "fixed top-0 z-50 bg-white dark:bg-[#181c31] shadow-md" : "absolute"} w-full flex justify-between items-center px-2 py-4 lg:px-16`}>
@@ -106,7 +120,7 @@ useEffect(() => {
     </div>
     {isVisible && (
       <div className="absolute">
-      <div className="fixed inset-0 bg-white menu z-50 flex flex-col items-center justify-center">
+      <div className="fixed inset-0 bg-white menu z-50 flex flex-col items-center overflow-x-hidden overflow-y-hidden justify-center">
         <button
           className="absolute top-8 right-8"
           onClick={() => setIsVisible(!isVisible)}
@@ -115,7 +129,8 @@ useEffect(() => {
         </button>
         <div className="flex flex-col justify-center items-center space-y-8">
           <Link href="/#home" className="text-lg text-gray-500 font-bold" onClick={() => setIsVisible(!isVisible)}>Accueil</Link>
-          <Link href="/#work" className="text-lg text-gray-500 font-bold" onClick={() => setIsVisible(!isVisible)}>À propos</Link>
+          <Link href="/#about" className="text-lg text-gray-500 font-bold" onClick={() => setIsVisible(!isVisible)}>À propos</Link>
+          <Link href="/#services" className="text-lg text-gray-500 font-bold" onClick={() => setIsVisible(!isVisible)}>Services</Link>
           <Link href="/#project" className="text-lg text-gray-500 font-bold" onClick={() => setIsVisible(!isVisible)}>Projets</Link>
           <Link href="/#contact" className="text-lg text-gray-500 font-bold" onClick={() => setIsVisible(!isVisible)}>Contact</Link>
 

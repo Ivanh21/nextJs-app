@@ -8,6 +8,7 @@ import Services from "./services";
 import Link from "next/link";
 import AnimatedBlock from "./scroll";
 import ProjectsHorizontal from "./scrollMotion";
+import Carrousel from "./carrousel";
 
 export default function Main(){
 
@@ -44,7 +45,7 @@ export default function Main(){
               </h1>
               </div>
             </div>
-            <p className="md:text-justify text-gray-500">Engagé dans le développement des infrastructures et de la santé en Afrique, je mets mon expertise en génie civil et en stratégie de développement au service de partenariats durables et à forte valeur ajoutée. <br />
+            <p className="md:text-justify text-gray-500 text-lg">Engagé dans le développement des infrastructures et de la santé en Afrique, je mets mon expertise en génie civil et en stratégie de développement au service de partenariats durables et à forte valeur ajoutée. <br />
             </p>
             <div className="flex space-x-8">
               <Link href="#about" className="p-4 bg-[#006bff] rounded-full text-white text-center max-lg:text-md">En savoir plus</Link>
@@ -160,14 +161,14 @@ export default function Main(){
 
     {/* <section className="w-full flex flex-col space-y-16 project-item p-2 lg:pt-12 lg:pb-12" id="project">
       <Carrousel />
-    </section>  */}
+    </section>   */}
 
 
    <AnimatedBlock>
-    <section className="w-full flex flex-col space-y-8 materiel-item p-2 lg:p-12" id="project">
+    <section className="w-full flex flex-col space-y-8 p-2 lg:p-12" id="project">
       <ProjectsHorizontal />
     </section> 
-   </AnimatedBlock>
+   </AnimatedBlock> 
 
     <AnimatedBlock>
       <section className="w-full flex flex-col space-y-16 p-4 lg:p-12">

@@ -143,7 +143,6 @@ body {
 
 .materiel-item{
   background:url("/images/shape/shape-15.svg"), #f4f7fa;
-    width: 100%;
     background-size: cover;
     background-position: center;
 }
@@ -289,3 +288,4 @@ height: 350px;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+

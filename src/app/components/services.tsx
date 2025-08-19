@@ -342,7 +342,7 @@
         <h1 className="text-5xl max-lg:text-4xl max-md:text-2xl font-bold text-center">
           Nos Services
         </h1>
-        <p className="text-center text-gray-500 mb-6">
+        <p className="text-center text-gray-500 mb-6 lg:w-[50%] mx-auto">
           Nous vous proposons de nombreux services pour satisfaire vos besoins et
           nous vous accompagnons à la réalisation de vos projets.
         </p>
