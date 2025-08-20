@@ -158,17 +158,18 @@ export default function Main(){
         </section>
       </AnimatedBlock>    
 
+    <AnimatedBlock>
+      <section className="w-full flex flex-col space-y-16 p-2 lg:pt-12 lg:pb-12" id="project">
+        <Carrousel />
+      </section>   
+    </AnimatedBlock>
 
-    {/* <section className="w-full flex flex-col space-y-16 project-item p-2 lg:pt-12 lg:pb-12" id="project">
-      <Carrousel />
-    </section>   */}
 
-
-   <AnimatedBlock>
+   {/* <AnimatedBlock>
     <section className="w-full flex flex-col space-y-8 materiel-item p-2 lg:p-12" id="project">
       <ProjectsHorizontal />
     </section> 
-   </AnimatedBlock> 
+   </AnimatedBlock>  */}
 
     <AnimatedBlock>
       <section className="w-full flex flex-col space-y-16 p-4 lg:p-12">

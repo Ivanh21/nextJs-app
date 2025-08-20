@@ -211,7 +211,29 @@ import Image from "next/image";
 //   );
 // }
 
-const images = ['projet-01', 'projet-02', 'projet-03', 'projet-04']
+interface Projet {
+  title: string;
+  images: string;
+}
+
+const images: Projet[] = [
+  {
+    title:'Pharmacie la maison blanche, Abidjan CIV, 2025',
+    images: 'projet-01'
+  },
+  {
+    title:'Pharmacie la maison blanche, Abidjan CIV, 2025',
+    images: 'projet-02'
+  },
+  {
+    title:'Pharmacie la maison blanche, Abidjan CIV, 2025',
+    images: 'projet-03'
+  },
+  {
+    title:'Pharmacie la maison blanche, Abidjan CIV, 2025',
+    images: 'projet-04'
+  }
+]
 
 export default function Carousel() {
   const scrollRef = useRef<HTMLDivElement>(null)
@@ -219,10 +241,12 @@ export default function Carousel() {
 
   // Calcule le décalage pour un slide
   const getScrollOffset = () => {
-    if (!scrollRef.current) return 0
-    const firstChild = scrollRef.current.querySelector('div')
-    return firstChild?.clientWidth ? firstChild.clientWidth + 16 : 300 // + gap
-  }
+  if (!scrollRef.current) return 0
+  const children = scrollRef.current.children
+  if (!children.length) return 0
+  return (scrollRef.current.scrollWidth / children.length)
+}
+
 
   const scrollToIndex = (index: number) => {
     if (!scrollRef.current) return
@@ -295,7 +319,7 @@ export default function Carousel() {
       {/* Carousel */}
       <div
         ref={scrollRef}
-        className="flex space-x-4 overflow-x-auto scrollbar-hide px-2 py-4 scroll-smooth snap-x snap-mandatory w-full"
+        className="flex space-x-8 overflow-x-auto scrollbar-hide px-2 py-4 scroll-smooth snap-x snap-mandatory w-full"
       >
         {images.map((img, i) => (
           <div
@@ -306,8 +330,8 @@ export default function Carousel() {
           >
             <div className="relative h-96 w-full">
                <Image
-                  src={`/images/project/${img}.jpg`}
-                  alt={`Image ${img}`}
+                  src={`/images/project/${img.images}.jpg`}
+                  alt={`Image ${img.images}`}
                   fill
                   style={{ objectFit: 'cover' }}
                 />
@@ -326,9 +350,9 @@ export default function Carousel() {
                 </div>
               </div> */}
             </div>
-
-            <div className="p-4 bg-gray-700 text-white text-sm font-medium">
-              Lorem ipsum dolor sit amet conse adipiscing elit.
+                
+            <div className="p-4 bg-gray-700 text-white text-md font-bold text-center">
+              {img.title}
             </div>
           </div>
         ))}
