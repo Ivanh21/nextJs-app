@@ -142,9 +142,11 @@ body {
 }
 
 .materiel-item{
-  background:url("/images/shape/shape-15.svg"), #f4f7fa;
+  /* background:url("/images/shape/shape-15.svg"), #f4f7fa;
+    width: 100%;
     background-size: cover;
-    background-position: center;
+    background-position: center; */
+    background-color: #f4f7fa;
 }
 .menu{
   background: linear-gradient(rgba(255, 255, 255, 0.9));
@@ -168,10 +170,11 @@ body {
 }
 
 .materiel-item{
-  background:url("/images/shape/shape-15.svg"), #1c2136;
+  /* background:url("/images/shape/shape-15.svg"), #1c2136;
     width: 100%;
     background-size: cover;
-    background-position: center;
+    background-position: center; */
+    background: #1c2136;
 }
 .menu{
   background: linear-gradient(rgba(0, 0, 0, 0.9));
