@@ -245,7 +245,7 @@ export default function Carousel() {
   const children = scrollRef.current.children
   if (!children.length) return 0
   return (scrollRef.current.scrollWidth / children.length)
-}
+  }
 
 
   const scrollToIndex = (index: number) => {

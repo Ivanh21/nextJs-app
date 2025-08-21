@@ -36,11 +36,11 @@ export default function Main(){
       <div className="w-full flex flex-col justify-between items-center  space-y-8">
         <div className="w-full flex justify-between items-center">
           <div className="max-lg:w-full w-[60%] flex flex-col space-y-6 max-lg:space-y-12">
-            <h1 className="text-4xl font-bold max-lg:text-3xl">Bienvenue !</h1>
+            <h1 className="text-5xl max-lg:text-4xl max-md:text-2xl font-bold">Bienvenue !</h1>
             <div className="flex flex-col space-y-4">
-              <h1 className="text-3xl font-bold max-lg:text-2xl"><strong>FIDELY NGOLION</strong></h1>
+              <h1 className="text-4xl font-bold max-lg:text-3xl"><strong>FIDELY NGOLION</strong></h1>
               <div className="h-6">
-                <h1 className="text-3xl font-bold max-lg:text-2xl">
+                <h1 className="text-3xl font-bold max-lg:text-3xl">
                 <Typewriter words={['Co-fondateur & Directeur Régional Afrique', 'Co-fondateur de Turkey Healthcare Group', 'Co-fondateur Instanbul Infertility Center']} />
               </h1>
               </div>

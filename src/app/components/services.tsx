@@ -340,7 +340,7 @@
     <div className="w-full mx-auto flex flex-col space-y-4 px-4 lg:px-24">
       <div className="flex flex-col space-y-8 py-8">
         <h1 className="text-5xl max-lg:text-4xl max-md:text-2xl font-bold text-center">
-          Nos Services
+          Nos services
         </h1>
         <p className="text-center text-gray-500 mb-6 lg:w-[50%] mx-auto">
           Nous vous proposons de nombreux services pour satisfaire vos besoins et
