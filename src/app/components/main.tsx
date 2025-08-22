@@ -40,7 +40,7 @@ export default function Main(){
             <div className="flex flex-col space-y-4">
               <h1 className="text-4xl font-bold max-lg:text-3xl"><strong>FIDELY NGOLION</strong></h1>
               <div className="h-6">
-                <h1 className="text-3xl font-bold max-lg:text-3xl">
+                <h1 className="text-3xl font-bold max-lg:text-2xl">
                 <Typewriter words={['Co-fondateur & Directeur Régional Afrique', 'Co-fondateur de Turkey Healthcare Group', 'Co-fondateur Instanbul Infertility Center']} />
               </h1>
               </div>
@@ -164,6 +164,18 @@ export default function Main(){
       </section>   
     </AnimatedBlock>
 
+    <AnimatedBlock>
+      <section className="w-full flex-col flex px-4 space-y-16" id="">
+        <div className="flex flex-col justify-center items-center space-y-4 px-2">
+        <h1 className="text-5xl font-bold max-md:text-2xl max-lg:text-4xl">
+          Avis des clients
+        </h1>
+      </div>
+        <script src="https://elfsightcdn.com/platform.js" async></script>
+        <div className="elfsight-app-a1149538-5229-4faf-b883-f4956c478ce5" data-elfsight-app-lazy></div>
+      </section>
+    </AnimatedBlock>
+
 
    {/* <AnimatedBlock>
     <section className="w-full flex flex-col space-y-8 materiel-item p-2 lg:p-12" id="project">
@@ -171,11 +183,11 @@ export default function Main(){
     </section> 
    </AnimatedBlock>  */}
 
-    <AnimatedBlock>
+    {/* <AnimatedBlock>
       <section className="w-full flex flex-col space-y-16 p-4 lg:p-12">
         <Testimonial />
       </section>
-    </AnimatedBlock>
+    </AnimatedBlock> */}
 
 
       
@@ -186,7 +198,7 @@ export default function Main(){
       </section>
      </AnimatedBlock>
       {show && (
-      <div className="absolute">
+      <div className="absolute  z-10">
         <Link href="#home"
           className="fixed bottom-6 right-4 p-3 rounded-md bg-[#006bff] text-white shadow-lg hover:bg-blue-700 transition"
           aria-label="Scroll to top"

@@ -218,19 +218,19 @@ interface Projet {
 
 const images: Projet[] = [
   {
-    title:'Pharmacie la maison blanche, Abidjan CIV, 2025',
+    title:'Rencontre institutionnelle avec la Polyclinique Internationale Sainte-Anne-Marie (PISAM), Abidjan CIV, 2025.',
     images: 'projet-01'
   },
   {
-    title:'Pharmacie la maison blanche, Abidjan CIV, 2025',
+    title:'Rencontre institutionnelle avec la Polyclinique Internationale Sainte-Anne-Marie (PISAM), Abidjan CIV, 2025.',
     images: 'projet-02'
   },
   {
-    title:'Pharmacie la maison blanche, Abidjan CIV, 2025',
+    title:'Rencontre institutionnelle avec la Polyclinique Internationale Sainte-Anne-Marie (PISAM), Abidjan CIV, 2025.',
     images: 'projet-03'
   },
   {
-    title:'Pharmacie la maison blanche, Abidjan CIV, 2025',
+    title:'Rencontre institutionnelle avec la Polyclinique Internationale Sainte-Anne-Marie (PISAM), Abidjan CIV, 2025.',
     images: 'projet-04'
   }
 ]

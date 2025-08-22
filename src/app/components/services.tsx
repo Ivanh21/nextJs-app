@@ -185,30 +185,30 @@
          </div>
        ),
      },
-      {
-         id: "contruction",
-         title: "Matériel de Construction & Finition",
-         icon: "fi fi-ss-hard-hat",
-         content: (
-         <div className="space-y-8">
-           <h1 className="font-bold text-2xl">
-             Aucun contenu pour le moment
-           </h1>
-         </div>
-         )
-      },
-      {
-         id: "voyage",
-         title: "Voyage d'affaires en Turquie",
-         icon: "fi fi-ss-plane",
-         content: (
-         <div className="space-y-8">
-           <h1 className="font-bold text-2xl">
-             Aucun contenu pour le moment
-           </h1>
-         </div>
-         )
-      },
+      // {
+      //    id: "contruction",
+      //    title: "Matériel de Construction & Finition",
+      //    icon: "fi fi-ss-hard-hat",
+      //    content: (
+      //    <div className="space-y-8">
+      //      <h1 className="font-bold text-2xl">
+      //        Aucun contenu pour le moment
+      //      </h1>
+      //    </div>
+      //    )
+      // },
+      // {
+      //    id: "voyage",
+      //    title: "Voyage d'affaires en Turquie",
+      //    icon: "fi fi-ss-plane",
+      //    content: (
+      //    <div className="space-y-8">
+      //      <h1 className="font-bold text-2xl">
+      //        Aucun contenu pour le moment
+      //      </h1>
+      //    </div>
+      //    )
+      // },
 
      {
        id: "afrique",
