@@ -238,6 +238,8 @@ const images: Projet[] = [
 export default function Carousel() {
   const scrollRef = useRef<HTMLDivElement>(null)
   const [activeIndex, setActiveIndex] = useState(0)
+  const intervalRef = useRef<NodeJS.Timeout | null>(null)
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   // Calcule le décalage pour un slide
   const getScrollOffset = () => {
@@ -273,12 +275,30 @@ export default function Carousel() {
     })
   }
 
-  // Auto scroll every 4s
-  useEffect(() => {
-    const interval = setInterval(() => {
+    const startAutoScroll = () => {
+    if (intervalRef.current) return
+    intervalRef.current = setInterval(() => {
       scrollRight()
     }, 4000)
-    return () => clearInterval(interval)
+  }
+
+  const stopAutoScroll = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current)
+      intervalRef.current = null
+    }
+  }
+
+  // Auto scroll every 4s
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     scrollRight()
+  //   }, 4000)
+  //   return () => clearInterval(interval)
+  // }, [])
+    useEffect(() => {
+    startAutoScroll()
+    return () => stopAutoScroll()
   }, [])
 
   // Met à jour l'index actif en fonction du scroll manuel
@@ -307,11 +327,11 @@ export default function Carousel() {
            Un catalogue des derniers projets sur lesquels j’ai travaillé.
         </p>
        </div>
-    <div className="w-full flex flex-col items-center relative mt-8 overflow-hidden">
+    <div className="w-full flex flex-col items-center relative lg:px-20 mt-8 overflow-hidden">
       {/* Flèche gauche */}
       <button
         onClick={scrollLeft}
-        className="hidden md:flex items-center justify-center absolute left-2 top-1/2 -translate-y-1/2 z-10"
+        className="hidden md:flex items-center justify-center absolute left-4 top-1/2 -translate-y-1/2 z-10"
       >
         <i className="fa-solid fa-arrow-left size-12 border rounded-full p-4 bg-[#006bff] border-[#006bff] text-white"></i>
       </button>
@@ -320,6 +340,8 @@ export default function Carousel() {
       <div
         ref={scrollRef}
         className="flex space-x-8 overflow-x-auto scrollbar-hide px-2 py-4 scroll-smooth snap-x snap-mandatory w-full"
+         onMouseEnter={stopAutoScroll}
+         onMouseLeave={startAutoScroll}
       >
         {images.map((img, i) => (
           <div
@@ -328,12 +350,13 @@ export default function Carousel() {
             w-[90vw] sm:w-[70vw] md:w-[50vw] lg:w-[33vw] xl:w-[25vw] 
             rounded-lg overflow-hidden shadow-lg bg-white"
           >
-            <div className="relative h-96 w-full">
+            <div className="relative h-72 w-full">
                <Image
                   src={`/images/project/${img.images}.jpg`}
                   alt={`Image ${img.images}`}
                   fill
                   style={{ objectFit: 'cover' }}
+                  onClick={() => setSelectedImage(`/images/project/${img.images}.jpg`)}
                 />
 
               {/* <div className="absolute top-6 right-6">
@@ -361,7 +384,7 @@ export default function Carousel() {
       {/* Flèche droite */}
       <button
         onClick={scrollRight}
-        className="hidden md:flex items-center justify-center absolute right-2 top-1/2 -translate-y-1/2 z-10"
+        className="hidden md:flex items-center justify-center absolute right-4 top-1/2 -translate-y-1/2 z-10"
       >
         <i className="fa-solid fa-arrow-right size-12 border rounded-full p-4 bg-[#006bff] border-[#006bff] text-white"></i>
       </button>
@@ -378,6 +401,30 @@ export default function Carousel() {
         ))}
       </div>
     </div>
+
+    {/* Modal */}
+          {selectedImage && (
+            <div
+              className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50"
+              onClick={() => setSelectedImage(null)}
+            >
+              <div className="relative max-w-4xl w-full p-4">
+                <Image
+                  src={selectedImage}
+                  alt="Aperçu projet"
+                  width={1200}
+                  height={800}
+                  className="w-full max-h-[80vh] object-contain rounded-lg shadow-lg"
+                />
+                <button
+                  className="absolute top-4 right-4 text-white bg-black bg-opacity-50 rounded-full p-2 hover:bg-opacity-80"
+                  onClick={() => setSelectedImage(null)}
+                >
+                  ✕
+                </button>
+              </div>
+            </div>
+          )}
     </>
   )
 }

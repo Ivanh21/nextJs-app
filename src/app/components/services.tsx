@@ -11,7 +11,7 @@
  }
 
  export default function Services() {
-     const [openIds, setOpenIds] = useState<string[]>([]);
+  const [openIds, setOpenIds] = useState<string[]>([]);
 
   const toggle = (id: string) => {
     setOpenIds((prev) =>
@@ -335,6 +335,7 @@
        ),
      },
    ];
+   
 
     return (
     <div className="w-full mx-auto flex flex-col space-y-4 px-4 lg:px-24">
