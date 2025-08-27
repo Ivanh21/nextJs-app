@@ -104,16 +104,23 @@ export default function Footer(){
               </ul>
             </div> */}
  
-            <div className="flex flex-col space-y-4 w-[70%] lg:w-[30%]">
+            <div className="flex flex-col space-y-6 w-[70%] lg:w-[30%]">
               
               <h2 className="text-xl font-semibold">Newsletter</h2>
-              <i className="fi fi-br-paper-plane-top"></i>
+         
 
               <p className="text-gray-500">Abonnez-vous pour recevoir des futures informations</p>
+              <div className="relative w-full ">
+                <input 
+                  type="text" 
+                  className="rounded-full p-3 pr-12 news dark:bg-[#181c31] w-full" 
+                  placeholder="example@gmail.com" 
+                />
+                <button><i className="fi fi-sr-paper-plane-top text-xl absolute top-7 right-4 -translate-y-1/2 text-gray-500"></i></button>
+              </div>
 
-              <input type="text" className="rounded-full p-3 news dark:bg-[#181c31]" placeholder="example@gmail.com" />
             </div>  
-            </div>
+            </div>  
             
         </div>
 

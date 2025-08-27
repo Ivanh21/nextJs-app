@@ -68,7 +68,7 @@ export default function Email(){
               <div className="flex flex-col space-y-10">
                 <div className="flex flex-col">
                     <h2 className="text-lg font-semibold">Adresse email</h2>
-                    <Link href="mailto:support@startup.com" className="text-gray-500">support@startup.com</Link>
+                    <Link href="mailto:Gemaeln21@gmail.com" className="text-gray-500">Gemaeln21@gmail.com</Link>
                 </div>
                 <div className="flex flex-col">
                   <h2 className="text-lg font-semibold">Nos bureaux</h2>
@@ -76,7 +76,7 @@ export default function Email(){
                 </div>
                 <div className="flex flex-col">
                   <h2 className="text-lg font-semibold">Tel</h2>
-                  <Link href="tel:+00987543433223" className="text-gray-500">+009 8754 3433 223</Link>
+                  <Link href="tel:+00905313789460" className="text-gray-500">+009 0531 3789 460</Link>
                 </div>
                 <div className="flex flex-col">
                     <h2 className="text-lg font-semibold">Skype Email</h2>
@@ -86,7 +86,7 @@ export default function Email(){
                 <div className="border border-gray-500"></div>
 
                 <div className="flex flex-col space-y-8">
-                  <h2 className="text-lg font-semibold">Réseaux socials</h2>
+                  <h2 className="text-lg font-semibold">Réseaux sociaux</h2>
 
                 <ul className="flex items-center gap-5">
                 <li>
