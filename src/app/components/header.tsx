@@ -51,7 +51,7 @@ useEffect(() => {
   }, [isVisible]);
 
     return (
-      <header className={`navbar transition-all duration-500 ease-in-out ${isFixed ? "fixed top-0 z-90 bg-white dark:bg-[#181c31] shadow-md" : "absolute"} w-full flex justify-between items-center px-2 py-4 lg:px-16`}>
+      <header className={`navbar transition-all duration-500 ease-in-out ${isFixed ? "fixed top-0 z-50 bg-white dark:bg-[#181c31] shadow-md" : "absolute"} w-full flex justify-between items-center px-2 py-4 lg:px-16`}>
           <div className="">
             <Image
             width={60}
