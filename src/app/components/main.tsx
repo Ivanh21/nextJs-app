@@ -28,7 +28,7 @@ export default function Main(){
   }, []);
 
     return (
-    <main className="w-full space-y-40">
+    <main className="w-full h-full flex flex-col space-y-40">
       <AnimatedBlock>
 
       <section className="flex flex-col justify-between max-lg:space-y-16 w-full px-4 lg:px-16 pt-16 max-lg:pt-32 max-md:pt-44" id="home">
@@ -71,12 +71,12 @@ export default function Main(){
 
       <AnimatedBlock>
 
-      <section className="w-full flex flex-col justify-center max-md:space-y-16  lg:px-24" id="about">
+      <section className="w-full flex flex-col justify-center space-y-16" id="about">
           <div className="text-5xl font-bold max-lg:text-4xl max-md:text-2xl text-center">
             <h1>À propos de moi</h1>
           </div>
-          <div className="w-full flex justify-center items-center px-4">
-            <div className="max-md:hidden pb-4">
+          <div className="w-full flex justify-center items-center px-4 lg:space-x-8">
+            <div className="max-md:hidden -mt-44">
                 <Image 
                 width={300}
                 height={200}
@@ -164,7 +164,7 @@ export default function Main(){
       </section>   
     </AnimatedBlock>
 
-    <AnimatedBlock>
+    {/* <AnimatedBlock>
       <section className="w-full flex-col flex px-4 space-y-16" id="">
         <div className="flex flex-col justify-center items-center space-y-4 px-2">
         <h1 className="text-5xl font-bold max-md:text-2xl max-lg:text-4xl">
@@ -174,7 +174,7 @@ export default function Main(){
         <script src="https://elfsightcdn.com/platform.js" async></script>
         <div className="elfsight-app-a1149538-5229-4faf-b883-f4956c478ce5" data-elfsight-app-lazy></div>
       </section>
-    </AnimatedBlock>
+    </AnimatedBlock> */}
 
 
    {/* <AnimatedBlock>

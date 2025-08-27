@@ -339,7 +339,7 @@ export default function Carousel() {
       {/* Carousel */}
       <div
         ref={scrollRef}
-        className="flex space-x-8 overflow-x-auto scrollbar-hide px-2 py-4 scroll-smooth snap-x snap-mandatory w-full"
+        className="flex space-x-8 overflow-x-auto scrollbar-hide cursor-pointer px-2 py-4 scroll-smooth snap-x snap-mandatory w-full"
          onMouseEnter={stopAutoScroll}
          onMouseLeave={startAutoScroll}
       >

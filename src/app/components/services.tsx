@@ -150,10 +150,9 @@
            </ul>
            <div className="flex flex-col space-y-4">
              <div className="flex space-x-2 items-center">
-               <i className="fa-solid fa-earth-africa text-2xl"></i>
                <h1 className="text-xl font-bold">Nos engagements</h1>
              </div>
-             <div className="flex flex-col space-y-4 px-2 lg:px-8">
+             <div className="flex flex-col space-y-4 px-2 lg:px-6">
                <div className="flex space-x-2 items-center">
                  <i className="fa-solid fa-circle-check text-green-500 text-xl"></i>
                  <span>
@@ -291,7 +290,7 @@
                <i className="fa-solid fa-earth-africa text-2xl"></i>
                <h1 className="text-xl font-bold">Notre approche en Afrique</h1>
              </div>
-             <div className="flex flex-col space-y-4 px-2 lg:px-8">
+             <div className="flex flex-col space-y-4 px-2 lg:px-6">
                <div className="flex space-x-2 items-center">
                  <i className="fa-solid fa-circle-check text-green-500 text-xl"></i>
                  <span>
