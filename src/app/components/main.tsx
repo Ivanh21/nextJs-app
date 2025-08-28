@@ -164,7 +164,7 @@ export default function Main(){
       </section>   
     </AnimatedBlock>
 
-    {/* <AnimatedBlock>
+    <AnimatedBlock>
       <section className="w-full flex-col flex px-4 space-y-16" id="">
         <div className="flex flex-col justify-center items-center space-y-4 px-2">
         <h1 className="text-5xl font-bold max-md:text-2xl max-lg:text-4xl">
@@ -174,7 +174,7 @@ export default function Main(){
         <script src="https://elfsightcdn.com/platform.js" async></script>
         <div className="elfsight-app-a1149538-5229-4faf-b883-f4956c478ce5" data-elfsight-app-lazy></div>
       </section>
-    </AnimatedBlock> */}
+    </AnimatedBlock> 
 
 
    {/* <AnimatedBlock>
