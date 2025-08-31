@@ -31,10 +31,10 @@ export default function Main(){
   }, []);
 
     return (
-    <main className="w-full h-full flex flex-col space-y-40">
+    <main className="w-full">
       <AnimatedBlock>
 
-      <section className="flex flex-col justify-between max-lg:space-y-16 w-full px-4 lg:px-16 pt-16 max-lg:pt-32 max-md:pt-44" id="home">
+      <section className="min-h-screen flex flex-col justify-center items-center w-full px-4 lg:px-16" id="home">
 
       <div className="w-full flex flex-col justify-between items-center  space-y-8">
         <div className="w-full flex justify-between items-center">
@@ -74,7 +74,7 @@ export default function Main(){
 
       <AnimatedBlock>
 
-      <section className="w-full flex flex-col justify-center space-y-16" id="about">
+      <section className="w-full min-h-screen flex flex-col justify-center items-center space-y-16" id="about">
           <div className="text-5xl font-bold max-lg:text-4xl max-md:text-2xl text-center">
             <h1>{t("Main.about-me")}</h1>
           </div>
@@ -103,7 +103,7 @@ export default function Main(){
 
       <AnimatedBlock>
       
-      <section className="flex flex-col space-y-16 justify-center items-center" id="work">
+      <section className="min-h-screen flex flex-col space-y-16 justify-center items-center" id="work">
          <div className="flex justify-center items-center">
           <div className="flex flex-col space-y-4 px-2 max-lg:px-4">
             <h1 className="text-5xl font-bold max-lg:text-4xl max-md:text-2xl text-center">{t("section1.title")}</h1>
@@ -155,19 +155,19 @@ export default function Main(){
       </AnimatedBlock> 
 
       <AnimatedBlock>
-        <section className="w-full flex flex-col space-y-16 justify-center items-center" id="services">
+        <section className="w-full min-h-screen flex flex-col space-y-16 justify-center items-center" id="services">
           <Services/>
         </section>
       </AnimatedBlock>    
 
     <AnimatedBlock>
-      <section className="w-full flex flex-col space-y-16 p-2 lg:pt-12 lg:pb-12" id="project">
+      <section className="w-full min-h-screen flex flex-col justify-center items-center space-y-16 p-2 lg:pt-12 lg:pb-12" id="project">
         <Carrousel />
       </section>   
     </AnimatedBlock>
  
-    <AnimatedBlock>
-      <section className="w-full flex-col flex px-4 space-y-16" id="">
+    {/* <AnimatedBlock>
+      <section className="w-full min-h-screen flex-col flex justify-center items-center px-4 space-y-16" id="">
         <div className="flex flex-col justify-center items-center space-y-4 px-2">
         <h1 className="text-5xl font-bold max-md:text-2xl max-lg:text-4xl">
           {t("section5.title")}
@@ -176,7 +176,7 @@ export default function Main(){
         <script src="https://elfsightcdn.com/platform.js" async></script>
         <div className="elfsight-app-a1149538-5229-4faf-b883-f4956c478ce5" data-elfsight-app-lazy></div>
       </section>
-    </AnimatedBlock> 
+    </AnimatedBlock>  */}
 
 
    {/* <AnimatedBlock>
@@ -195,7 +195,7 @@ export default function Main(){
       
 
      <AnimatedBlock>
-       <section className="contact w-full p-4 lg:p-12 flex flex-col justify-end space-y-16" id="contact">
+       <section className="contact min-h-screen w-full p-4 lg:p-12 flex flex-col justify-center items-center space-y-16" id="contact">
           <Email />
       </section>
      </AnimatedBlock>

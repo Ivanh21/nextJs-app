@@ -329,7 +329,7 @@ export default function Carousel() {
         <h1 className="text-5xl font-bold max-md:text-2xl max-lg:text-4xl text-center">
           {t("section3.title")}
          </h1>
-         <p className="text-sm text-gray-500 w-[50%] max-md:w-full text-center">
+         <p className="text-sm text-gray-500 max-md:w-full text-center">
            {t("section3.description")}
         </p>
        </div>

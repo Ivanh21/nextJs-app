@@ -80,7 +80,9 @@ export default function Home({ params }: { params: Promise<{ locale: string }> }
       {/* Contenu principal toujours présent dans le DOM */}
       <div style={{ visibility: loading ? "hidden" : "visible" }}>
         <Header />
+        
         <Main />
+
         <Footer />
       </div>
     </>
