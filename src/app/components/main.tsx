@@ -75,7 +75,7 @@ export default function Main(){
       <AnimatedBlock>
 
       <section className="w-full min-h-screen flex flex-col justify-center items-center space-y-16 materiel-item" id="about">
-          <div className="text-5xl font-black max-lg:text-4xl max-md:text-2xl text-center">
+          <div className="text-5xl font-bold max-lg:text-4xl max-md:text-2xl text-center">
             <h1>{t("Main.about-me")}</h1>
           </div>
           <div className="w-full flex justify-center items-center px-4 lg:space-x-8">
@@ -166,7 +166,7 @@ export default function Main(){
       </section>   
     </AnimatedBlock>
  
-    {/* <AnimatedBlock>
+    <AnimatedBlock>
       <section className="w-full min-h-screen flex-col flex justify-center items-center px-4 space-y-16" id="">
         <div className="flex flex-col justify-center items-center space-y-4 px-2">
         <h1 className="text-5xl font-bold max-md:text-2xl max-lg:text-4xl">
@@ -176,7 +176,7 @@ export default function Main(){
         <script src="https://elfsightcdn.com/platform.js" async></script>
         <div className="elfsight-app-a1149538-5229-4faf-b883-f4956c478ce5" data-elfsight-app-lazy></div>
       </section>
-    </AnimatedBlock>  */}
+    </AnimatedBlock> 
 
 
    {/* <AnimatedBlock>
