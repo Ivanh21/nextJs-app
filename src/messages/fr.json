@@ -15,7 +15,7 @@
     "poste3": "Co-fondateur Instanbul Infertility Center",
     "myself": "Engagé dans le développement des infrastructures et de la santé en Afrique, je mets mon expertise en génie civil et en stratégie de développement au service de partenariats durables et à forte valeur ajoutée.",
     "show-more": "En savoir plus",
-    "about-me": "À propos de moi",
+    "about-me": "À PROPOS",
     "about-me-info1": "Co-fondateur de Turkey Healthcare Group & Istanbul infertility Center j’accompagne les entreprises et institutions médicales dans la mise en place de solutions de soins de santé de haut niveau, en facilitant l’accès à une médecine d’excellence grâce à des collaborations internationales solides et des technologies médicales avancées.",
     "about-me-info2": " Je m’investis pleinement pour connecter l’Afrique aux meilleures expertises médicales de Turquie, avec une approche personnalisée, humaine et tournée vers les résultats.",
     "cv": "Télécharger mon CV"
@@ -29,7 +29,7 @@
     "five-why": "Service client multilingue et équipe dédiée en Afrique"
   },
   "section2":{
-    "title": "Nos services",
+    "title": "NOS SERVICES",
     "description": "Nous vous proposons de nombreux services pour satisfaire vos besoins et nous vous accompagnons à la réalisation de vos projets.",
     "first-service":{
       "title": "Services Sanitaires & Tourisme Médical",
@@ -151,12 +151,12 @@
     }
   },
   "section3":{
-    "title": "Derniers projets",
+    "title": "DERNIERS PROJETS",
     "description":"Un catalogue des derniers projets sur lesquels j’ai travaillé.",
     "project1": "Rencontre institutionnelle avec la Polyclinique Internationale Sainte-Anne-Marie (PISAM), Abidjan CIV, 2025."
   },
   "section4":{
-    "title": "Contactez-moi",
+    "title": "CONTACTEZ-MOI",
     "description": "Pour plus des informations, contactez-moi en utilisant mes coordonnées.",
     "name": "Noms",
     "email":"Adresse email",

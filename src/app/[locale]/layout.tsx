@@ -25,8 +25,9 @@ export const metadata: Metadata = {
 };
 
 const poppins = Poppins({
-  weight: "400",
-  subsets: ["latin"]
+  weight: ["300", "400", "500", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-poppins",
 })
 
 export default function RootLayout({
@@ -38,7 +39,7 @@ export default function RootLayout({
  }) {
   const { locale } = use(params);
   return (
-    <html lang={locale} className="scroll-smooth">
+    <html lang={locale} className={`${poppins.variable} scroll-smooth`}>
       <head>
      
         <link rel="icon" type="image/png" sizes="192x192" href="/images/logo/android-chrome-192x192.png" />
@@ -59,7 +60,7 @@ export default function RootLayout({
         <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css' />
       </head>
       <body
-        className={poppins.className}
+        className="font-sans"
       >
         <Providers>
         <main>{children}</main>

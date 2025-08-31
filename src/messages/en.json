@@ -15,7 +15,7 @@
     "poste3": "Co-founder of Istanbul Infertility Center",
     "myself": "Committed to infrastructure and healthcare development in Africa, I use my expertise in civil engineering and development strategy to build sustainable, high-value partnerships.",
     "show-more": "Learn more",
-    "about-me": "About me",
+    "about-me": "ABOUT ME",
     "about-me-info1": "As co-founder of Turkey Healthcare Group & Istanbul Infertility Center, I support companies and medical institutions in implementing high-level healthcare solutions, facilitating access to excellent medical care through strong international collaborations and advanced medical technologies.",
     "about-me-info2": "I am fully committed to connecting Africa with the best medical expertise in Turkey, with a personalized, human, and results-oriented approach.",
     "cv": "Download my resume"
@@ -29,7 +29,7 @@
     "five-why": "Multilingual customer service and dedicated team in Africa"
   },
   "section2":{
-    "title": "Our services",
+    "title": "OUR SERVICES",
     "description": "We offer a wide range of services to meet your needs and support you in bringing your projects to fruition.",
     "first-service":{
       "title": "Health Services & Medical Tourism",
@@ -152,12 +152,12 @@
     }
   },
   "section3":{
-  "title": "Latest projects",
+  "title": "LATEST PROJECTS",
   "description":"A catalog of the latest projects I have worked on.",
   "project1": "Institutional meeting with the Sainte-Anne-Marie International Polyclinic (PISAM), Abidjan CIV, 2025."
   },
   "section4":{
-    "title": "Contact Me",
+    "title": "CONTACT ME",
     "description": "For more information, please contact me using my contact details.",
     "name": "Name",
     "email":"Email address",
@@ -180,6 +180,6 @@
     "reserved": "All rights reserved"
   },
   "section5":{
-    "title": "Customer reviews"
+    "title": "CUSTOMER REVIEWS"
   }
 }

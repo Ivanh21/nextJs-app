@@ -48,7 +48,7 @@ export default function Main(){
               </h1>
               </div>
             </div>
-            <p className="md:text-justify text-gray-500 text-lg">{t("Main.myself")} <br />
+            <p className="md:text-justify text-gray-500 text-xl">{t("Main.myself")} <br />
             </p>
             <div className="flex space-x-8">
               <Link href="#about" className="p-4 bg-[#006bff] rounded-full text-white text-center max-lg:text-md">{t("Main.show-more")}</Link>
@@ -74,8 +74,8 @@ export default function Main(){
 
       <AnimatedBlock>
 
-      <section className="w-full min-h-screen flex flex-col justify-center items-center space-y-16" id="about">
-          <div className="text-5xl font-bold max-lg:text-4xl max-md:text-2xl text-center">
+      <section className="w-full min-h-screen flex flex-col justify-center items-center space-y-16 materiel-item" id="about">
+          <div className="text-5xl font-black max-lg:text-4xl max-md:text-2xl text-center">
             <h1>{t("Main.about-me")}</h1>
           </div>
           <div className="w-full flex justify-center items-center px-4 lg:space-x-8">
@@ -89,7 +89,7 @@ export default function Main(){
                 /> 
             </div>
             <div className="flex flex-col space-y-6 justify-center w-[50%] max-md:w-full">
-            <p className="text-gray-500 md:text-justify">
+            <p className="text-gray-500 md:text-justify text-xl">
               {t("Main.about-me-info1")} <br />
               {t("Main.about-me-info2")}
             </p>
@@ -115,21 +115,21 @@ export default function Main(){
               <div className="w-[30%] max-lg:w-full menu-item h-56 rounded-lg p-4 space-y-4 flex flex-col justify-center items-center cursor-pointer">
                 <i className="fi fi-ss-entrance icon-circle"></i>              
                 <div className="flex flex-col">
-                <span className="text-lg font-bold text-center">{t("section1.first-why")}</span>
+                <span className="text-lg font-semibold text-center">{t("section1.first-why")}</span>
               </div>
               </div>
 
             <div className="w-[30%] max-lg:w-full p-4 menu-item h-56 rounded-lg space-y-4 flex flex-col justify-center items-center cursor-pointer">
               <i className="fi fi-sr-people-group icon-circle"></i>
               <div className="flex flex-col">
-                <span className="text-lg font-bold text-center">{t("section1.second-why")}</span>
+                <span className="text-lg font-semibold text-center">{t("section1.second-why")}</span>
               </div>
             </div>
 
             <div className="w-[30%] max-lg:w-full p-4 menu-item h-56 rounded-lg space-y-4 flex flex-col justify-center items-center cursor-pointer">
               <i className="fi fi-sr-sack-dollar icon-circle"></i>
               <div className="flex">
-                <span className="text-lg font-bold text-center">{t("section1.third-why")}</span>
+                <span className="text-lg font-semibold text-center">{t("section1.third-why")}</span>
               </div>
             </div>
             </div>
@@ -138,14 +138,14 @@ export default function Main(){
               <div className="w-[30%] max-lg:w-full menu-item h-56 rounded-lg p-4 space-y-4 flex flex-col justify-center items-center cursor-pointer">
               <i className="fi fi-ss-hr-management icon-circle"></i>
               <div className="flex flex-col space-y-6">
-                <span className="text-lg font-bold text-center">{t("section1.fourth-why")}</span>
+                <span className="text-lg font-semibold text-center">{t("section1.fourth-why")}</span>
               </div>
               </div>
 
             <div className="w-[30%] max-lg:w-full menu-item h-56 rounded-lg p-4 hover:p-4 space-y-4 flex flex-col justify-center items-center cursor-pointer">
               <i className="fi fi-ss-user-headset icon-circle"></i>
               <div className="flex flex-col space-y-6">
-                <span className="text-lg font-bold text-center">{t("section1.five-why")}</span>
+                <span className="text-lg font-semibold text-center">{t("section1.five-why")}</span>
               </div>
             </div>
 
@@ -155,7 +155,7 @@ export default function Main(){
       </AnimatedBlock> 
 
       <AnimatedBlock>
-        <section className="w-full min-h-screen flex flex-col space-y-16 justify-center items-center" id="services">
+        <section className="w-full min-h-screen flex flex-col space-y-16 justify-center items-center materiel-item" id="services">
           <Services/>
         </section>
       </AnimatedBlock>    

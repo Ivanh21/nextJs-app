@@ -310,7 +310,7 @@ import { useTranslation } from "react-i18next";
         <h1 className="text-5xl max-lg:text-4xl max-md:text-2xl font-bold text-center">
           {t("section2.title")}
         </h1>
-        <p className="text-center text-gray-500 mb-6 lg:w-[50%] mx-auto">
+        <p className="text-center text-lg text-gray-500 mb-6 lg:w-[50%] mx-auto">
           {t("section2.description")}
         </p>
       </div>
@@ -334,7 +334,7 @@ import { useTranslation } from "react-i18next";
             >
               <div className="flex items-center space-x-3">
                 <i className={`${service.icon} text-xl icon-circle`} />
-                <span className="font-semibold text-start">{service.title}</span>
+                <span className="font-semibold text-start text-xl">{service.title}</span>
               </div>
               <i
                 className={`fa-solid ${

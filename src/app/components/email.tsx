@@ -61,7 +61,7 @@ export default function Email(){
         <>
           <div className="flex flex-col justify-center items-center space-y-4 px-2">
           <h1 className="text-5xl font-bold max-md:text-2xl max-lg:text-4xl ">{t("section4.title")}</h1>
-          <p className="text-sm text-gray-500 w-[50%] max-md:w-full text-center">{t("section4.description")}</p>
+          <p className="text-lg text-gray-500 max-md:w-full text-center">{t("section4.description")}</p>
         </div>
         
 
