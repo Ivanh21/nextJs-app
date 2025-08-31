@@ -3,16 +3,40 @@ import Image from "next/image";
 import { useState, useEffect } from 'react';
 import styles from './header.module.css';
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
+import { usePathname, useRouter } from "next/navigation";
 
 
-// const languages = [
-//   { code: 'en', name: 'English', flag: '/images/icon/flag-kingdom.png' },
-//   { code: 'tr', name: 'Türkçe', flag: '/images/icon/flag-turkey.png' },
-// ];
+ const languages = [
+  { code: 'fr', name: 'Français', flag: '/images/icon/france.png' },
+  { code: 'en', name: 'English', flag: '/images/icon/flag-kingdom.png' },
+  // { code: 'tr', name: 'Türkçe', flag: '/images/icon/flag-turkey.png' },
+ ];
 
 export default function Header(){
-  // const [selectedLang, setSelectedLang] = useState(languages[0]);
-  // const [open, setOpen] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
+  const { t, i18n } = useTranslation();
+  const [selectedLang, setSelectedLang] = useState(languages[0]);
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    const current = languages.find((l) => l.code === i18n.language);
+    if (current) setSelectedLang(current);
+  }, [i18n.language]);
+
+  const changeLanguage = (lang: { code: string; name: string; flag: string }) => {
+    setSelectedLang(lang);
+    setOpen(false);
+
+    // changer la langue dans i18n
+    i18n.changeLanguage(lang.code);
+
+    // reconstruire l’URL avec la nouvelle locale
+    const segments = pathname.split("/");
+    segments[1] = lang.code;
+    router.push(segments.join("/"));
+  }
 
   const [isFixed, setIsFixed] = useState(false);
 
@@ -64,11 +88,11 @@ useEffect(() => {
 
         <div className="hidden lg:flex space-x-8">
 
-        <Link href="/#home" className="text-lg font-semibold">Accueil</Link>
-        <Link href="/#about" className="text-lg font-semibold">À propos</Link>
-        <Link href="/#services" className="text-lg font-semibold">Services</Link>
-        <Link href="/#project" className="text-lg font-semibold">Projets</Link>
-        <Link href="/#contact" className="text-lg font-semibold">Contact</Link>
+        <Link href="/#home" className="text-lg font-semibold">{t("Header.home")}</Link>
+        <Link href="/#about" className="text-lg font-semibold">{t("Header.about")}</Link>
+        <Link href="/#services" className="text-lg font-semibold">{t("Header.work")}</Link>
+        <Link href="/#project" className="text-lg font-semibold">{t("Header.project")}</Link>
+        <Link href="/#contact" className="text-lg font-semibold">{t("Header.contact")}</Link>
 
         </div>
 
@@ -79,7 +103,7 @@ useEffect(() => {
       </div>
 
       <div className="max-lg:hidden relative inline-block text-left">
-      {/* <button
+       <button
         onClick={() => setOpen(!open)}
         className="inline-flex items-center gap-2 border px-3 py-2 rounded hover:bg-gray-100 dark:hover:bg-[#181c31]"
       >
@@ -101,12 +125,12 @@ useEffect(() => {
       </button>
 
       {open && (
-        <ul className="absolute z-10 mt-2 w-full light:bg-white border rounded shadow">
+        <ul className="absolute z-10 mt-2 w-full lang border rounded shadow">
           {languages.map((lang) => (
             <li
               key={lang.code}
               onClick={() => {
-                setSelectedLang(lang);
+                changeLanguage(lang);
                 setOpen(false);
               }}
               className="flex items-center gap-2 px-3 py-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-[#181c31]"
@@ -116,7 +140,7 @@ useEffect(() => {
             </li>
           ))}
         </ul>
-      )} */}
+      )} 
     </div>
     {isVisible && (
       <div className="absolute">
@@ -128,13 +152,13 @@ useEffect(() => {
           <i className="fa-solid fa-xmark text-2xl text-gray-500 hover:text-black"></i>
         </button>
         <div className="flex flex-col justify-center items-center space-y-8">
-          <Link href="/#home" className="text-lg text-gray-500 font-bold" onClick={() => setIsVisible(!isVisible)}>Accueil</Link>
-          <Link href="/#about" className="text-lg text-gray-500 font-bold" onClick={() => setIsVisible(!isVisible)}>À propos</Link>
-          <Link href="/#services" className="text-lg text-gray-500 font-bold" onClick={() => setIsVisible(!isVisible)}>Services</Link>
-          <Link href="/#project" className="text-lg text-gray-500 font-bold" onClick={() => setIsVisible(!isVisible)}>Projets</Link>
-          <Link href="/#contact" className="text-lg text-gray-500 font-bold" onClick={() => setIsVisible(!isVisible)}>Contact</Link>
+          <Link href="/#home" className="text-lg text-gray-500 font-bold" onClick={() => setIsVisible(!isVisible)}>{t("Header.home")}</Link>
+          <Link href="/#about" className="text-lg text-gray-500 font-bold" onClick={() => setIsVisible(!isVisible)}>{t("Header.about")}</Link>
+          <Link href="/#services" className="text-lg text-gray-500 font-bold" onClick={() => setIsVisible(!isVisible)}>{t("Header.work")}</Link>
+          <Link href="/#project" className="text-lg text-gray-500 font-bold" onClick={() => setIsVisible(!isVisible)}>{t("Header.project")}</Link>
+          <Link href="/#contact" className="text-lg text-gray-500 font-bold" onClick={() => setIsVisible(!isVisible)}>{t("Header.contact")}</Link>
 
-        {/* <div className="lg:hidden relative inline-block text-left">
+       <div className="lg:hidden relative inline-block text-left">
         <button
           onClick={() => setOpen(!open)}
           className="inline-flex items-center gap-2 border px-3 py-2 rounded hover:bg-gray-100 dark:hover:bg-[#181c31]"
@@ -162,7 +186,7 @@ useEffect(() => {
               <li
                 key={lang.code}
                 onClick={() => {
-                  setSelectedLang(lang);
+                  changeLanguage(lang);
                   setOpen(false);
                   setIsVisible(!isVisible)
                 }}
@@ -174,7 +198,7 @@ useEffect(() => {
             ))}
           </ul>
         )}
-      </div> */}
+      </div> 
         </div>
       </div>
     </div>

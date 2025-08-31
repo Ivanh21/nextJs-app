@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 //import { Geist, Geist_Mono } from "next/font/google";
 import { Poppins } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 import Script from "next/script";
 import { Toaster } from "react-hot-toast";
-import Header from "./components/header";
-import Footer from "./components/footer";
+import Header from "../components/header";
+import Footer from "../components/footer";
+import Providers from "../providers";
+import { use } from "react";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -29,11 +31,14 @@ const poppins = Poppins({
 
 export default function RootLayout({
   children,
-}: Readonly<{
+  params
+ }: {
   children: React.ReactNode;
-}>) {
+  params: Promise<{ locale: string }>;
+ }) {
+  const { locale } = use(params);
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang={locale} className="scroll-smooth">
       <head>
      
         <link rel="icon" type="image/png" sizes="192x192" href="/images/logo/android-chrome-192x192.png" />
@@ -41,9 +46,6 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="32x32" href="/images/logo/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/images/logo/favicon-16x16.png" />
         <link rel="icon" href="/favicon.ico" />
-
-
-        <link rel="manifest" href="/site.webmanifest" />
 
         
         <link rel="apple-touch-icon" sizes="180x180" href="/images/logo/apple-touch-icon.png" />
@@ -59,9 +61,36 @@ export default function RootLayout({
       <body
         className={poppins.className}
       >
+        <Providers>
         <main>{children}</main>
         <Toaster position="top-right" reverseOrder={false} />
+        </Providers>
       </body>
     </html>
   );
 }
+
+
+
+
+
+
+// import Providers from "../providers";
+
+// export default function LocaleLayout({
+//   children,
+//   params: { locale }
+// }: {
+//   children: React.ReactNode;
+//   params: { locale: string };
+// }) {
+//   return (
+//     <html lang={locale}>
+//       <body>
+//         <Providers>{children}</Providers>
+//       </body>
+//     </html>
+//   );
+// }
+
+

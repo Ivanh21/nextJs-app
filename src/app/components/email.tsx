@@ -4,9 +4,11 @@ import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 
 export default function Email(){
+  const {t} = useTranslation();
   const form = useRef<HTMLFormElement>(null);
 //   const sendEmail = (e: React.FormEvent) => {
 //     e.preventDefault();
@@ -36,7 +38,7 @@ export default function Email(){
     e.preventDefault();
     if (!form.current) return;
 
-    const toastId = toast.loading('Envoi du message...');
+    const toastId = toast.loading(t("section4.loading"));
 
     emailjs
       .sendForm(
@@ -46,20 +48,20 @@ export default function Email(){
         'B2hJtZR6UR-qCW1yJ' 
       )
       .then(() => {
-        toast.success('Message envoyé avec succès !', { id: toastId });
+        toast.success(t("section4.success"), { id: toastId });
         form.current?.reset();
       })
       .catch((error) => {
         console.error(error);
-        toast.error("Une erreur est survenue. Réessaie plus tard.", { id: toastId });
+        toast.error(t("section4.error"), { id: toastId });
       });
   };
 
     return (
         <>
           <div className="flex flex-col justify-center items-center space-y-4 px-2">
-          <h1 className="text-5xl font-bold max-md:text-2xl max-lg:text-4xl ">Contactez-moi</h1>
-          <p className="text-sm text-gray-500 w-[50%] max-md:w-full text-center">Pour plus des informations, contactez-moi en utilisant mes coordonnées.</p>
+          <h1 className="text-5xl font-bold max-md:text-2xl max-lg:text-4xl ">{t("section4.title")}</h1>
+          <p className="text-sm text-gray-500 w-[50%] max-md:w-full text-center">{t("section4.description")}</p>
         </div>
         
 
@@ -67,15 +69,15 @@ export default function Email(){
             <div className="w-[25%] max-lg:w-[50%] max-md:w-full block-contact social-media p-8 rounded-xl">
               <div className="flex flex-col space-y-10">
                 <div className="flex flex-col">
-                    <h2 className="text-lg font-semibold">Adresse email</h2>
+                    <h2 className="text-lg font-semibold">{t("section4.email")}</h2>
                     <Link href="mailto:Gemaeln21@gmail.com" className="text-gray-500">Gemaeln21@gmail.com</Link>
                 </div>
                 <div className="flex flex-col">
-                  <h2 className="text-lg font-semibold">Nos bureaux</h2>
+                  <h2 className="text-lg font-semibold">{t("section4.address")}</h2>
                   <Link href="https://maps.app.goo.gl/4n9bSfm9LXM7jMAh9" target="_blank" className="text-gray-500">HEALTHCARE GROUP, Merkez, Çukurçeşme Cd.</Link>
                 </div>
                 <div className="flex flex-col">
-                  <h2 className="text-lg font-semibold">Tel</h2>
+                  <h2 className="text-lg font-semibold">{t("section4.tel")}</h2>
                   <Link href="tel:+00905313789460" className="text-gray-500">+009 0531 3789 460</Link>
                 </div>
                 <div className="flex flex-col">
@@ -86,7 +88,7 @@ export default function Email(){
                 <div className="border border-gray-500"></div>
 
                 <div className="flex flex-col space-y-8">
-                  <h2 className="text-lg font-semibold">Réseaux sociaux</h2>
+                  <h2 className="text-lg font-semibold">{t("section4.social-media")}</h2>
 
                 <ul className="flex items-center gap-5">
                 <li>
@@ -112,37 +114,37 @@ export default function Email(){
               <form ref={form} onSubmit={sendEmail} className="flex flex-col space-y-8">
                 <div className="flex max-lg:flex-col justify-between items-center max-lg:space-y-4 lg:space-x-8">
                   <div className="w-full flex flex-col space-y-1">
-                      <label htmlFor="">Noms</label>
+                      <label htmlFor="">{t("section4.name")}</label>
                       <input type="text" name="name" className="p-4 w-full border border-gray-500 rounded-lg hover:border-[#006bff] dark:bg-[#181c31]" placeholder="John Smith" required />
                   </div>
 
                   
                   <div className="w-full flex flex-col space-y-1">
-                      <label htmlFor="">Adresse email</label>
+                      <label htmlFor="">{t("section4.email")}</label>
                       <input type="email" name="email" className="p-4 w-full border border-gray-500 rounded-lg hover:border-[#006bff] dark:bg-[#181c31]" placeholder="exemple@gmail.com" required />
                   </div>
                 </div>
 
                 <div className="flex max-lg:flex-col justify-between items-center max-lg:space-y-4 lg:space-x-8">
                   <div className="w-full flex flex-col space-y-1">
-                      <label htmlFor="">Numéro de téléphone</label>
+                      <label htmlFor="">{t("section4.phone")}</label>
                       <input type="text" name="tel" className="p-4 w-full border border-gray-500 rounded-lg hover:border-[#006bff] dark:bg-[#181c31]" placeholder="+009 3342 3432" required />
                   </div>
 
                   
                   <div className="w-full flex flex-col space-y-1">
-                      <label htmlFor="">Sujet</label>
-                      <input type="text" name="subject" className="p-4 w-full border border-gray-500 rounded-lg hover:border-[#006bff] dark:bg-[#181c31]" placeholder="Type du sujet" required />
+                      <label htmlFor="">{t("section4.subject")}</label>
+                      <input type="text" name="subject" className="p-4 w-full border border-gray-500 rounded-lg hover:border-[#006bff] dark:bg-[#181c31]" placeholder={t("section4.type")} required />
                   </div>
                 </div>
 
                 <div className="flex flex-col space-y-1">
-                  <label htmlFor="">Message</label>
-                  <textarea name="message" id="" cols={30} rows={7} className="w-full p-4 border border-gray-500 hover:border-[#006bff] rounded-lg dark:bg-[#181c31]" placeholder="Message" required></textarea>
+                  <label htmlFor="">{t("section4.message")}</label>
+                  <textarea name="message" id="" cols={30} rows={7} className="w-full p-4 border border-gray-500 hover:border-[#006bff] rounded-lg dark:bg-[#181c31]" placeholder={t("section4.message")} required></textarea>
                 </div>
 
                 <div className="flex justify-center">
-                  <button className="bg-[#006bff] p-4 text-white rounded-full">Envoyer votre message</button>
+                  <button className="bg-[#006bff] p-4 text-white rounded-full">{t("section4.send")}</button>
                 </div>
 
              

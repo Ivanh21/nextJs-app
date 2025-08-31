@@ -2,6 +2,7 @@
 'use client';
 
  import { useState, useRef } from "react";
+import { useTranslation } from "react-i18next";
 
  interface Service {
    id: string;
@@ -11,6 +12,7 @@
  }
 
  export default function Services() {
+  const { t } = useTranslation();
   const [openIds, setOpenIds] = useState<string[]>([]);
 
   const toggle = (id: string) => {
@@ -24,68 +26,57 @@
    const services: Service[] = [
      {
        id: "sanitaire",
-       title: "Services sanitaires & Tourisme médical",
+       title: t("section2.first-service.title"),
        icon: "fi fi-ss-hand-holding-medical",
        content: (
          <div className="space-y-8">
            <h1 className="text-3xl font-bold max-md:text-2xl">
-             Services Sanitaires & Tourisme Médical
+             {t("section2.first-service.title")}
            </h1>
            <p className="md:text-justify">
-             Chez Turkey Healthcare Group et Istanbul Infertility Center, nous
-             offrons une prise en charge médicale intégrée et personnalisée pour
-             les patients internationaux, en combinant soins de santé de haut
-             niveau, accompagnement sur mesure.
+             {t("section2.first-service.paragraph1")}
            </p>
            <p className="md:text-justify">
-             Notre objectif est de rendre l’excellence médicale turque accessible
-             à tous, dans un cadre sécurisé, organisé et rassurant.
+             {t("section2.first-service.paragraph2")}
            </p>
            <h2 className="text-2xl font-bold max-lg:text-2xl">
-             Nos services médicaux
+             {t("section2.first-service.list.title")}
            </h2>
            <ul className="flex flex-col space-y-8 list-disc px-8">
              <li>
                 <p>
-                 <strong className="text-xl font-bold">Consultations médicales internationales : </strong>
-                    Accès à des spécialistes de renommée internationale pour des
-                    diagnostics et des plans de traitement précis.
+                 <strong className="text-xl font-bold">{t("section2.first-service.list.li1.span")} </strong>
+                    {t("section2.first-service.list.li1.text")}
                 </p>
              </li>
              <li>
                  <p>
-                 <strong className="text-xl font-bold">Suivi médical à distance : </strong>
-                    Monitoring médical continu des patients internationaux, même
-                    après leur retour dans leur pays.
+                 <strong className="text-xl font-bold">{t("section2.first-service.list.li2.span")} </strong>
+                    {t("section2.first-service.list.li2.text")}
                 </p>
              </li>
              <li>
                  <p>
-                 <strong className="text-xl font-bold">FIV & traitement de l’infertilité : </strong>
-                    Programmes complets de procréation médicalement assistée,
-                    adaptés à chaque situation, avec des taux de réussite élevés.
+                 <strong className="text-xl font-bold">{t("section2.first-service.list.li3.span")} </strong>
+                    {t("section2.first-service.list.li3.text")}
                 </p>
              </li>
              <li>
                  <p>
-                 <strong className="text-xl font-bold">Greffe capillaire et chirurgie esthétique : </strong>
-                    Soins réalisés dans des cliniques certifiées, avec des chirurgiens
-                    expérimentés et des technologies de pointe.
+                 <strong className="text-xl font-bold">{t("section2.first-service.list.li4.span")} </strong>
+                    {t("section2.first-service.list.li4.text")}
                 </p>
              </li>
              <li>
                 <p>
-                 <strong className="text-xl font-bold">Prise en charge dans les hôpitaux spécialisés : </strong>
-                    Coordination rapide et efficace pour une prise en charge des
-                    patients dans les établissements les mieux adaptés à leur
-                    pathologie.
+                 <strong className="text-xl font-bold">{t("section2.first-service.list.li5.span")} </strong>
+                    {t("section2.first-service.list.li5.text")}
                 </p>
              </li>
              <li>
                  <p>
-                 <strong className="text-xl font-bold">Consultations médicales en ligne : </strong>
-                    Évaluations préliminaires et second avis médicaux avec nos
-                    médecins, en toute confidentialité et simplicité.
+                 <strong className="text-xl font-bold">{t("section2.first-service.list.li6.span")} </strong>
+                    {t("section2.first-service.list.li6.text")}
                 </p>
              </li>
            </ul>
@@ -94,89 +85,81 @@
      },
      {
        id: "fourniture",
-       title: "Fourniture de Matériel Médical et de Laboratoire",
+       title: t("section2.second-service.title"),
        icon: "fi fi-rr-stethoscope",
        content: (
          <div className="space-y-8">
            <h1 className="font-bold text-3xl max-md:text-2xl">
-             Fourniture de Matériel Médical et de Laboratoire
+             {t("section2.second-service.title")}
            </h1>
            <p className="md:text-justify">
-             Nous mettons à la disposition des établissements de santé publics et
-             privés une large gamme d’équipements médicaux et de dispositifs de
-             diagnostic, avec des standards de qualité internationale.
+             {t("section2.second-service.paragraph1")}
            </p>
            <p className="md:text-justify">
-             Grâce à nos partenaires stratégiques et notre expertise terrain, nous
-             assurons une chaîne d’approvisionnement fluide et maîtrisée, de la
-             commande à la livraison.
+             {t("section2.second-service.paragraph2")}
            </p>
            <ul className="flex flex-col space-y-8">
              <li>
                <span className="text-xl font-bold">
-                 Tests de Diagnostic de Laboratoire
+                 {t("section2.second-service.list1.title")}
                </span>
                <ul className="list-disc px-12 flex flex-col space-y-2 py-4">
-                 <li>Tests des maladies infectieuse</li>
-                 <li>Tests COVID-19</li>
-                 <li>Maladies sexuellement transmissibles</li>
-                 <li>Tests des maladies tropicales</li>
-                 <li>Marqueurs tumoraux</li>
-                 <li>Tests de grossesse</li>
-                 <li>Marqueurs cardiaques</li>
-                 <li>Groupage sanguin</li>
+                 <li>{t("section2.second-service.list1.li1")}</li>
+                 <li>{t("section2.second-service.list1.li2")}</li>
+                 <li>{t("section2.second-service.list1.li3")}</li>
+                 <li>{t("section2.second-service.list1.li4")}</li>
+                 <li>{t("section2.second-service.list1.li5")}</li>
+                 <li>{t("section2.second-service.list1.li6")}</li>
+                 <li>{t("section2.second-service.list1.li7")}</li>
+                 <li>{t("section2.second-service.list1.li8")}</li>
                </ul>
              </li>
              <li>
                <span className="text-xl font-bold">
-                 Fournitures et équipements complémentaires
+                 {t("section2.second-service.list2.title")}
                </span>
                <ul className="list-disc px-12 flex flex-col space-y-2 py-4">
                  <li>
-                   Équipements pour laboratoires d’analyses médicales
+                   {t("section2.second-service.list2.li1")}
                  </li>
-                 <li>Dispositifs de dépistage rapide (RDT)</li>
-                 <li>Kits de prélèvement, consommables et réactifs</li>
+                 <li>{t("section2.second-service.list2.li2")}</li>
+                 <li>{t("section2.second-service.list2.li3")}</li>
                  <li>
-                   Matériel hospitalier : moniteurs, lits médicaux,
-                   pousse-seringues, etc.
+                   {t("section2.second-service.list2.li4")}
                  </li>
                  <li>
-                   Appareils de diagnostic : échographes, ECG, dopplers,
-                   autoclaves etc
+                   {t("section2.second-service.list2.li5")}
                  </li>
                </ul>
              </li>
            </ul>
            <div className="flex flex-col space-y-4">
              <div className="flex space-x-2 items-center">
-               <h1 className="text-xl font-bold">Nos engagements</h1>
+               <h1 className="text-xl font-bold">{t("section2.second-service.list3.title")}</h1>
              </div>
              <div className="flex flex-col space-y-4 px-2 lg:px-6">
                <div className="flex space-x-2 items-center">
                  <i className="fa-solid fa-circle-check text-green-500 text-xl"></i>
                  <span>
-                   Produits certifiés CE, ISO et validés cliniquement.
+                   {t("section2.second-service.list3.li1")}
                  </span>
                </div>
                <div className="flex space-x-2 items-center">
                  <i className="fa-solid fa-circle-check text-green-500 text-xl"></i>
                  <span>
-                   Livraison internationale avec accompagnement logistique.
+                   {t("section2.second-service.list3.li2")}
                  </span>
                </div>
                <div className="flex space-x-2 items-center">
                  <i className="fa-solid fa-circle-check text-green-500 text-xl"></i>
                  <span>
-                   Conseil technique pour le choix des équipements adaptés à vos
-                   besoins.
+                   {t("section2.second-service.list3.li3")}
                  </span>
                </div>
                <div className="flex space-x-2 items-center">
                  <i className="fa-solid fa-circle-check text-green-500 text-xl"></i>
                  <span>
-                   Service après-vente et possibilité de formation à
-                   l’utilisation du matériel.
+                   {t("section2.second-service.list3.li4")}
                  </span>
                </div>
              </div>
@@ -211,76 +194,67 @@
 
      {
        id: "afrique",
-       title: "Projets en Afrique",
+       title: t("section2.third-service.title"),
        icon: "fi fi-rr-earth-africa",
        content: (
          <div className="space-y-8">
            <h1 className="font-bold text-3xl max-md:text-2xl">
-             Projets en Afrique
+             {t("section2.third-service.title")}
            </h1>
-           <p>Une vision claire, des actions concrètes</p>
+           <p>{t("section2.third-service.paragraph1")}</p>
            <p className="md:text-justify">
-             Notre présence en Afrique ne se limite pas à l’exportation de
-             services médicaux. Nous développons une dynamique régionale forte,
-             articulée autour de projets structurants, durables et à fort impact
-             social.
+             {t("section2.third-service.paragraph2")}
            </p>
            <ul className="flex flex-col space-y-8">
              <li>
                <span className="text-xl font-bold">
-                 1. Déploiement de corridors de santé Turquie – Afrique
+                  {t("section2.third-service.list1.title")}
                </span>
                <ul className="list-disc px-12 flex flex-col space-y-2 py-4">
-                 <li>l’évacuation sanitaire rapide et encadrée</li>
+                 <li>{t("section2.third-service.list1.li1")}</li>
                  <li>
-                   l’accès direct aux traitements spécialisés (oncologie,
-                   cardiologie, fertilité, greffes, etc.)
+                    {t("section2.third-service.list1.li2")}
                  </li>
                  <li>
-                   la continuité des soins à distance via la télémédecine.
+                    {t("section2.third-service.list1.li3")}
                  </li>
                </ul>
              </li>
              <li>
                <span className="text-xl font-bold">
-                 2. Développement d’infrastructures médicales locales
+                 {t("section2.third-service.list2.title")}
                </span>
                <ul className="list-disc px-12 flex flex-col space-y-2 py-4">
                  <li>
-                   accompagnons la création de centres de soins spécialisés
-                   (fertilité, diagnostics, chirurgie ambulatoire)
+                  {t("section2.third-service.list2.li1")}
                  </li>
-                 <li>proposons des modèles hospitaliers clé en main</li>
+                 <li>{t("section2.third-service.list2.li2")}</li>
                  <li>
-                   facilitons l’acquisition de matériel médical de pointe adapté
-                   aux réalités locales.
+                   {t("section2.third-service.list2.li3")}
                  </li>
                </ul>
              </li>
              <li>
                <span className="text-xl font-bold">
-                 3. Renforcement des compétences médicales
+                 {t("section2.third-service.list3.title")}
                </span>
                <ul className="list-disc px-12 flex flex-col space-y-2 py-4">
                  <li>
-                   sessions de formation continue pour professionnels de santé
-                   africains en Turquie ou en ligne
+                   {t("section2.third-service.list3.li1")}
                  </li>
-                 <li>stages pratiques en milieu hospitalier</li>
-                 <li>développement de partenariats académiques.</li>
+                 <li>{t("section2.third-service.list3.li2")}</li>
+                 <li>{t("section2.third-service.list3.li3")}</li>
                </ul>
              </li>
              <li>
                <span className="text-xl font-bold">
-                 4. Approvisionnement en matériel de diagnostic et dispositifs
-                 médicaux
+                 {t("section2.third-service.list4.title")}
                </span>
                <ul className="list-disc px-12 flex flex-col space-y-2 py-4">
-                 <li>tests infectieux, cardiaques, tumoraux, FIV, etc.</li>
-                 <li>dispositifs de diagnostic rapide</li>
+                 <li>{t("section2.third-service.list4.li1")}</li>
+                 <li>{t("section2.third-service.list4.li2")}</li>
                  <li>
-                   équipements hospitaliers (moniteurs, respirateurs, blocs
-                   opératoires mobiles…)
+                   {t("section2.third-service.list4.li3")}
                  </li>
                </ul>
              </li>
@@ -288,37 +262,31 @@
            <div className="flex flex-col space-y-4">
              <div className="flex space-x-2 items-center">
                <i className="fa-solid fa-earth-africa text-2xl"></i>
-               <h1 className="text-xl font-bold">Notre approche en Afrique</h1>
+               <h1 className="text-xl font-bold">{t("section2.third-service.list5.title")}</h1>
              </div>
              <div className="flex flex-col space-y-4 px-2 lg:px-6">
                <div className="flex space-x-2 items-center">
                  <i className="fa-solid fa-circle-check text-green-500 text-xl"></i>
                  <span>
-                   <strong>Orientation patient :</strong> chaque projet est conçu
-                   pour améliorer la qualité et la rapidité de prise en charge.
+                   <strong>{t("section2.third-service.list5.li1.span")}</strong> {t("section2.third-service.list5.li1.text")}
                  </span>
                </div>
                <div className="flex space-x-2 items-center">
                  <i className="fa-solid fa-circle-check text-green-500 text-xl"></i>
                  <span>
-                   <strong>Modèle collaboratif :</strong> nous travaillons main
-                   dans la main avec des partenaires africains locaux.
+                   <strong>{t("section2.third-service.list5.li2.span")}</strong> {t("section2.third-service.list5.li2.text")}
                  </span>
                </div>
                <div className="flex space-x-2 items-center">
                  <i className="fa-solid fa-circle-check text-green-500 text-xl"></i>
                  <span>
-                   <strong>Adaptation aux réalités du terrain :</strong>{" "}
-                   solutions médicales personnalisées selon les besoins et les
-                   contextes.
+                   <strong>{t("section2.third-service.list5.li3.span")}</strong> {t("section2.third-service.list5.li3.text")}
                  </span>
                </div>
                <div className="flex space-x-2 items-center">
                  <i className="fa-solid fa-circle-check text-green-500 text-xl"></i>
                  <span>
-                   <strong>Impact mesurable :</strong> notre action se traduit en
-                   vies améliorées, en capacités renforcées, en systèmes de santé
-                   plus solides.
+                   <strong>{t("section2.third-service.list5.li4.span")}</strong> {t("section2.third-service.list5.li4.text")}
                  </span>
                </div>
              </div>
@@ -326,7 +294,7 @@
            <footer className="pb-8">
              <div className="text-center">
                <h1 className="text-gray-500 font-bold">
-                 Ensemble, faisons progresser la santé en Afrique.
+                {t("section2.third-service.list5.footer")}
                </h1>
              </div>
            </footer>
@@ -340,11 +308,10 @@
     <div className="w-full mx-auto flex flex-col space-y-4 px-4 lg:px-24">
       <div className="flex flex-col space-y-8 py-8">
         <h1 className="text-5xl max-lg:text-4xl max-md:text-2xl font-bold text-center">
-          Nos services
+          {t("section2.title")}
         </h1>
         <p className="text-center text-gray-500 mb-6 lg:w-[50%] mx-auto">
-          Nous vous proposons de nombreux services pour satisfaire vos besoins et
-          nous vous accompagnons à la réalisation de vos projets.
+          {t("section2.description")}
         </p>
       </div>
 

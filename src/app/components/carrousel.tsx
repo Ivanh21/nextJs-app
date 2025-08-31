@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 // export default function Carrousel(){
 //    const scrollRef = useRef<HTMLDivElement>(null);
@@ -211,31 +212,36 @@ import Image from "next/image";
 //   );
 // }
 
+
+
 interface Projet {
   title: string;
   images: string;
 }
 
-const images: Projet[] = [
+
+
+export default function Carousel() {
+  const {t} = useTranslation(); 
+
+  const images: Projet[] = [
   {
-    title:'Rencontre institutionnelle avec la Polyclinique Internationale Sainte-Anne-Marie (PISAM), Abidjan CIV, 2025.',
+    title : t("section3.project1"),
     images: 'projet-01'
   },
   {
-    title:'Rencontre institutionnelle avec la Polyclinique Internationale Sainte-Anne-Marie (PISAM), Abidjan CIV, 2025.',
+    title:t("section3.project1"),
     images: 'projet-02'
   },
   {
-    title:'Rencontre institutionnelle avec la Polyclinique Internationale Sainte-Anne-Marie (PISAM), Abidjan CIV, 2025.',
+    title:t("section3.project1"),
     images: 'projet-03'
   },
   {
-    title:'Rencontre institutionnelle avec la Polyclinique Internationale Sainte-Anne-Marie (PISAM), Abidjan CIV, 2025.',
+    title:t("section3.project1"),
     images: 'projet-04'
   }
 ]
-
-export default function Carousel() {
   const scrollRef = useRef<HTMLDivElement>(null)
   const [activeIndex, setActiveIndex] = useState(0)
   const intervalRef = useRef<NodeJS.Timeout | null>(null)
@@ -321,10 +327,10 @@ export default function Carousel() {
     
      <div className="flex flex-col justify-center items-center space-y-4 lg:px-2">
         <h1 className="text-5xl font-bold max-md:text-2xl max-lg:text-4xl text-center">
-          Derniers projets
+          {t("section3.title")}
          </h1>
          <p className="text-sm text-gray-500 w-[50%] max-md:w-full text-center">
-           Un catalogue des derniers projets sur lesquels j’ai travaillé.
+           {t("section3.description")}
         </p>
        </div>
     <div className="w-full flex flex-col items-center relative lg:px-20 mt-8 overflow-hidden">

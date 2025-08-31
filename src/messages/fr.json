@@ -1,0 +1,184 @@
+{
+  "Index": {
+    "title": "Bienvenue !"
+  },
+  "Header": {
+    "home": "Accueil",
+    "about": "À propos",
+    "work": "Services",
+    "project": "Projets",
+    "contact": "Contact"
+  },
+  "Main":{
+    "poste1": "Co-fondateur & Directeur Régional Afrique",
+    "poste2": "Co-fondateur de Turkey Healthcare Group",
+    "poste3": "Co-fondateur Instanbul Infertility Center",
+    "myself": "Engagé dans le développement des infrastructures et de la santé en Afrique, je mets mon expertise en génie civil et en stratégie de développement au service de partenariats durables et à forte valeur ajoutée.",
+    "show-more": "En savoir plus",
+    "about-me": "À propos de moi",
+    "about-me-info1": "Co-fondateur de Turkey Healthcare Group & Istanbul infertility Center j’accompagne les entreprises et institutions médicales dans la mise en place de solutions de soins de santé de haut niveau, en facilitant l’accès à une médecine d’excellence grâce à des collaborations internationales solides et des technologies médicales avancées.",
+    "about-me-info2": " Je m’investis pleinement pour connecter l’Afrique aux meilleures expertises médicales de Turquie, avec une approche personnalisée, humaine et tournée vers les résultats.",
+    "cv": "Télécharger mon CV"
+  },
+  "section1":{
+    "title": "Pourquoi travailler avec nous ?",
+    "first-why": "Accès à des hôpitaux accrédités et des médecins parmi les meilleurs de Turquie",
+    "second-why": "Prise en charge personnalisée et confidentielle",
+    "third-why": "Tarifs compétitifs, sans compromis sur la qualité des soins",
+    "fourth-why": "Coordination complète avant, pendant et après le traitement",
+    "five-why": "Service client multilingue et équipe dédiée en Afrique"
+  },
+  "section2":{
+    "title": "Nos services",
+    "description": "Nous vous proposons de nombreux services pour satisfaire vos besoins et nous vous accompagnons à la réalisation de vos projets.",
+    "first-service":{
+      "title": "Services Sanitaires & Tourisme Médical",
+      "paragraph1": "Chez Turkey Healthcare Group et Istanbul Infertility Center, nous offrons une prise en charge médicale intégrée et personnalisée pour les patients internationaux, en combinant soins de santé de haut niveau, accompagnement sur mesure.",
+      "paragraph2": "Notre objectif est de rendre l’excellence médicale turque accessible à tous, dans un cadre sécurisé, organisé et rassurant.",
+      "list":{
+        "title": "Nos services médicaux",
+        "li1":{
+          "span": "Consultations médicales internationales :",
+          "text": "Accès à des spécialistes de renommée internationale pour des diagnostics et des plans de traitement précis."
+        },
+        "li2":{
+          "span": "Suivi médical à distance :",
+          "text": "Monitoring médical continu des patients internationaux, même après leur retour dans leur pays."
+        },
+        "li3":{
+          "span":"FIV & traitement de l’infertilité :",
+          "text": "Programmes complets de procréation médicalement assistée, adaptés à chaque situation, avec des taux de réussite élevés."
+        },
+        "li4":{
+          "span": "Greffe capillaire et chirurgie esthétique :",
+          "text": "Soins réalisés dans des cliniques certifiées, avec des chirurgiens expérimentés et des technologies de pointe."
+        },
+        "li5":{
+          "span": "Prise en charge dans les hôpitaux spécialisés :",
+          "text": "Coordination rapide et efficace pour une prise en charge des patients dans les établissements les mieux adaptés à leur pathologie."
+        },
+        "li6":{
+          "span": "Consultations médicales en ligne :",
+          "text": "Évaluations préliminaires et second avis médicaux avec nos médecins, en toute confidentialité et simplicité."
+        }
+      }
+    },
+    "second-service":{
+      "title": "Fourniture de Matériel Médical et de Laboratoire",
+      "paragraph1": "Nous mettons à la disposition des établissements de santé publics et privés une large gamme d’équipements médicaux et de dispositifs de diagnostic, avec des standards de qualité internationale.",
+      "paragraph2": "Grâce à nos partenaires stratégiques et notre expertise terrain, nous assurons une chaîne d’approvisionnement fluide et maîtrisée, de la commande à la livraison.",
+      "list1": {
+        "title": "Tests de Diagnostic de Laboratoire",
+        "li1": "Tests des maladies infectieuse",
+        "li2": "Tests COVID-19",
+        "li3": "Maladies sexuellement transmissibles",
+        "li4": "Tests des maladies tropicales",
+        "li5": "Marqueurs tumoraux",
+        "li6": "Tests de grossesse",
+        "li7": "Marqueurs cardiaques",
+        "li8": "Groupage sanguin"
+      },
+      "list2":{
+        "title": "Fournitures et équipements complémentaires",
+        "li1": "Équipements pour laboratoires d’analyses médicales",
+        "li2": "Dispositifs de dépistage rapide (RDT)",
+        "li3": "Kits de prélèvement, consommables et réactifs",
+        "li4": "Matériel hospitalier : moniteurs, lits médicaux, pousse-seringues, etc.",
+        "li5": "Appareils de diagnostic : échographes, ECG, dopplers, autoclaves etc"
+      },
+      "list3":{
+        "title": "Nos engagements",
+        "li1": "Produits certifiés CE, ISO et validés cliniquement.",
+        "li2": "Livraison internationale avec accompagnement logistique.",
+        "li3": "Conseil technique pour le choix des équipements adaptés à vos besoins.",
+        "li4": "Service après-vente et possibilité de formation à l’utilisation du matériel."
+      }
+    },
+    "third-service": {
+      "title": "Projets en Afrique",
+      "paragraph1": "Une vision claire, des actions concrètes",
+      "paragraph2": "Notre présence en Afrique ne se limite pas à l’exportation de services médicaux. Nous développons une dynamique régionale forte, articulée autour de projets structurants, durables et à fort impact social.",
+      "list1": {
+        "title": "1. Déploiement de corridors de santé Turquie – Afrique",
+        "li1": "l’évacuation sanitaire rapide et encadrée",
+        "li2":"l’accès direct aux traitements spécialisés (oncologie, cardiologie, fertilité, greffes, etc.)",
+        "li3": "la continuité des soins à distance via la télémédecine."
+      },
+      "list2":{
+        "title": "2. Développement d’infrastructures médicales locales",
+        "li1": "accompagnons la création de centres de soins spécialisés (fertilité, diagnostics, chirurgie ambulatoire)",
+        "li2": "proposons des modèles hospitaliers clé en main",
+        "li3": "facilitons l’acquisition de matériel médical de pointe adapté aux réalités locales."
+      },
+      "list3":{
+        "title":"3. Renforcement des compétences médicales",
+        "li1": "sessions de formation continue pour professionnels de santé africains en Turquie ou en ligne",
+        "li2": "stages pratiques en milieu hospitalier",
+        "li3":"développement de partenariats académiques."
+      },
+      "list4":{
+        "title": "4. Approvisionnement en matériel de diagnostic et dispositifs médicaux",
+        "li1": "tests infectieux, cardiaques, tumoraux, FIV, etc.",
+        "li2": "dispositifs de diagnostic rapide",
+        "li3": "équipements hospitaliers (moniteurs, respirateurs, blocs opératoires mobiles…)"
+      },
+      "list5":{
+        "title": "Notre approche en Afrique",
+        "li1": {
+          "span": "Orientation patient :",
+          "text": "chaque projet est conçu pour améliorer la qualité et la rapidité de prise en charge."
+        },
+        "li2":{
+          "span": "Modèle collaboratif :",
+          "text": "nous travaillons main dans la main avec des partenaires africains locaux."
+        },
+        "li3": {
+          "span": "Adaptation aux réalités du terrain :",
+          "text": "solutions médicales personnalisées selon les besoins et les contextes."
+        },
+        "li4":{
+          "span": "Impact mesurable :",
+          "text": "notre action se traduit en vies améliorées, en capacités renforcées, en systèmes de santé plus solides."
+        },
+        "footer": "Ensemble, faisons progresser la santé en Afrique."
+      }
+    },
+    "fourth-service":{
+      "title":"Matériel de Construction & Finition"
+    },
+    "five-service":{
+      "title":"Voyage d'affaires en Turquie"
+    }
+  },
+  "section3":{
+    "title": "Derniers projets",
+    "description":"Un catalogue des derniers projets sur lesquels j’ai travaillé.",
+    "project1": "Rencontre institutionnelle avec la Polyclinique Internationale Sainte-Anne-Marie (PISAM), Abidjan CIV, 2025."
+  },
+  "section4":{
+    "title": "Contactez-moi",
+    "description": "Pour plus des informations, contactez-moi en utilisant mes coordonnées.",
+    "name": "Noms",
+    "email":"Adresse email",
+    "address": "Nos bureaux",
+    "tel": "Tel",
+    "social-media": "Réseaux sociaux",
+    "phone": "Numéro de téléphone",
+    "subject":"Sujet",
+    "type":"Type du sujet",
+    "message": "Message",
+    "send": "Envoyer votre message",
+    "loading": "Envoi du message...",
+    "success": "Message envoyé avec succès !",
+    "error": "Une erreur est survenue. Réessaie plus tard."
+  },
+  "footer":{
+    "socials":"N’hésitez pas à me joindre via mes différents réseaux sociaux en cas de besoin.",
+    "subscribe":"Abonnez-vous pour recevoir des futures informations",
+    "link":"Liens",
+    "reserved":"Tous droits réservés"
+  },
+  "section5":{
+    "title": "Avis des clients"
+  }
+}

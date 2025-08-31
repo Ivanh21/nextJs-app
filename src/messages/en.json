@@ -1,0 +1,185 @@
+{
+  "Index": {
+    "title": "Welcome!"
+  },
+  "Header": {
+    "home": "Home",
+    "about": "About",
+    "work": "Services",
+    "project": "Projects",
+    "contact": "Contact"
+  },
+  "Main":{
+    "poste1": "Co-founder & Regional Director Africa",
+    "poste2": "Co-founder of Turkey Healthcare Group",
+    "poste3": "Co-founder of Istanbul Infertility Center",
+    "myself": "Committed to infrastructure and healthcare development in Africa, I use my expertise in civil engineering and development strategy to build sustainable, high-value partnerships.",
+    "show-more": "Learn more",
+    "about-me": "About me",
+    "about-me-info1": "As co-founder of Turkey Healthcare Group & Istanbul Infertility Center, I support companies and medical institutions in implementing high-level healthcare solutions, facilitating access to excellent medical care through strong international collaborations and advanced medical technologies.",
+    "about-me-info2": "I am fully committed to connecting Africa with the best medical expertise in Turkey, with a personalized, human, and results-oriented approach.",
+    "cv": "Download my resume"
+  },
+   "section1":{
+    "title": "Why work with us?",
+    "first-why": "Access to accredited hospitals and some of the best doctors in Turkey",
+    "second-why": "Personalized and confidential care",
+    "third-why": "Competitive rates, without compromising on the quality of care",
+    "fourth-why": "Full coordination before, during, and after treatment",
+    "five-why": "Multilingual customer service and dedicated team in Africa"
+  },
+  "section2":{
+    "title": "Our services",
+    "description": "We offer a wide range of services to meet your needs and support you in bringing your projects to fruition.",
+    "first-service":{
+      "title": "Health Services & Medical Tourism",
+      "paragraph1": "At Turkey Healthcare Group and Istanbul Infertility Center, we offer integrated and personalized medical care for international patients, combining high-level healthcare with tailored support.",
+      "paragraph2": "Our goal is to make Turkish medical excellence accessible to all, in a secure, organized, and reassuring environment.",
+      "list":{
+        "title": "Our medical services",
+        "li1":{
+          "span": "International medical consultations :",
+          "text": "Access to internationally renowned specialists for accurate diagnoses and treatment plans."
+        },
+        "li2":{
+          "span": "Remote medical follow-up :",
+          "text": "Continuous medical monitoring of international patients, even after they return to their home country."
+        },
+        "li3":{
+          "span":"IVF & infertility treatment :",
+          "text": "Comprehensive medically assisted reproduction programs, tailored to each situation, with high success rates."
+        },
+        "li4":{
+          "span": "Hair Transplant and Cosmetic Surgery :",
+          "text": "Care provided in certified clinics, with experienced surgeons and state-of-the-art technology."
+        },
+        "li5":{
+          "span": "Care in specialized hospitals :",
+          "text": "Fast and efficient coordination for patient care in the facilities best suited to their condition."
+        },
+        "li6":{
+          "span": "Online medical consultations :",
+          "text": "Preliminary assessments and second medical opinions with our doctors, in complete confidentiality and simplicity."
+        }
+    
+      }
+    },
+    "second-service":{
+      "title": "Supply of Medical and Laboratory Equipment",
+      "paragraph1": "We provide public and private healthcare facilities with a wide range of medical equipment and diagnostic devices that meet international quality standards.",
+      "paragraph2": "Thanks to our strategic partners and our expertise in the field, we ensure a smooth and controlled supply chain, from order to delivery.",
+      "list1": {
+        "title": "Laboratory Diagnostic Tests",
+        "li1": "Infectious Disease Tests",
+        "li2": "COVID-19 Tests",
+        "li3": "Sexually Transmitted Diseases",
+        "li4": "Tropical disease testing",
+        "li5": "Tumor markers",
+        "li6": "Pregnancy testing",
+        "li7": "Cardiac markers",
+        "li8": "Blood grouping"
+      },
+      "list2":{
+        "title": "Additional supplies and equipment",
+        "li1": "Medical laboratory equipment",
+        "li2": "Rapid diagnostic tests (RDTs)",
+        "li3": "Sample collection kits, consumables, and reagents",
+        "li4": "Hospital equipment: monitors, medical beds, syringe pumps, etc.",
+        "li5": "Diagnostic devices: ultrasound machines, ECGs, Dopplers, autoclaves, etc."
+      },
+      "list3":{
+        "title": "Our commitments",
+        "li1": "CE and ISO certified products that are clinically validated.",
+        "li2": "International delivery with logistical support.",
+        "li3": "Technical advice on choosing the right equipment for your needs.",
+        "li4": "After-sales service and training available on how to use the equipment."
+      }
+    },
+    "third-service": {
+      "title": "Projects in Africa",
+      "paragraph1": "A clear vision, concrete actions",
+      "paragraph2": "Our presence in Africa is not limited to the export of medical services. We are developing a strong regional dynamic, centered around structuring, sustainable projects with a strong social impact.",
+      "list1": {
+        "title": "1. Deployment of Turkey-Africa health corridors",
+        "li1": "rapid and supervised medical evacuation",
+        "li2":"direct access to specialized treatments (oncology, cardiology, fertility, transplants, etc.)",
+        "li3": "continuity of remote care via telemedicine."
+      },
+      "list2":{
+        "title": "2. Development of local medical infrastructure",
+        "li1": "supporting the creation of specialized care centers (fertility, diagnostics, outpatient surgery)",
+        "li2": "offer turnkey hospital models",
+        "li3": "facilitate the acquisition of cutting-edge medical equipment adapted to local realities."
+      },
+      "list3":{
+        "title":"3. Strengthening medical skills",
+        "li1": "continuing education sessions for African healthcare professionals in Turkey or online",
+        "li2": "practical internships in hospitals",
+        "li3":"development of academic partnerships."
+      },
+      "list4":{
+        "title": "4. Supplying diagnostic equipment and medical devices",
+        "li1": "infectious disease, cardiac, tumor, HIV tests, etc.",
+        "li2": "rapid diagnostic devices",
+        "li3": "hospital equipment (monitors, ventilators, mobile operating rooms, etc.)"
+      },
+      "list5":{
+        "title": "Our approach in Africa",
+        "li1": {
+          "span": "Patient focus:",
+          "text": "each project is designed to improve the quality and speed of care."
+        },
+        "li2":{
+          "span": "Collaborative model:",
+          "text": "we work hand in hand with local African partners."
+        },
+        "li3": {
+          "span": "Adaptation to local realities:",
+          "text": "medical solutions tailored to needs and contexts."
+        },
+        "li4":{
+          "span": "Measurable impact:",
+          "text": "our work translates into improved lives, strengthened capacities, and more robust health systems."
+        },
+        "footer": "Together, let's advance health in Africa."
+      }
+    },
+    "fourth-service":{
+      "title":"Construction & Finishing Materials"
+    },
+    "fifth-service":{
+      "title":"Business Travel in Turkey"
+    }
+  },
+  "section3":{
+  "title": "Latest projects",
+  "description":"A catalog of the latest projects I have worked on.",
+  "project1": "Institutional meeting with the Sainte-Anne-Marie International Polyclinic (PISAM), Abidjan CIV, 2025."
+  },
+  "section4":{
+    "title": "Contact Me",
+    "description": "For more information, please contact me using my contact details.",
+    "name": "Name",
+    "email":"Email address",
+    "address": "Our offices",
+    "tel": "Telephone",
+    "social-media": "Social media",
+    "phone": "Phone number",
+    "subject":"Subject",
+    "type": "Subject type",
+    "message": "Message",
+    "send": "Send your message",
+    "loading": "Sending message...",
+    "success": "Message sent successfully!",
+    "error": "An error occurred. Please try again later."
+  },
+   "footer":{
+    "socials":"Feel free to contact me via my various social media accounts if you need to.",
+    "subscribe":"Subscribe to receive future updates",
+    "link": "Links",
+    "reserved": "All rights reserved"
+  },
+  "section5":{
+    "title": "Customer reviews"
+  }
+}

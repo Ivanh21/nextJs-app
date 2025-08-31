@@ -1,0 +1,23 @@
+{
+  "Index": {
+    "title": "hoş geldiniz"
+  },
+   "Header": {
+    "home": "Ana Sayfa",
+    "about": "Hakkında",
+    "work": "Hizmetler",
+    "project": "Projeler",
+    "contact": "İletişim"
+  },
+  "Main":{
+    "poste1": "Kurucu Ortak ve Afrika Bölge Direktörü",
+    "poste2": "Türkiye Sağlık Grubu'nun kurucu ortağı",
+    "poste3": "İstanbul Kısırlık Merkezi Kurucu Ortağı",
+    "myself": "Afrika'da altyapı ve sağlık alanlarında kalkınmaya adanmış bir kişi olarak, inşaat mühendisliği ve kalkınma stratejisi alanlarındaki uzmanlığımı, sürdürülebilir ve yüksek katma değerli ortaklıklar için kullanıyorum.",
+    "show-more": "Daha fazla bilgi",
+    "about-me": "Hakkımda",
+    "about-me-info1": "Turkey Healthcare Group & Istanbul infertility Center'ın kurucu ortağı olarak, sağlam uluslararası işbirlikleri ve ileri tıp teknolojileri sayesinde mükemmel tıp hizmetlerine erişimi kolaylaştırarak, şirketlere ve tıp kurumlarına üst düzey sağlık hizmetleri çözümleri sunuyorum.",
+    "about-me-info2": "Afrika'yı Türkiye'nin en iyi tıbbi uzmanlıklarıyla buluşturmak için kişiselleştirilmiş, insani ve sonuç odaklı bir yaklaşımla tüm gücümle çalışıyorum.",
+    "cv": "Özgeçmişimi indir"
+  }
+}

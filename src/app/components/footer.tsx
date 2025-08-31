@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 
 export default function Footer(){
+  const {t} = useTranslation();
     return(
       <>
       {/* <div className="section-bar" ></div> */}
@@ -17,7 +19,7 @@ export default function Footer(){
               alt="logo"
               />
 
-              <p className="text-sm text-gray-500 max-lg:w-72">N’hésitez pas à me joindre via mes différents réseaux sociaux en cas de besoin.</p>
+              <p className="text-sm text-gray-500 max-lg:w-72">{t("footer.socials")}</p>
 
               <ul className="flex items-center gap-5">
                 <li>
@@ -42,46 +44,46 @@ export default function Footer(){
             <div className="flex lg:justify-between w-full max-md:flex-col max-md:space-y-8 max-lg:space-x-8 max-md:space-x-0">
             <div className="flex flex-col space-y-4">
               
-              <h2 className="text-xl font-semibold">Liens</h2>
+              <h2 className="text-xl font-semibold">{t("footer.link")}</h2>
 
               <ul className="flex flex-col space-y-2 text-gray-500">
                 <li>
-                  <Link href="/#home">Accueil</Link>
+                  <Link href="/#home">{t("Header.home")}</Link>
                 </li>
                 <li>
-                  <Link href="/#about">À propos</Link>
+                  <Link href="/#about">{t("Header.about")}</Link>
                 </li>
                  <li>
-                  <Link href="/#services">Services</Link>
+                  <Link href="/#services">{t("Header.work")}</Link>
                 </li>
                 <li>
-                  <Link href="/#project">Projets</Link>
+                  <Link href="/#project">{t("Header.project")}</Link>
                 </li>
                 <li>
-                  <Link href="/#contact">Contact</Link>
+                  <Link href="/#contact">{t("Header.contact")}</Link>
                 </li>
               </ul>
             </div>
 
             <div className="flex flex-col space-y-4">
               
-              <h2 className="text-xl font-semibold">Services</h2>
+              <h2 className="text-xl font-semibold">{t("Header.work")}</h2>
 
               <ul className="flex flex-col space-y-2 text-gray-500">
                 <li>
-                  <Link href="#">Services sanitaires & Tourisme médical </Link>
+                  <Link href="#">{t("section2.first-service.title")}</Link>
                 </li>
                 <li>
-                  <Link href="#">Matériel Médical et de Laboratoire</Link>
+                  <Link href="#">{t("section2.second-service.title")}</Link>
                 </li>
                 <li>
-                  <Link href="#">Construction & Finition</Link>
+                  <Link href="#">{t("section2.fourth-service.title")}</Link>
                 </li>
                  <li>
-                  <Link href="#">Voyages en Turquie</Link>
+                  <Link href="#">{t("section2.five-service.title")}</Link>
                 </li>
                 <li>
-                  <Link href="# ">Projets en Afrique</Link>
+                  <Link href="# ">{t("section2.third-service.title")}</Link>
                 </li>
               </ul>
             </div>
@@ -109,7 +111,7 @@ export default function Footer(){
               <h2 className="text-xl font-semibold">Newsletter</h2>
          
 
-              <p className="text-gray-500">Abonnez-vous pour recevoir des futures informations</p>
+              <p className="text-gray-500">{t("footer.subscribe")}</p>
               <div className="relative w-full ">
                 <input 
                   type="text" 
@@ -131,7 +133,7 @@ export default function Footer(){
           </div> */}
 
           <div className="flex max-md:justify-center">
-            <span className="text-gray-500">© 2025 NGOLION. Tous droits réservés</span>
+            <span className="text-gray-500">© 2025 NGOLION. {t("footer.reserved")}</span>
           </div>
         </div>
       </footer>

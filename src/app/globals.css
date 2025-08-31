@@ -151,6 +151,11 @@ body {
 .menu{
   background: linear-gradient(rgba(255, 255, 255, 0.9));
 }
+.lang{
+  background-color: white;
+}
+
+
 }
 
 
@@ -178,6 +183,10 @@ body {
 }
 .menu{
   background: linear-gradient(rgba(0, 0, 0, 0.9));
+}
+
+.lang{
+  background-color: #1c2136;
 }
 }
 

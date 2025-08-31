@@ -1,12 +1,22 @@
-// app/page.tsx ou pages/index.tsx selon ta structure
+// app/[locale]/page.tsx ou pages/index.tsx selon ta structure
 "use client"; // si tu es dans un dossier `app/`
 
-import { useEffect, useState } from "react";
-import Footer from "./components/footer";
-import Header from "./components/header";
-import Main from "./components/main";
+import { use, useEffect, useState } from "react";
+import Footer from "../components/footer";
+import Header from "../components/header";
+import Main from "../components/main";
+import { useTranslation } from "react-i18next";
 
-export default function Home() {
+
+export default function Home({ params }: { params: Promise<{ locale: string }> }) {
+
+  const { t, i18n } = useTranslation();
+  const { locale } = use(params);
+
+  if (i18n.language !== locale) {
+    i18n.changeLanguage(locale);
+  }
+
   const [loading, setLoading] = useState(true);
   const [fadeOut, setFadeOut] = useState(false);
 
@@ -76,3 +86,46 @@ export default function Home() {
     </>
   );
 }
+
+
+
+
+
+// "use client";
+
+// import { useTranslation } from "react-i18next";
+// import i18n from "../../i18n";
+// import { useRouter, usePathname } from "next/navigation";
+
+// export default function HomePage({ params }: { params: { locale: string } }) {
+//   const { t } = useTranslation();
+//   const router = useRouter();
+//   const pathname = usePathname();
+
+//   // mettre i18n sur la langue de l'URL
+//   if (i18n.language !== params.locale) {
+//     i18n.changeLanguage(params.locale);
+//   }
+
+//   const changeLanguage = (lng: string) => {
+//     i18n.changeLanguage(lng);
+
+//     // remplacer la locale dans l’URL
+//     const segments = pathname.split("/");
+//     segments[1] = lng; // le premier segment = locale
+//     router.push(segments.join("/"));
+//   };
+
+//   return (
+//     <div>
+//       <h1>{t("Index.title")}</h1>
+//       <p>{t("Index.description")}</p>
+
+//       <button onClick={() => changeLanguage("fr")}>FR</button>
+//       <button onClick={() => changeLanguage("en")}>EN</button>
+//       <button onClick={() => changeLanguage("tr")}>TR</button>
+//     </div>
+//   );
+// }
+
+
